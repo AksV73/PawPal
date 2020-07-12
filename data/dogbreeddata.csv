@@ -98,40 +98,38 @@ Finnish Lapphund,,Herding,Northern,18,"Calm, Courageous, Faithful, Friendly, Kee
 Finnish Spitz,,Non Sporting,Northern,15,"Happy, Independent, Intelligent, Loyal, Playful, Vocal",no,independent house,high,yes,meat rich,not independent,high,frequent
 Flat-coated Retriever,,Sporting,Gun,30,"Friendly, Confident, Devoted, Optimistic, Outgoing, Intelligent",yes,ranch,high,yes,not particular,not independent,high,seasonal
 Fox Terrier,,Terrier,Terrier,8,"Active, Affectionate, Alert, Fearless, Intelligent, Playful",no,independent house,moderate,yes,not particular,moderate,high,low
-Foxhound,,Hound,Scenthound,32,"Independent, Intelligent, Kind, Loving, Loyal, Sweet-tempered",no,,,,,,,
-French Bulldog,,Non Sporting,Companion,12,"Affectionate, Playful, Alert, Athletic, Bright, Easygoing, Keen, Lively, Patient",no,,,,,,,
-Gaddi,,,,,,,,,,,,,
-Galgo Spanish Greyhound,,Hound,Sight,25,"Affectionate, Calm, Quiet, Gentle",no,,,,,,,
-German Pinscher,,Working,Terrier,14,"Even-tempered, Familial, Courageous, Lively, Loving, Spirited",yes,,,,,,,
-German Shepherd Dog,German Shepherd,Herding,Herding,35,"Alert, Confident, Courageous, Curious, Intelligent, Loyal, Obedient, Watchful",yes,,,,,,,
-German Shorthaired Pointer,German Short Haired Pointer,Working,Gun,29,"Affectionate, Boisterous, Bold, Cooperative, Intelligent, Trainable",no,,,,,,,
-German Spitz,,Non Sporting,Northern,8,"Alert, Energetic, Friendly, Independent, Intelligent, Protective",yes,,,,,,,
-German Wirehaired Pointer,,Sporting,Gun,30,"Active, Affectionate, Friendly, Intelligent, Loyal, Willful, Responsive",yes,,,,,,,
-Giant Schnauzer,,Working,Companion,38,"Dominant, Intelligent, Kind, Loyal, Powerful, Strong-willed",yes,,,,,,,
-Glen of Imaal Terrier,,Terrier,Terrier,16,"Active, Agile, Courageous, Gentle, Loyal, Spirited",no,,,,,,,
-Golden Retriever,,Sporting,Gun,32,"Confident, Friendly, Intelligent, Kind, Reliable, Trustworthy",no,,,,,,,
-Gordon Setter,,Sporting,Gun,31,"Alert, Confident, Eager, Fearless, Loyal, Intelligent",yes,,,,,,,
-Great Dane,,Working,Guardian,77,"Friendly, Confident, Devoted, Intelligent, Gentle, Loving, Reserved",yes,,,,,,,
-Great Pyrenees,,Working,Guardian,45,"Affectionate, Confident, Fearless, Gentle, Patient, Strong-willed",yes,,,,,,,
-Greater Swiss Mountain Dog,,Working,Guardian,60,"Alert, Devoted, Fearless, Good-natured, Protective, Self-confident",yes,,,,,,,
-Greyhound,,Hound,Sight,33,"Intelligent, Gentle, Affectionate, Athletic, Even-tempered, Quiet",no,,,,,,,
-Gull Dong,,,,,,,,,,,,,
-Gull terrier,,,,,,,,,,,,,
-Harrier,,Hound,Scenthound,22,"Active, Cheerful, Friendly, Outgoing, Sweet-tempered, Tolerant",no,,,,,,,
-Havanese,,Toy,Companion,5,"Affectionate, Companionable, Gentle, Intelligent, Playful, Responsive",no,,,,,,,
-Hound,,Hound,Scenthound,32,"Independent, Intelligent, Kind, Loving, Loyal, Sweet-tempered",no,,,,,,,
-Hovawart,,Working,Guardian,38,"Watchful, Even-tempered, Reserved, Active, Devoted",yes,,,,,,,
-Husky,,Working,Northern,24,"Alert, Friendly, Gentle, Intelligent, Outgoing",no,,,,,,,
-Ibizan Hound,,Hound,Sight,22,"Active, Clownish, Engaging, Independent, Intelligent, Stubborn",no,,,,,,,
-Illyrian Sheepdog,,Herding,Herding,40,"Independent, Reliable, Devoted, Protective",yes,,,,,,,
-Indian Mastif,Bully Kutta,,,,,,,,,,,,
-Indian Pariah Dog,,,,,,,,,,,,,
-Indian Spitz,,,,,,,,,,,,,
-Irish Setter,,Sporting,Gun,32,"Affectionate, Companionable, Energetic, Independent, Lively, Playful, Intelligent",no,,,,,,,
-Irish Terrier,,Terrier,Terrier,12,"Dominant, Intelligent, Lively, Protective, Respectful, Trainable",yes,,,,,,,
-Irish Water Spaniel,,Sporting,Gun,25,"Active, Alert, Clownish, Inquisitive, Intelligent, Quick",no,,,,,,,
-Irish Wolfhound,,Hound,Scenthound,55,"Dignified, Generous, Loyal, Patient, Sweet-tempered, Thoughtful, Intelligent",no,,,,,,,
-Italian Greyhound,,Toy,Companion,4,"Affectionate, Agile, Athletic, Companionable, Intelligent, Mischevious",no,,,,,,,
+Foxhound,,Hound,Scenthound,32,"Independent, Intelligent, Kind, Loving, Loyal, Sweet-tempered",no,ranch,high,yes,meat rich,very independent,high,seasonal
+French Bulldog,,Non Sporting,Companion,12,"Affectionate, Playful, Alert, Athletic, Bright, Easygoing, Keen, Lively, Patient",no,apartment ,moderate,yes,meat rich,not independent,medium,seasonal
+Gaddi,,Herding,Guardian,45,"Intelligent, Gentle, Calm,Territorial",yes,ranch,high,no,meat rich,very independent,high,frequent
+Galgo Spanish Greyhound,,Hound,Sight,25,"Affectionate, Calm, Quiet, Gentle",no,ranch,high,no,meat rich,very independent,high,seasonal
+German Pinscher,,Working,Terrier,14,"Even-tempered, Familial, Courageous, Lively, Loving, Spirited",yes,independent house,moderate,no,meat rich,moderate,high,seasonal
+German Shepherd Dog,German Shepherd,Herding,Herding,35,"Alert, Confident, Courageous, Curious, Intelligent, Loyal, Obedient, Watchful",yes,independent house,high,yes,meat rich,not independent,high,frequent
+German Shorthaired Pointer,German Short Haired Pointer,Working,Gun,29,"Affectionate, Boisterous, Bold, Cooperative, Intelligent, Trainable",no,ranch,moderate,yes,meat rich,not independent,high,low
+German Spitz,,Non Sporting,Northern,8,"Alert, Energetic, Friendly, Independent, Intelligent, Protective",yes,apartment ,high,yes,not particular,moderate,high,frequent
+German Wirehaired Pointer,,Sporting,Gun,30,"Active, Affectionate, Friendly, Intelligent, Loyal, Willful, Responsive",yes,ranch,moderate,no,not particular,not independent,high,low
+Giant Schnauzer,,Working,Companion,38,"Dominant, Intelligent, Kind, Loyal, Powerful, Strong-willed",yes,ranch,high,no,meat rich,not independent,high,frequent
+Glen of Imaal Terrier,,Terrier,Terrier,16,"Active, Agile, Courageous, Gentle, Loyal, Spirited",no,apartment ,high,yes,not particular,moderate,high,low
+Golden Retriever,,Sporting,Gun,32,"Confident, Friendly, Intelligent, Kind, Reliable, Trustworthy",no,ranch,moderate,yes,not particular,not independent,high,frequent
+Gordon Setter,,Sporting,Gun,31,"Alert, Confident, Eager, Fearless, Loyal, Intelligent",yes,apartment ,high,no,not particular,not independent,high,frequent
+Great Dane,,Working,Guardian,77,"Friendly, Confident, Devoted, Intelligent, Gentle, Loving, Reserved",yes,ranch,high,yes,meat rich,not independent,high,frequent
+Great Pyrenees,,Working,Guardian,45,"Affectionate, Confident, Fearless, Gentle, Patient, Strong-willed",yes,ranch,high,yes,meat rich,moderate,high,frequent
+Greater Swiss Mountain Dog,,Working,Guardian,60,"Alert, Devoted, Fearless, Good-natured, Protective, Self-confident",yes,ranch,high,yes,not particular,moderate,high,seasonal
+Greyhound,,Hound,Sight,33,"Intelligent, Gentle, Affectionate, Athletic, Even-tempered, Quiet",no,apartment ,low,yes,not particular,not independent,high,frequent
+Gull Dong,,Hunting,Guardian,35,"Stubborn, Aggressive",yes,ranch,high,no,meat rich,very independent,high,low
+Harrier,,Hound,Scenthound,22,"Active, Cheerful, Friendly, Outgoing, Sweet-tempered, Tolerant",no,ranch,high,yes,not particular,moderate,high,seasonal
+Havanese,,Toy,Companion,5,"Affectionate, Companionable, Gentle, Intelligent, Playful, Responsive",no,apartment ,low,yes,not particular,not independent,medium,low
+Hovawart,,Working,Guardian,38,"Watchful, Even-tempered, Reserved, Active, Devoted",yes,ranch,low,yes,not particular,not independent,high,seasonal
+Husky,,Working,Northern,24,"Alert, Friendly, Gentle, Intelligent, Outgoing",no,ranch,high,yes,meat rich,not independent,high,frequent
+Ibizan Hound,,Hound,Sight,22,"Active, Clownish, Engaging, Independent, Intelligent, Stubborn",no,apartment ,low,yes,not particular,not independent,high,seasonal
+Illyrian Sheepdog,,Herding,Herding,40,"Independent, Reliable, Devoted, Protective",yes,ranch,high,yes,meat rich,very independent,high,frequent
+Indian Mastif,Bully Kutta,Hunting,Guardian,80,"Protective, Dominant, Fearless, Obedient, Stubborn, Trainable",yes,ranch,high,yes,meat rich,very independent,high,frequent
+Indian Pariah Dog,,Sporting,Companion,30,"Protective, Calm, Energetic",no,apartment ,moderate,yes,not particular,very independent,high,low
+Indian Spitz,,Terrier,Companion,15,"Intelligent, Kind, Playful, Athletic",no,apartment ,moderate,yes,not particular,moderate,high,frequent
+Irish Setter,,Sporting,Gun,32,"Affectionate, Companionable, Energetic, Independent, Lively, Playful, Intelligent",no,ranch,high,yes,meat rich,not independent,high,frequent
+Irish Terrier,,Terrier,Terrier,12,"Dominant, Intelligent, Lively, Protective, Respectful, Trainable",yes,independent house,high,yes,not particular,not independent,high,frequent
+Irish Water Spaniel,,Sporting,Gun,25,"Active, Alert, Clownish, Inquisitive, Intelligent, Quick",no,independent house,high,yes,not particular,moderate,high,low
+Irish Wolfhound,,Hound,Scenthound,55,"Dignified, Generous, Loyal, Patient, Sweet-tempered, Thoughtful, Intelligent",no,ranch,low,yes,meat rich,not independent,low,seasonal
+Italian Greyhound,,Toy,Companion,4,"Affectionate, Agile, Athletic, Companionable, Intelligent, Mischevious",no,apartment ,moderate,yes,meat rich,not independent,high,low
 Italian Spinone,,Sporting,Gun,33,"Friendly, Loyal, Affectionate, Docile, Gentle, Patient",no,,,,,,,
 Jack Russell Terrier,,Terrier,Terrier,7,"Alert, Cheerful, Courageous, Energetic, Independent",yes,,,,,,,
 Jack Russell Terrier (Parson Russell Terrier),,Terrier,Terrier,7,"Energetic, Bold, Eager, Happy, Intelligent, Obedient",no,,,,,,,
