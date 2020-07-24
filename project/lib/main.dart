@@ -1,117 +1,269 @@
 import 'package:flutter/material.dart';
 
-void main() {
+void main()  {
   runApp(MyApp());
 }
 
+
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-        // This makes the visual density adapt to the platform that you run
-        // the app on. For desktop platforms, the controls will be smaller and
-        // closer together (more dense) than on mobile platforms.
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: PawPal(),
+      routes: <String, WidgetBuilder> {
+        '/welcome page' : (context) => categories(),
+        '/categories' : (context) => categories(),
+        '/category1' : (context) => Category1(),
+      },
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
+class PawPal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
+      //backgroundColor: Colors.grey[900],
       body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+          child: Text(
+            'PawPal',
+            style: TextStyle(
+              fontSize: 30.0,
+              fontWeight: FontWeight.bold
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
+          ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+        onPressed: () {
+          Navigator.pushNamed(context, '/welcome page');
+        },
+        child: Text('temp'),
+        backgroundColor: Colors.red[600],
+      ),
     );
   }
 }
+
+class welcome extends StatelessWidget {
+  @override
+  Widget build(BuildContext) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Welcome to the world of dogs'),
+        centerTitle: true,
+      ),
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            flex: 1,
+            child: Container(
+//              padding: EdgeInsets.all(2.0),
+              color: Colors.cyanAccent,
+              child: Text('Write about us'),
+            ),
+          ),
+          Expanded(
+            flex: 3,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                FlatButton(
+                  onPressed: () {
+//                    Navigator.pushNamed(context, '/categories');
+                  },
+                  child: Text('Breed Selector')
+                )
+              ],
+            ),
+          ),
+          Expanded(
+            flex: 2,
+              child: Text('more infor- tbd')
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+class categories extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.green[200],
+      appBar: AppBar(
+        title: Text('QUIZ- Categories'),
+      ),
+      body: Column(
+        children: <Widget>[
+          Row(
+            children: <Widget>[
+              FlatButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/category1');
+                  },
+                  child: Text("Category 1"),
+              ),
+              FlatButton(
+                onPressed: () {},
+                child: Text("Category 2"),
+              ),
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              FlatButton(
+                  onPressed: () {},
+                  child: Text("Category 3"),
+              ),
+              FlatButton(
+                  onPressed: () {},
+                child: Text("Category 4"),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+class Category1 extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return Category1state();
+  }
+}
+
+class Category1state extends State<Category1> {
+  var questionIndex = 0;
+
+  void ansQues() {
+    setState(() {
+      questionIndex += 1;
+    });
+    print(questionIndex);
+  }
+  @override
+  Widget build(BuildContext context) {
+    var questions = [
+      'ques1 - drooling',
+      'ques2',
+      'ques3',
+      'ques4'
+    ];
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Category1'),
+      ),
+      body: Column(
+        children: <Widget>[
+          Text(
+            questions[questionIndex],
+          ),
+          RaisedButton(onPressed: ansQues,
+          child: Text('ans1'),
+          ),
+          RaisedButton(onPressed: ansQues,
+            child: Text('ans2'),
+          ),
+          RaisedButton(onPressed: ansQues,
+            child: Text('ans3'),
+          ),
+          RaisedButton(onPressed: ansQues,
+            child: Text('ans4'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//class Categories extends StatelessWidget {
+//  @override
+//  Widget build(BuildContext context) {
+//    return Scaffold(
+//      backgroundColor: Colors.grey[900],
+//      appBar: AppBar(
+//        title: Text('Categories'),
+//        centerTitle: true,
+//        backgroundColor: Colors.grey[850],
+//        elevation: 0.0,
+//      ),
+//      body: Padding(
+//        padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0),
+//        child: Column(
+//          crossAxisAlignment: CrossAxisAlignment.start,
+//          children: <Widget>[
+//            Center(
+//              child: CircleAvatar(
+//                radius: 40.0,
+//                backgroundImage: AssetImage('assets/thumb.jpg'),
+//              ),
+//            ),
+//            Divider(
+//              color: Colors.grey[800],
+//              height: 60.0,
+//            ),
+//            Text(
+//              'NAME',
+//              style: TextStyle(
+//                color: Colors.grey,
+//                letterSpacing: 2.0,
+//              ),
+//            ),
+//
+//            SizedBox(height: 30.0),
+//            Row(
+//              children: <Widget>[
+//                Icon(
+//                  Icons.email,
+//                  color: Colors.grey[400],
+//                ),
+//                SizedBox(width: 10.0),
+//                Text(
+//                  'chun.li@thenetninja.co.uk',
+//                  style: TextStyle(
+//                    color: Colors.grey[400],
+//                    fontSize: 18.0,
+//                    letterSpacing: 1.0,
+//                  ),
+//                )
+//              ],
+//            ),
+//          ],
+//        ),
+//      ),
+//    );
+//  }
+//}
+
+
