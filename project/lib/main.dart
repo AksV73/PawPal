@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
+//import 'dart:js';
 
+import 'package:flutter/material.dart';
+//import 'dart:convert';
 void main()  {
   runApp(MyApp());
 }
@@ -11,8 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: PawPal(),
       routes: <String, WidgetBuilder> {
-        '/welcome page' : (context) => categories(),
-        '/categories' : (context) => categories(),
+        '/welcome page' : (context) => welcome(),
+        '/quiz' : (context) => categories(),
         '/category1' : (context) => Category1(),
       },
     );
@@ -38,7 +40,7 @@ class PawPal extends StatelessWidget {
         onPressed: () {
           Navigator.pushNamed(context, '/welcome page');
         },
-        child: Text('temp'),
+        child: Text('Next'),
         backgroundColor: Colors.red[600],
       ),
     );
@@ -47,45 +49,34 @@ class PawPal extends StatelessWidget {
 
 class welcome extends StatelessWidget {
   @override
-  Widget build(BuildContext) {
+  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Welcome to the world of dogs'),
-        centerTitle: true,
-      ),
-      body: Column(
+        appBar: AppBar(
+          title: Text('Welcome'),
+        ),
+        body: Center(
+        child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Expanded(
-            flex: 1,
-            child: Container(
-//              padding: EdgeInsets.all(2.0),
-              color: Colors.cyanAccent,
-              child: Text('Write about us'),
-            ),
-          ),
-          Expanded(
-            flex: 3,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                FlatButton(
-                  onPressed: () {
-//                    Navigator.pushNamed(context, '/categories');
-                  },
-                  child: Text('Breed Selector')
-                )
-              ],
-            ),
-          ),
-          Expanded(
-            flex: 2,
-              child: Text('more infor- tbd')
-          ),
+            Text('Click button to take quiz'),
+            RaisedButton(
+                textColor: Colors.white,
+                color: Colors.blue,
+                child: Text('quiz'),
+                onPressed: () {
+              navigateToSubPage(context);
+             },
+          )
         ],
-      ),
+        ),
+        ),
     );
+
   }
+  Future navigateToSubPage(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => categories()));
+  }
+
 }
 
 
