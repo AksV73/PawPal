@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 void main()  {
   runApp(MyApp());
 }
-
+List data = [];
 
 class MyApp extends StatelessWidget {
   @override
@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
       home: PawPal(),
       routes: <String, WidgetBuilder> {
         '/welcome page' : (context) => welcome(),
-        '/quiz' : (context) => categories(),
-        '/category1' : (context) => Category1(),
+        '/quiz' : (context) => qu1(),
+       // '/category1' : (context) => Category1(),
       },
     );
   }
@@ -67,9 +67,9 @@ class welcome extends StatelessWidget {
           title: Text('Welcome'),
         ),
         body: Center(
-        child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
+         child: Column(
+           mainAxisAlignment: MainAxisAlignment.center,
+           children: <Widget>[
             Text('Click button to take quiz'),
             RaisedButton(
                 textColor: Colors.white,
@@ -86,108 +86,541 @@ class welcome extends StatelessWidget {
 
   }
   Future navigateToSubPage(context) async {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => categories()));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
   }
 
 }
 
 
-class categories extends StatelessWidget {
+class qu1 extends StatelessWidget {
+ void addData(value){
+   data.add(value);
+   print(data);
+ }
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
+   return Scaffold(
+     appBar: AppBar(
+       title: Text("Question 1"),
+     ),
+     body: Column(
+       children: <Widget>[
+         FlatButton(
+           onPressed: (){},
+           child: Text("Which on of the following are you ?"),
+         ),
+         Column(
+           children: <Widget>[
+             FlatButton(
+                 onPressed: (){
+                   addData("single");
+                 },
+                 child: Text("A single working individual")),
+
+                FlatButton(
+                 onPressed: (){
+                   addData("family");
+                 },
+                 child: Text("A family with kids"),
+               ),
+             FlatButton(
+               onPressed: (){
+                 addData("Couple");
+               },
+               child: Text("A wroking couple"),
+             ),
+             FlatButton(
+               onPressed: (){
+                 addData("elderly");
+               },
+               child: Text("An elderly"),
+             ),
+             RaisedButton(
+               textColor: Colors.white,
+               color: Colors.red,
+               child: Text('Next'),
+               onPressed: () {
+                 navigateToSubPage(context);
+               },
+             )
+               ]
+         ),
+           ],
+         )
+
+     );
+
+  }
+ Future navigateToSubPage(context) async {
+   Navigator.push(context, MaterialPageRoute(builder: (context) => qu2()));
+ }
+  }
+
+class qu2 extends StatelessWidget {
+  void addData(value){
+    data.add(value);
+    print(data);
+  }
+
+  @override
+  Widget build(BuildContext context){
     return Scaffold(
-      backgroundColor: Colors.green[200],
-      appBar: AppBar(
-        title: Text('QUIZ- Categories'),
-      ),
-      body: Column(
-        children: <Widget>[
-          Row(
-            children: <Widget>[
-              FlatButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/category1');
-                  },
-                  child: Text("Category 1"),
-              ),
-              FlatButton(
-                onPressed: () {},
-                child: Text("Category 2"),
-              ),
-            ],
-          ),
-          Row(
-            children: <Widget>[
-              FlatButton(
-                  onPressed: () {},
-                  child: Text("Category 3"),
-              ),
-              FlatButton(
-                  onPressed: () {},
-                child: Text("Category 4"),
-              ),
-            ],
-          ),
-        ],
-      ),
+        appBar: AppBar(
+          title: Text("Question 2"),
+        ),
+        body: Column(
+          children: <Widget>[
+            FlatButton(
+              onPressed: (){},
+              child: Text("What kind of accommodation would you provide your dog ?"),
+            ),
+            Column(
+                children: <Widget>[
+                  FlatButton(
+                      onPressed: (){
+                        addData("apartment");
+                      },
+                      child: Text("An apartment")),
+
+                  FlatButton(
+                    onPressed: (){
+                      addData("independent house");
+                    },
+                    child: Text("An Independent house"),
+                  ),
+                  FlatButton(
+                    onPressed: (){
+                      addData("ranch");
+                    },
+                    child: Text("A farmhouse/ranch"),
+                  ),
+
+                  RaisedButton(
+                    textColor: Colors.white,
+                    color: Colors.red,
+                    child: Text('next'),
+                    onPressed: () {
+                      navigateToSubPage(context);
+                    },
+                  )
+                ]
+            ),
+          ],
+        )
+
     );
+
+  }
+  Future navigateToSubPage(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => qu3()));
   }
 }
 
-
-class Category1 extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return Category1state();
+class qu3 extends StatelessWidget {
+  void addData(value){
+    data.add(value);
+    print(data);
   }
-}
 
-class Category1state extends State<Category1> {
-  var questionIndex = 0;
-
-  void ansQues() {
-    setState(() {
-      questionIndex += 1;
-    });
-    print(questionIndex);
-  }
   @override
-  Widget build(BuildContext context) {
-    var questions = [
-      'ques1 - drooling',
-      'ques2',
-      'ques3',
-      'ques4'
-    ];
+  Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Category1'),
-      ),
-      body: Column(
-        children: <Widget>[
-          Text(
-            questions[questionIndex],
-          ),
-          RaisedButton(onPressed: ansQues,
-          child: Text('ans1'),
-          ),
-          RaisedButton(onPressed: ansQues,
-            child: Text('ans2'),
-          ),
-          RaisedButton(onPressed: ansQues,
-            child: Text('ans3'),
-          ),
-          RaisedButton(onPressed: ansQues,
-            child: Text('ans4'),
-          ),
-        ],
-      ),
+        appBar: AppBar(
+          title: Text("Question 3"),
+        ),
+        body: Column(
+          children: <Widget>[
+            FlatButton(
+              onPressed: (){},
+              child: Text("How much barking can you tolerate ?"),
+            ),
+            Column(
+                children: <Widget>[
+                  FlatButton(
+                      onPressed: (){
+                        addData("High");
+                      },
+                      child: Text("Enough to blow the roof off!")),
+
+                  FlatButton(
+                    onPressed: (){
+                      addData("Low");
+                    },
+                    child: Text("A woof once in a while "),
+                  ),
+                  FlatButton(
+                    onPressed: (){
+                      addData("Moderate");
+                    },
+                    child: Text("Somewhere in between the two"),
+                  ),
+
+                  RaisedButton(
+                    textColor: Colors.white,
+                    color: Colors.red,
+                    child: Text('next'),
+                    onPressed: () {
+                      navigateToSubPage(context);
+                    },
+                  )
+                ]
+            ),
+          ],
+        )
+
     );
+
+  }
+  Future navigateToSubPage(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => qu4()));
   }
 }
 
+class qu4 extends StatelessWidget {
+  void addData(value){
+    data.add(value);
+    print(data);
+  }
 
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Question 4"),
+        ),
+        body: Column(
+          children: <Widget>[
+            FlatButton(
+              onPressed: (){},
+              child: Text("For How long will your dog be alone ?"),
+            ),
+            Column(
+                children: <Widget>[
+                  FlatButton(
+                      onPressed: (){
+                        addData("very independent");
+                      },
+                      child: Text("For 8-10 hrs")),
+
+                  FlatButton(
+                    onPressed: (){
+                      addData("moderate");
+                    },
+                    child: Text("For 4-6 hrs"),
+                  ),
+                  FlatButton(
+                    onPressed: (){
+                      addData("not independent");
+                    },
+                    child: Text("The dog would never be alone"),
+                  ),
+
+                  RaisedButton(
+                    textColor: Colors.white,
+                    color: Colors.red,
+                    child: Text('next'),
+                    onPressed: () {
+                      navigateToSubPage(context);
+                    },
+                  )
+                ]
+            ),
+          ],
+        )
+
+    );
+
+  }
+  Future navigateToSubPage(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => qu5()));
+  }
+}
+
+class qu5 extends StatelessWidget {
+  void addData(value){
+    data.add(value);
+    print(data);
+  }
+
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Question 5"),
+        ),
+        body: Column(
+          children: <Widget>[
+            FlatButton(
+              onPressed: (){},
+              child: Text("How active would you like your dog to be ?"),
+            ),
+            Column(
+                children: <Widget>[
+                  FlatButton(
+                      onPressed: (){
+                        addData("high");
+                      },
+                      child: Text("very active")),
+
+                  FlatButton(
+                    onPressed: (){
+                      addData("medium");
+                    },
+                    child: Text("moderate"),
+                  ),
+                  FlatButton(
+                    onPressed: (){
+                      addData("low");
+                    },
+                    child: Text("inactive"),
+                  ),
+
+                  RaisedButton(
+                    textColor: Colors.white,
+                    color: Colors.red,
+                    child: Text('next'),
+                    onPressed: () {
+                      navigateToSubPage(context);
+                    },
+                  )
+                ]
+            ),
+          ],
+        )
+
+    );
+
+  }
+  Future navigateToSubPage(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => qu6()));
+  }
+}
+
+class qu6 extends StatelessWidget {
+  void addData(value){
+    data.add(value);
+    print(data);
+  }
+
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Question 6"),
+        ),
+        body: Column(
+          children: <Widget>[
+            FlatButton(
+              onPressed: (){},
+              child: Text("How much shedding can you tolerate?"),
+            ),
+            Column(
+                children: <Widget>[
+                  FlatButton(
+                      onPressed: (){
+                        addData("frequent");
+                      },
+                      child: Text("high")),
+
+                  FlatButton(
+                    onPressed: (){
+                      addData("seasonal");
+                    },
+                    child: Text("moderate"),
+                  ),
+                  FlatButton(
+                    onPressed: (){
+                      addData("low");
+                    },
+                    child: Text("low"),
+                  ),
+
+                  RaisedButton(
+                    textColor: Colors.white,
+                    color: Colors.red,
+                    child: Text('next'),
+                    onPressed: () {
+                      navigateToSubPage(context);
+                    },
+                  )
+                ]
+            ),
+          ],
+        )
+
+    );
+
+  }
+  Future navigateToSubPage(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => qu7()));
+  }
+}
+
+class qu7 extends StatelessWidget {
+  void addData(value){
+    data.add(value);
+    print(data);
+  }
+
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Question 7"),
+        ),
+        body: Column(
+          children: <Widget>[
+            FlatButton(
+              onPressed: (){},
+              child: Text("Do you have kids below the age of 12 ?"),
+            ),
+            Column(
+                children: <Widget>[
+                  FlatButton(
+                      onPressed: (){
+                        addData("yes");
+                      },
+                      child: Text("yes")),
+
+                  FlatButton(
+                    onPressed: (){
+                      addData("no");
+                    },
+                    child: Text("no"),
+                  ),
+
+
+                  RaisedButton(
+                    textColor: Colors.white,
+                    color: Colors.red,
+                    child: Text('next'),
+                    onPressed: () {
+                      navigateToSubPage(context);
+                    },
+                  )
+                ]
+            ),
+          ],
+        )
+
+    );
+
+  }
+  Future navigateToSubPage(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => qu8()));
+  }
+}
+
+class qu8 extends StatelessWidget {
+  void addData(value){
+    data.add(value);
+    print(data);
+  }
+
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Question 8"),
+        ),
+        body: Column(
+          children: <Widget>[
+            FlatButton(
+              onPressed: (){},
+              child: Text("What kind of dog do you want ?"),
+            ),
+            Column(
+                children: <Widget>[
+                  FlatButton(
+                      onPressed: (){
+                        addData("yes");
+                      },
+                      child: Text("Guard")),
+
+                  FlatButton(
+                    onPressed: (){
+                      addData("no");
+                    },
+                    child: Text("Companion"),
+                  ),
+
+
+                  RaisedButton(
+                    textColor: Colors.white,
+                    color: Colors.red,
+                    child: Text('next'),
+                    onPressed: () {
+                      navigateToSubPage(context);
+                    },
+                  )
+                ]
+            ),
+          ],
+        )
+
+    );
+
+  }
+  Future navigateToSubPage(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => qu9()));
+  }
+}
+
+class qu9 extends StatelessWidget {
+  void addData(value){
+    data.add(value);
+    print(data);
+  }
+
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Question 9"),
+        ),
+        body: Column(
+          children: <Widget>[
+            FlatButton(
+              onPressed: (){},
+              child: Text("Which diet would you provide your dog ?"),
+            ),
+            Column(
+                children: <Widget>[
+                  FlatButton(
+                      onPressed: (){
+                        addData("not particular");
+                      },
+                      child: Text("vegan/vegetarian")),
+
+                  FlatButton(
+                    onPressed: (){
+                      addData("meat rich");
+                    },
+                    child: Text("diet with meat"),
+                  ),
+
+
+                  RaisedButton(
+                    textColor: Colors.white,
+                    color: Colors.red,
+                    child: Text('next'),
+                    onPressed: () {
+                      navigateToSubPage(context);
+                    },
+                  )
+                ]
+            ),
+          ],
+        )
+
+    );
+
+  }
+  Future navigateToSubPage(context) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => qu9()));
+  }
+}
 
 
 
