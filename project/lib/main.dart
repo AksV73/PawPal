@@ -53,14 +53,9 @@ class PawPals extends State<PawPal> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pushNamed(context, '/welcome page');
-        },
-        child: Text('Next'),
-        backgroundColor: Colors.red[600],
-      ),
-    );
+
+      );
+
   }
 }
 
