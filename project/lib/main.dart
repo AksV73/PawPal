@@ -1,5 +1,7 @@
 //import 'dart:js';
 
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 //import 'dart:convert';
 void main()  {
@@ -20,21 +22,36 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+class PawPal extends StatefulWidget{
+  @override
+  PawPals createState() => PawPals();
+}
+
+class PawPals extends State<PawPal> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(Duration(seconds: 3), ()
+    {
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => welcome()));
+    });
+  }
 
 
-class PawPal extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       //backgroundColor: Colors.grey[900],
       body: Center(
-          child: Text(
-            'PawPal',
-            style: TextStyle(
+        child: Text(
+          'PawPal',
+          style: TextStyle(
               fontSize: 30.0,
               fontWeight: FontWeight.bold
-            ),
           ),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
