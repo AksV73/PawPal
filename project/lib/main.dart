@@ -2,14 +2,23 @@
 
 import 'dart:async';
 
+import 'package:flutter/services.dart' show rootBundle;
+
+
 import 'package:flutter/material.dart';
-//import 'dart:convert';
+import 'dart:convert';
+
+
 void main()  {
   runApp(MyApp());
 }
 List data = [];
 
 class MyApp extends StatelessWidget {
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,14 +26,18 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder> {
         '/welcome page' : (context) => welcome(),
         '/quiz' : (context) => qu1(),
+        //
+        // '/data' : (context) => dogo()
        // '/category1' : (context) => Category1(),
       },
     );
   }
 }
+
 class PawPal extends StatefulWidget{
   @override
   PawPals createState() => PawPals();
+
 }
 
 class PawPals extends State<PawPal> {
@@ -618,8 +631,67 @@ class qu9 extends StatelessWidget {
 
   }
   Future navigateToSubPage(context) async {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => qu9()));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => MyApps()));
   }
+}
+class MyApps extends StatefulWidget {
+  @override
+  MyAppState createState() => MyAppState();
+}
+
+
+class MyAppState extends  State<MyApps>  {
+  List data;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Load local JSON file"),
+        ),
+        body: Container(
+          child: Center(
+            // Use future builder and DefaultAssetBundle to load the local JSON file
+            child: FutureBuilder(
+                future: DefaultAssetBundle
+                    .of(context)
+                    .loadString('dataasset/dogbreeddata.json'),
+                builder: (context, snapshot) {
+                  // Decode the JSON
+                  var new_data = json.decode(snapshot.data.toString());
+
+                  return ListView.builder(
+                    // Build the ListView
+                    itemBuilder: (BuildContext context, int index) {
+                      return Card(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: <Widget>[
+
+                            Text("Name: " + new_data[index]['BreedName']),
+                            Text("Group1: " + new_data[index]['Group1']),
+                            Text("Group2: " + new_data[index]['Group2']),
+                            Text(
+                                "Weight: " + new_data[index]['MaleWtKg']),
+                            Text(
+                                "Temperment: " + new_data[index]['Temperment']),
+                            Text(
+                                "Watchdog: " + new_data[index]['Watchdog']),
+                            Text(
+                                "Home type: " + new_data[index]['Type of home required']),
+                            Text("Barking: " + new_data[index]['Barking ability'])
+                          ],
+                        ),
+                      );
+                    },
+                    itemCount: new_data == null ? 0 : new_data.length,
+                  );
+                }),
+          ),
+        ));
+  }
+
+
 }
 
 
@@ -643,63 +715,9 @@ class qu9 extends StatelessWidget {
 
 
 
-//class Categories extends StatelessWidget {
-//  @override
-//  Widget build(BuildContext context) {
-//    return Scaffold(
-//      backgroundColor: Colors.grey[900],
-//      appBar: AppBar(
-//        title: Text('Categories'),
-//        centerTitle: true,
-//        backgroundColor: Colors.grey[850],
-//        elevation: 0.0,
-//      ),
-//      body: Padding(
-//        padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0),
-//        child: Column(
-//          crossAxisAlignment: CrossAxisAlignment.start,
-//          children: <Widget>[
-//            Center(
-//              child: CircleAvatar(
-//                radius: 40.0,
-//                backgroundImage: AssetImage('assets/thumb.jpg'),
-//              ),
-//            ),
-//            Divider(
-//              color: Colors.grey[800],
-//              height: 60.0,
-//            ),
-//            Text(
-//              'NAME',
-//              style: TextStyle(
-//                color: Colors.grey,
-//                letterSpacing: 2.0,
-//              ),
-//            ),
-//
-//            SizedBox(height: 30.0),
-//            Row(
-//              children: <Widget>[
-//                Icon(
-//                  Icons.email,
-//                  color: Colors.grey[400],
-//                ),
-//                SizedBox(width: 10.0),
-//                Text(
-//                  'chun.li@thenetninja.co.uk',
-//                  style: TextStyle(
-//                    color: Colors.grey[400],
-//                    fontSize: 18.0,
-//                    letterSpacing: 1.0,
-//                  ),
-//                )
-//              ],
-//            ),
-//          ],
-//        ),
-//      ),
-//    );
-//  }
-//}
+
+
+
+
 
 
