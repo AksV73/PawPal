@@ -12,7 +12,7 @@ import 'dart:convert';
 void main()  {
   runApp(MyApp());
 }
-List data = [];
+List datas = [];
 
 class MyApp extends StatelessWidget {
 
@@ -107,8 +107,8 @@ class welcome extends StatelessWidget {
 
 class qu1 extends StatelessWidget {
  void addData(value){
-   data.add(value);
-   print(data);
+   datas.add(value);
+   print(datas);
  }
 
   @override
@@ -127,25 +127,25 @@ class qu1 extends StatelessWidget {
            children: <Widget>[
              FlatButton(
                  onPressed: (){
-                   addData("single");
+                  // addData("single");
                  },
                  child: Text("A single working individual")),
 
                 FlatButton(
                  onPressed: (){
-                   addData("family");
+                   //addData("family");
                  },
                  child: Text("A family with kids"),
                ),
              FlatButton(
                onPressed: (){
-                 addData("Couple");
+                // addData("Couple");
                },
                child: Text("A wroking couple"),
              ),
              FlatButton(
                onPressed: (){
-                 addData("elderly");
+                // addData("elderly");
                },
                child: Text("An elderly"),
              ),
@@ -172,8 +172,8 @@ class qu1 extends StatelessWidget {
 
 class qu2 extends StatelessWidget {
   void addData(value){
-    data.add(value);
-    print(data);
+    datas.add(value);
+    print(datas);
   }
 
   @override
@@ -192,7 +192,7 @@ class qu2 extends StatelessWidget {
                 children: <Widget>[
                   FlatButton(
                       onPressed: (){
-                        addData("apartment");
+                        addData("apartment ");
                       },
                       child: Text("An apartment")),
 
@@ -232,8 +232,8 @@ class qu2 extends StatelessWidget {
 
 class qu3 extends StatelessWidget {
   void addData(value){
-    data.add(value);
-    print(data);
+    datas.add(value);
+    print(datas);
   }
 
   @override
@@ -252,19 +252,19 @@ class qu3 extends StatelessWidget {
                 children: <Widget>[
                   FlatButton(
                       onPressed: (){
-                        addData("High");
+                        addData("high");
                       },
                       child: Text("Enough to blow the roof off!")),
 
                   FlatButton(
                     onPressed: (){
-                      addData("Low");
+                      addData("low");
                     },
                     child: Text("A woof once in a while "),
                   ),
                   FlatButton(
                     onPressed: (){
-                      addData("Moderate");
+                      addData("moderate");
                     },
                     child: Text("Somewhere in between the two"),
                   ),
@@ -292,8 +292,8 @@ class qu3 extends StatelessWidget {
 
 class qu4 extends StatelessWidget {
   void addData(value){
-    data.add(value);
-    print(data);
+    datas.add(value);
+    print(datas);
   }
 
   @override
@@ -352,8 +352,8 @@ class qu4 extends StatelessWidget {
 
 class qu5 extends StatelessWidget {
   void addData(value){
-    data.add(value);
-    print(data);
+    datas.add(value);
+    print(datas);
   }
 
   @override
@@ -412,8 +412,8 @@ class qu5 extends StatelessWidget {
 
 class qu6 extends StatelessWidget {
   void addData(value){
-    data.add(value);
-    print(data);
+    datas.add(value);
+    print(datas);
   }
 
   @override
@@ -472,8 +472,8 @@ class qu6 extends StatelessWidget {
 
 class qu7 extends StatelessWidget {
   void addData(value){
-    data.add(value);
-    print(data);
+    datas.add(value);
+    print(datas);
   }
 
   @override
@@ -527,8 +527,8 @@ class qu7 extends StatelessWidget {
 
 class qu8 extends StatelessWidget {
   void addData(value){
-    data.add(value);
-    print(data);
+    datas.add(value);
+    print(datas);
   }
 
   @override
@@ -582,8 +582,8 @@ class qu8 extends StatelessWidget {
 
 class qu9 extends StatelessWidget {
   void addData(value){
-    data.add(value);
-    print(data);
+    datas.add(value);
+    print(datas);
   }
 
   @override
@@ -640,7 +640,7 @@ class MyApps extends StatefulWidget {
 }
 
 
-class MyAppState extends  State<MyApps>  {
+class MyAppState extends  State<MyApps> {
   List data;
 
   @override
@@ -663,26 +663,46 @@ class MyAppState extends  State<MyApps>  {
                   return ListView.builder(
                     // Build the ListView
                     itemBuilder: (BuildContext context, int index) {
-                      return Card(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: <Widget>[
+                      String name  = new_data[index]['BreedName'];
+                      String group1 = new_data[index]['Group1'];
+                      String group2 = new_data[index]['Group2'];
+                      String weight = new_data[index]['MaleWtKg'];
+                      String watch = new_data[index]['Watchdog'];
+                      String house = new_data[index]['Type of home required'];
+                      String diet = new_data[index]['Eating habits'];
+                      String bark = new_data[index]['Barking ability'];
+                      String kid = new_data[index]['Kid friendly'];
+                      String indi = new_data[index]['Independence'];
+                      String activity = new_data[index]['activity level'];
+                      String shed = new_data[index]['Shedding'];
+                      if(house == datas[0] &&  bark == datas[1] && indi == datas[2] && activity == datas[3] && shed == datas[4] && kid == datas[5] && watch == datas[6] && diet == datas[7]) {
+                        return Card(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: <Widget>[
+                              Text("Name: " + name),
+                              Text("Group1: " + group1),
+                              Text("Group2: " + group2),
+                              Text(
+                                  "Weight: " + weight),
 
-                            Text("Name: " + new_data[index]['BreedName']),
-                            Text("Group1: " + new_data[index]['Group1']),
-                            Text("Group2: " + new_data[index]['Group2']),
-                            Text(
-                                "Weight: " + new_data[index]['MaleWtKg']),
-                            Text(
-                                "Temperment: " + new_data[index]['Temperment']),
-                            Text(
-                                "Watchdog: " + new_data[index]['Watchdog']),
-                            Text(
-                                "Home type: " + new_data[index]['Type of home required']),
-                            Text("Barking: " + new_data[index]['Barking ability'])
-                          ],
-                        ),
-                      );
+                              Text(
+                                  "Watchdog: " + watch),
+                              Text("Type of home required: " + house),
+                              Text('Eating habits: '+ diet),
+                              Text('Barking Ability: '+ bark),
+                              Text('Kid Friendly: '+ kid),
+                              Text('Independence '+ indi),
+                              Text('Activity level: '+ activity),
+                              Text('Shedding: '+ shed),
+
+                            ],
+                          ),
+                        );
+                      }
+                      else{
+                        return new Container();
+                      }
                     },
                     itemCount: new_data == null ? 0 : new_data.length,
                   );
@@ -693,22 +713,6 @@ class MyAppState extends  State<MyApps>  {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
