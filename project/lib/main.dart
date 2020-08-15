@@ -134,7 +134,7 @@ class MyAppState extends  State<MyApps> {
   List data;
 
   @override
-  Widget _newpage(String name, String group1, String group2, String weight, String watch, String house, String diet, String bark, String kid, String indi, String activity, String shed)
+  Widget _newpage(String name, String group1, String group2, String temper, String weight, String watch, String house, String diet, String bark, String kid, String indi, String activity, String shed)
   {
     return Scaffold(
       appBar: AppBar(
@@ -143,7 +143,7 @@ class MyAppState extends  State<MyApps> {
       body: Container(
         child: ListTile(
 
-         title: Text("Name: " + name + "\nGroup1: " + group1 + "\nGroup2: " + group2 + "\nWatchDog: " + watch +"\nWeight: "+ weight + "\nType of home required: "+ house +"\nEating habits: "+ diet + "\nKid Friendly" + kid + "\nActivity level: "+ activity + "\nShedding: "+ shed),
+         title: Text("Name: " + name + "\nGroup1: " + group1 + "\nGroup2: " + group2 + "\nTemperment: "+ temper + "\nWatchDog: " + watch +"\nWeight: "+ weight + "\nType of home required: "+ house +"\nEating habits: "+ diet + "\nKid Friendly: " + kid + "\nActivity level: "+ activity + "\nShedding: "+ shed),
 
       ),
       ),
@@ -197,6 +197,7 @@ class MyAppState extends  State<MyApps> {
                       String name  = new_data[index]['BreedName'];
                       String group1 = new_data[index]['Group1'];
                       String group2 = new_data[index]['Group2'];
+                      String temper = new_data[index]['Temperment'];
                       String weight = new_data[index]['MaleWtKg'];
                       String watch = new_data[index]['Watchdog'];
                       String house = new_data[index]['Type of home required'];
@@ -210,7 +211,7 @@ class MyAppState extends  State<MyApps> {
 
                             return FlatButton(
                               onPressed: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (context) => _newpage(name, group1, group2, weight, watch, house, diet, bark, kid, indi, activity, shed)));
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => _newpage(name, group1, group2, temper, weight, watch, house, diet, bark, kid, indi, activity, shed)));
                               },
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
