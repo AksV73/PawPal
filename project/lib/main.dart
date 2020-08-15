@@ -134,6 +134,32 @@ class MyAppState extends  State<MyApps> {
   List data;
 
   @override
+  Widget _newpage(String name, String group1, String group2, String weight, String watch, String house, String diet, String bark, String kid, String indi, String activity, String shed)
+  {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(name),
+      ),
+      body: Container(
+        child: ListTile(
+
+         title: Text("Name: " + name + "\nGroup1: " + group1 + "\nGroup2: " + group2 + "\nWatchDog: " + watch +"\nWeight: "+ weight + "\nType of home required: "+ house +"\nEating habits: "+ diet + "\nKid Friendly" + kid + "\nActivity level: "+ activity + "\nShedding: "+ shed),
+
+      ),
+      ),
+    );
+
+
+       
+
+     
+
+
+  }
+
+
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
@@ -182,25 +208,15 @@ class MyAppState extends  State<MyApps> {
                       String shed = new_data[index]['Shedding'];
                       if((house == datas[firstchoice] || bark == datas[firstchoice] || indi == datas[firstchoice]) && (activity == datas[secondchoice] || shed == datas[secondchoice] || kid == datas[secondchoice]) && (watch == datas[thirdchoice] || diet == datas[thirdchoice])) {
 
-                            return Card(
+                            return FlatButton(
+                              onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => _newpage(name, group1, group2, weight, watch, house, diet, bark, kid, indi, activity, shed)));
+                              },
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: <Widget>[
-                                  Text("Name: " + name),
-                                  Text("Group1: " + group1),
-                                  Text("Group2: " + group2),
-                                  Text(
-                                      "Weight: " + weight),
-
-                                  Text(
-                                      "Watchdog: " + watch),
-                                  Text("Type of home required: " + house),
-                                  Text('Eating habits: ' + diet),
-                                  Text('Barking Ability: ' + bark),
-                                  Text('Kid Friendly: ' + kid),
-                                  Text('Independence ' + indi),
-                                  Text('Activity level: ' + activity),
-                                  Text('Shedding: ' + shed),
+                                  Text(name),
+                                 
 
                                 ],
                               ),
@@ -222,6 +238,7 @@ class MyAppState extends  State<MyApps> {
 
 
 }
+
 
 
 
