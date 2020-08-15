@@ -74,6 +74,7 @@ class PawPals extends State<PawPal> {
 }
 
 class welcome extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,7 +91,9 @@ class welcome extends StatelessWidget {
                 color: Colors.blue,
                 child: Text('quiz'),
                 onPressed: () {
-              navigateToSubPage(context);
+
+                  datas = [];
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
              },
           )
         ],
@@ -99,9 +102,7 @@ class welcome extends StatelessWidget {
     );
 
   }
-  Future navigateToSubPage(context) async {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
-  }
+
 
 }
 
@@ -136,11 +137,26 @@ class MyAppState extends  State<MyApps> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Load local JSON file"),
+          backgroundColor: Colors.blue,
+          title: Text("Your Matches!"),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.home,
+                color: Colors.white,
+
+              ),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
+              },
+
+
+            ),
+          ],
         ),
         body: Container(
+
           child: Center(
-            // Use future builder and DefaultAssetBundle to load the local JSON file
             child: FutureBuilder(
                 future: DefaultAssetBundle
                     .of(context)
@@ -200,6 +216,7 @@ class MyAppState extends  State<MyApps> {
                   );
                 }),
           ),
+
         ));
   }
 
