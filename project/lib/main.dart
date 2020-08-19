@@ -2,6 +2,7 @@
 
 import 'dart:async';
 //import 'dart:html';
+import 'package:flutter/cupertino.dart';
 import 'package:project/quizfile.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
@@ -140,12 +141,16 @@ class MyAppState extends  State<MyApps> {
       appBar: AppBar(
         title: Text(name),
       ),
-      body: Container(
-        child: ListTile(
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            child: Image.asset('images/$name.jpg'),
+          ),
+          ListTile(
+            title: Text("Name: " + name + "\nGroup1: " + group1 + "\nGroup2: " + group2 + "\nTemperment: "+ temper + "\nWatchDog: " + watch +"\nWeight: "+ weight + "\nType of home required: "+ house +"\nEating habits: "+ diet + "\nKid Friendly: " + kid + "\nActivity level: "+ activity + "\nShedding: "+ shed),
+          ),
+        ],
 
-         title: Text("Name: " + name + "\nGroup1: " + group1 + "\nGroup2: " + group2 + "\nTemperment: "+ temper + "\nWatchDog: " + watch +"\nWeight: "+ weight + "\nType of home required: "+ house +"\nEating habits: "+ diet + "\nKid Friendly: " + kid + "\nActivity level: "+ activity + "\nShedding: "+ shed),
-
-      ),
       ),
     );
 
