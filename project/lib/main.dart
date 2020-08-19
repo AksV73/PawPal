@@ -9,6 +9,8 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
+import 'xdHome.dart';
+
 
 void main()  {
   runApp(MyApp());
@@ -16,9 +18,6 @@ void main()  {
 List datas = [];
 
 class MyApp extends StatelessWidget {
-
-
-
 
   @override
   Widget build(BuildContext context) {
