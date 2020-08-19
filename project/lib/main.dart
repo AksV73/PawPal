@@ -10,6 +10,8 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
+import 'xdHome.dart';
+
 
 void main()  {
   runApp(MyApp());
@@ -17,9 +19,6 @@ void main()  {
 List datas = [];
 
 class MyApp extends StatelessWidget {
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -46,31 +45,40 @@ class PawPals extends State<PawPal> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 3), ()
+    Timer(Duration(seconds: 10), ()
     {
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => welcome()));
     });
   }
-
-
-
+  List<Color> _colors = [Colors.blue, Colors.yellow];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       //backgroundColor: Colors.grey[900],
-      body: Center(
-        child: Text(
-          'PawPal',
-          style: TextStyle(
-              fontSize: 30.0,
-              fontWeight: FontWeight.bold
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: new LinearGradient(
+              colors: _colors,
+          ),
+          image: DecorationImage(
+              image: AssetImage('images/pawpal_dog.jpg'),
+              fit: BoxFit.cover
+          ),
+        ),
+        child: Center(
+          child: Text(
+            'PawPal',
+//          textAlign: TextAlign.right,
+            style: TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.bold
+
+            ),
           ),
         ),
       ),
-
       );
-
   }
 }
 
