@@ -155,7 +155,7 @@ class MyAppState extends  State<MyApps> {
             child: Image.asset('images/$name.jpg'),
           ),
           ListTile(
-            title: Text("Name: " + name + "\nGroup1: " + group1 + "\nGroup2: " + group2 + "\nTemperment: "+ temper + "\nWatchDog: " + watch +"\nWeight: "+ weight + "\nType of home required: "+ house +"\nEating habits: "+ diet + "\nKid Friendly: " + kid + "\nActivity level: "+ activity + "\nShedding: "+ shed),
+            title: Text("Name: " + name + "\nGroup1: " + group1 + "\nGroup2: " + group2 + "\nTemperment: "+ temper + "\nWatchDog: " + watch +"\nWeight: "+ weight +" kg" + "\nType of home required: "+ house + "\nKid Friendly: " + kid + "\nActivity level: "+ activity + "\nShedding: "+ shed),
           ),
         ],
 
