@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project/main.dart';
 
@@ -8,6 +9,8 @@ class qu1 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
+  List<Color> _colors = [Colors.blue, Colors.yellow];
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -16,6 +19,15 @@ class qu1 extends StatelessWidget {
         ),
         body: Column(
           children: <Widget>[
+            SizedBox(
+                width: 458.0,
+                height: 86.0,
+                child: Container(
+                  Text("pawpal"),
+                  Color: Colors.amber,
+                ),
+
+            ),
             FlatButton(
               onPressed: (){},
               child: Text("What kind of accommodation would you provide your dog ?"),
@@ -25,7 +37,6 @@ class qu1 extends StatelessWidget {
                   RaisedButton(
                       onPressed: (){
                         temp = "apartment ";
-
                       },
                       highlightColor: Colors.green,
                       child: Text("An apartment")),

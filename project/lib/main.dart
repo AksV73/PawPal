@@ -45,7 +45,7 @@ class PawPals extends State<PawPal> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 10), ()
+    Timer(Duration(seconds: 1), ()
     {
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => welcome()));
