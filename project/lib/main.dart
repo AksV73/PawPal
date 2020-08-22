@@ -191,7 +191,7 @@ class _welcomeState extends State<welcome> {
                     fontSize: 20,
                     color: const Color(0xff0e0e0e),
                     height: 0.8,
-                    //fontFamily: 'IndieFlower',
+                    //fontFamily: 'Indie',
                   ),
                   textAlign: TextAlign.left,
                 ),

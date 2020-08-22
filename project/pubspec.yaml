@@ -73,6 +73,7 @@ flutter:
          - asset: fonts/DancingScript-VariableFont_wght.ttf
          - asset: fonts/IndieFlower-Regular.ttf
          - asset: fonts/Schoolbell-Regular.ttf
+         - asset: fonts/Pacifico-Regular.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
