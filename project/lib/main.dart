@@ -2,6 +2,7 @@
 
 import 'dart:async';
 //import 'dart:html';
+//import 'dart:html';
 import 'package:flutter/cupertino.dart';
 import 'package:project/quizfile.dart';
 import 'package:flutter/services.dart' show rootBundle;
@@ -155,11 +156,13 @@ class MyAppState extends  State<MyApps> {
             child: Image.asset('images/$name.jpg'),
           ),
           ListTile(
-            title: Text("Name: " + name + "\nGroup1: " + group1 + "\nGroup2: " + group2 + "\nTemperment: "+ temper + "\nWatchDog: " + watch +"\nWeight: "+ weight +" kg" + "\nType of home required: "+ house + "\nKid Friendly: " + kid + "\nActivity level: "+ activity + "\nShedding: "+ shed),
+            title: Text("Name: " + name + "\nCharacteristics: " + group1 + ", " + group2 + "\nTemperment: "+ temper + "\nWatchDog: " + watch +"\nIndependence"+ indi+"\nWeight: "+ weight +" kg" + "\nType of home required: "+ house + "\nKid Friendly: " + kid + "\nActivity level: "+ activity + "\nShedding: "+ shed),
           ),
+          Image.asset('images/license.png'),
         ],
 
       ),
+
     );
 
 

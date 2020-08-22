@@ -524,7 +524,7 @@ class preferance1 extends StatelessWidget {
                       firstchoice = 2;
                     },
                     highlightColor: Colors.green,
-                    child: Text('Accompany '),
+                    child: Text('Independent nature '),
                   ),
 
                   RaisedButton(
