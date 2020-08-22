@@ -365,7 +365,7 @@ class MyAppState extends  State<MyApps> {
 
           ListTile(
 
-                title: Text("Name: " + name + "\nCharacteristics: " + group1 + ", " + group2 + "\nTemperment: "+ temper + "\nWatchDog: " + watch +"\nIndependence"+ indi+"\nWeight: "+ weight +" kg" + "\nType of home required: "+ house + "\nKid Friendly: " + kid + "\nActivity level: "+ activity + "\nShedding: "+ shed
+                title: Text("Name: " + name + "\nCharacteristics: " + group1 + ", " + group2 + "\nTemperment: "+ temper + "\nWatchDog: " + watch +"\nIndependence: "+ indi+"\nWeight: "+ weight +" kg" + "\nType of home required: "+ house + "\nKid Friendly: " + kid + "\nActivity level: "+ activity + "\nShedding: "+ shed
 
                 ),
 
