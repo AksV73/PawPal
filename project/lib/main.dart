@@ -1,9 +1,7 @@
 import 'dart:async';
-//import 'dart:html';
 import 'package:flutter/cupertino.dart';
 import 'package:project/quizfile.dart';
 import 'package:flutter/services.dart' show rootBundle;
-import 'welcome.dart'
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
@@ -34,14 +32,13 @@ class MyApp extends StatelessWidget {
 class PawPal extends StatefulWidget{
   @override
   PawPals createState() => PawPals();
-
 }
 
 class PawPals extends State<PawPal> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 1), ()
+    Timer(Duration(seconds: 200), ()
     {
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => welcome()));
@@ -52,24 +49,78 @@ class PawPals extends State<PawPal> {
   Widget build(BuildContext context) {
     return Scaffold(
       //backgroundColor: Colors.grey[900],
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('images/pawpal_dog.jpg'),
-              fit: BoxFit.cover
-          ),
-        ),
-        child: Center(
-          child: Text(
-            'PawPal',
-//          textAlign: TextAlign.right,
-            style: TextStyle(
-                fontSize: 30.0,
-                fontWeight: FontWeight.bold
-
+      body: Stack(
+        children: <Widget>[
+          Opacity(
+            opacity: 0.9,
+            child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('images/pawpal_dog.jpg'),
+                    fit: BoxFit.cover
+                ),
+              ),
             ),
           ),
-        ),
+          Opacity(
+            opacity: 0.3,
+            child: Container(
+              color: Colors.deepOrangeAccent,
+            )
+          ),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Container(
+                  child: IconButton(
+                    icon: Icon(Icons.pets),
+                    iconSize: 100.0,
+                    color: Colors.blue,
+                  ),
+                ),
+                Container(
+                  color: Colors.black45,
+                  height: 80.0,
+                  width: 200.0,
+                  child: Center(
+                    child: Text(
+                      'PawPal',
+                      style: TextStyle(
+                          fontSize: 50.0,
+                          fontWeight: FontWeight.bold
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 20.0,
+                ),
+                Container(
+                  color: Colors.black45,
+                  height: 80.0,
+                  width: 300.0,
+                  child: Center(
+                    child: Text(
+                      'Partners in Pethood',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.w100,
+                        fontStyle: FontStyle.italic
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 150.0,
+                )
+
+              ],
+            ),
+          ),
+        ],
+
       ),
       );
   }
@@ -126,7 +177,7 @@ class welcome extends StatelessWidget {
            RaisedButton(
                padding: EdgeInsets.all(20.0),
                textColor: Colors.black,
-               color: Colors.deepOrangeAccent
+               color: Colors.deepOrangeAccent,
                child: Text('Take the breed selector quiz!'),
                onPressed: () {
                  datas = [];
@@ -144,7 +195,7 @@ class welcome extends StatelessWidget {
             ) ,
             Text(
               'At PawPal, we believe in that magical bond between people and their pets, and that together we can live richer, happier lives. Our pets are more than just pets, they\'re our best friends, closest confidants and family members. Owning a dog is hugely rewarding, but it\'s also a big responsibility. You may be wondering which dog breed you should get, which is why we\'re here to help you find a breed that suits your unique lifestyle to ensure that you can both share happy adventures together.',
-              tyle: TextStyle(
+              style: TextStyle(
 //                fontFamily: 'Gabriola',
     fontSize: 20,
     color: const Color(0xff0e0e0e),
@@ -155,7 +206,7 @@ class welcome extends StatelessWidget {
     RaisedButton(
     padding: EdgeInsets.all(20.0),
     textColor: Colors.black,
-    color: Colors.deepOrangeAccent
+    color: Colors.deepOrangeAccent,
     child: Text('Take the breed selector quiz!'),
     onPressed: () {
     datas = [];
@@ -217,12 +268,6 @@ class MyAppState extends  State<MyApps> {
 
       ),
     );
-
-
-       
-
-     
-
 
   }
 
