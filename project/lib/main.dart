@@ -1,16 +1,12 @@
-//import 'dart:js';
-
 import 'dart:async';
 //import 'dart:html';
 import 'package:flutter/cupertino.dart';
 import 'package:project/quizfile.dart';
 import 'package:flutter/services.dart' show rootBundle;
-
-
+import 'welcome.dart'
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
-import 'xdHome.dart';
 
 
 void main()  {
@@ -85,25 +81,88 @@ class welcome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Welcome'),
+          backgroundColor: Colors.grey,
+          title: Text(
+            "Pawpal",
+            textAlign: TextAlign.start,
+          ),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.pets),
+              iconSize: 30.0,
+            ),
+            IconButton(
+              icon: Icon(Icons.home),
+              iconSize: 30.0,
+              tooltip: 'Go to Home',
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
+              },
+            ),
+          ],
         ),
-        body: Center(
-         child: Column(
-           mainAxisAlignment: MainAxisAlignment.center,
-           children: <Widget>[
-            Text('Click button to take quiz'),
-            RaisedButton(
-                textColor: Colors.white,
-                color: Colors.blue,
-                child: Text('quiz'),
-                onPressed: () {
+        body: Column(
+          children: <Widget>[
+            Container(
+              height: 60.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('images/1_1.jpg'),
+                      fit: BoxFit.cover
+                  ),
+                )
+            ),
+            Text(
+              'Welcome everyone to the world of dogs \nWhere everything is about drooling and paws\n\nAnd a woof every now and then\nWhen a hooman rubs my tummy and go amen\n\nAnd a wag in my tail \nWhen I play with a butterfly and garden snail\n\nAnd I lick to my heart’s content \nA big bowl of peanut butter with my vet’s content \n\nAnd I run quickly towards the ball\nWhen my hooman said, “Fetch! Before the night befalls!”.\n',
+              style: TextStyle(
+//                fontFamily: 'Gabriola',
+                fontSize: 20,
+                color: const Color(0xff0e0e0e),
+                height: 0.75,
+              ),
+              textAlign: TextAlign.right,
+            ),
 
-                  datas = [];
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
-             },
-          )
+           RaisedButton(
+               padding: EdgeInsets.all(20.0),
+               textColor: Colors.black,
+               color: Colors.deepOrangeAccent
+               child: Text('Take the breed selector quiz!'),
+               onPressed: () {
+                 datas = [];
+                 Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
+            },
+         ),
+            Container(
+            height: 60.0,
+            decoration: BoxDecoration(
+            image: DecorationImage(
+            image: AssetImage('images/1_1.jpg'),
+            fit: BoxFit.cover
+            ),
+              )
+            ) ,
+            Text(
+              'At PawPal, we believe in that magical bond between people and their pets, and that together we can live richer, happier lives. Our pets are more than just pets, they\'re our best friends, closest confidants and family members. Owning a dog is hugely rewarding, but it\'s also a big responsibility. You may be wondering which dog breed you should get, which is why we\'re here to help you find a breed that suits your unique lifestyle to ensure that you can both share happy adventures together.',
+              tyle: TextStyle(
+//                fontFamily: 'Gabriola',
+    fontSize: 20,
+    color: const Color(0xff0e0e0e),
+    height: 0.75,
+    ),
+    textAlign: TextAlign.right,
+              ) ,
+    RaisedButton(
+    padding: EdgeInsets.all(20.0),
+    textColor: Colors.black,
+    color: Colors.deepOrangeAccent
+    child: Text('Take the breed selector quiz!'),
+    onPressed: () {
+    datas = [];
+    Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
+    },
+    ),
         ],
-        ),
         ),
     );
 

@@ -1,5 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:adobe_xd/pinned.dart';
+import 'package:project/main.dart';
 
 class xdGooglePixel3XL1 extends StatelessWidget {
   xdGooglePixel3XL1({

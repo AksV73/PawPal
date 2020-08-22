@@ -695,7 +695,7 @@ class preferance3 extends StatelessWidget {
                   },
                   color: Colors.red,
                   highlightColor: Colors.green,
-                  child: Text('Next'),
+                  child: Text('Results!'),
                 )
 
               ],
