@@ -48,69 +48,74 @@ class _qu1State extends State<qu1> {
 //
 //            )
 //          ),
-          child: Column(
-            children: <Widget>[
-              Container(
-                padding: EdgeInsets.all(15.0),
-                height: 70.0,
-                width: devwidth - 10.0,
-                color: Colors.white24,
-                child: Text(
-                    'Question 1',
-                    style: TextStyle( fontSize: 30.0 ),
-                    textAlign: TextAlign.center,
-                ),
-              ),
-
-              Container(
-                padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
-                height: 300.0,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: _colors,
+          child: Card(
+            child: Container(
+              padding: EdgeInsets.all(10.0),
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    padding: EdgeInsets.all(15.0),
+                    height: 70.0,
+                    width: devwidth - 10.0,
+                    color: Colors.white24,
+                    child: Text(
+                        'Question 1',
+                        style: TextStyle( fontSize: 30.0 ),
+                        textAlign: TextAlign.center,
+                    ),
                   ),
-                ),
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
-                      child: Text(
-                          "What kind of accommodation would you provide your dog ?",
-                        style: TextStyle( fontSize: 20.0),
+
+                  Container(
+                    padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
+                    height: 300.0,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: _colors,
                       ),
                     ),
-                    RaisedButton(
-                        onPressed: (){
-                          temp = "apartment ";
-                        },
-                        highlightColor: Colors.green,
-                        child: Text("An apartment")),
-                    RaisedButton(
-                      onPressed: (){
-                        temp = "independent house";
-                      },
-                      highlightColor: Colors.green,
-                      child: Text("An Independent house"),
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
+                          child: Text(
+                              "What kind of accommodation would you provide your dog ?",
+                            style: TextStyle( fontSize: 20.0),
+                          ),
+                        ),
+                        RaisedButton(
+                            onPressed: (){
+                              temp = "apartment ";
+                            },
+                            highlightColor: Colors.green,
+                            child: Text("An apartment")),
+                        RaisedButton(
+                          onPressed: (){
+                            temp = "independent house";
+                          },
+                          highlightColor: Colors.green,
+                          child: Text("An Independent house"),
+                        ),
+                        RaisedButton(
+                          onPressed: (){ temp = "ranch"; },
+                          highlightColor: Colors.green,
+                          child: Text("A farmhouse/ranch"),
+                        ),
+                      ],
                     ),
-                    RaisedButton(
-                      onPressed: (){ temp = "ranch"; },
-                      highlightColor: Colors.green,
-                      child: Text("A farmhouse/ranch"),
-                    ),
-                  ],
-                ),
+                  ),
+                  RaisedButton(
+                    textColor: Colors.white,
+                    color: Colors.blue,
+                    highlightColor: Colors.red,
+                    child: Text('Next'),
+                    onPressed: () {
+                      addData(temp);
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => qu2()));
+                    },
+                  )
+                ],
               ),
-              RaisedButton(
-                textColor: Colors.white,
-                color: Colors.blue,
-                highlightColor: Colors.red,
-                child: Text('Next'),
-                onPressed: () {
-                  addData(temp);
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => qu2()));
-                },
-              )
-            ],
+            ),
           ),
         )
     );

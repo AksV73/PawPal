@@ -38,7 +38,7 @@ class PawPals extends State<PawPal> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 200), ()
+    Timer(Duration(seconds: 1), ()
     {
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => welcome()));
@@ -126,8 +126,13 @@ class PawPals extends State<PawPal> {
   }
 }
 
-class welcome extends StatelessWidget {
+class welcome extends StatefulWidget {
 
+  @override
+  _welcomeState createState() => _welcomeState();
+}
+
+class _welcomeState extends State<welcome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -152,74 +157,154 @@ class welcome extends StatelessWidget {
             ),
           ],
         ),
-        body: Column(
-          children: <Widget>[
-            Container(
-              height: 60.0,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage('images/1_1.jpg'),
-                      fit: BoxFit.cover
-                  ),
-                )
-            ),
-            Text(
-              'Welcome everyone to the world of dogs \nWhere everything is about drooling and paws\n\nAnd a woof every now and then\nWhen a hooman rubs my tummy and go amen\n\nAnd a wag in my tail \nWhen I play with a butterfly and garden snail\n\nAnd I lick to my heart’s content \nA big bowl of peanut butter with my vet’s content \n\nAnd I run quickly towards the ball\nWhen my hooman said, “Fetch! Before the night befalls!”.\n',
-              style: TextStyle(
-//                fontFamily: 'Gabriola',
-                fontSize: 20,
-                color: const Color(0xff0e0e0e),
-                height: 0.75,
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.all(10.0),
+                height: MediaQuery.of(context).size.height/3,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('images/1_1.jpg'),
+                        fit: BoxFit.fitHeight
+                    ),
+                  )
               ),
-              textAlign: TextAlign.right,
-            ),
-
-           RaisedButton(
-               padding: EdgeInsets.all(20.0),
-               textColor: Colors.black,
-               color: Colors.deepOrangeAccent,
-               child: Text('Take the breed selector quiz!'),
-               onPressed: () {
-                 datas = [];
-                 Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
-            },
-         ),
-            Container(
-            height: 60.0,
-            decoration: BoxDecoration(
-            image: DecorationImage(
-            image: AssetImage('images/1_1.jpg'),
-            fit: BoxFit.cover
-            ),
-              )
-            ) ,
-            Text(
-              'At PawPal, we believe in that magical bond between people and their pets, and that together we can live richer, happier lives. Our pets are more than just pets, they\'re our best friends, closest confidants and family members. Owning a dog is hugely rewarding, but it\'s also a big responsibility. You may be wondering which dog breed you should get, which is why we\'re here to help you find a breed that suits your unique lifestyle to ensure that you can both share happy adventures together.',
-              style: TextStyle(
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  'Welcome everyone to the world of dogs \nWhere everything is about drooling and paws\n\nAnd a woof every now and then\nWhen a hooman rubs my tummy and go amen\n\nAnd a wag in my tail \nWhen I play with a butterfly and garden snail\n\nAnd I lick to my heart’s content \nA big bowl of peanut butter with my vet’s content \n\nAnd I run quickly towards the ball\nWhen my hooman said, “Fetch! Before the night befalls!”.\n',
+                  style: TextStyle(
 //                fontFamily: 'Gabriola',
-    fontSize: 20,
-    color: const Color(0xff0e0e0e),
-    height: 0.75,
-    ),
-    textAlign: TextAlign.right,
+                    fontSize: 20,
+                    color: const Color(0xff0e0e0e),
+                    height: 0.8,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+             Padding(
+               padding: const EdgeInsets.all(10.0),
+               child: RaisedButton(
+                   padding: EdgeInsets.all(20.0),
+                   textColor: Colors.black,
+                   color: Colors.deepOrangeAccent,
+                   child: Text('Take the breed selector quiz!'),
+                   onPressed: () {
+                     datas = [];
+                     Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
+                },
+           ),
+             ),
+              Container(
+                  padding: EdgeInsets.all(10.0),
+                  height: MediaQuery.of(context).size.height/3,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('images/1_2.jpg'),
+                        fit: BoxFit.fitHeight
+                    ),
+                  )
+              ),
+              Container(
+                height: 20.0,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  'At PawPal, we believe in that magical bond between people and their pets, and that together we can live richer, happier lives. Our pets are more than just pets, they\'re our best friends, closest confidants and family members. Owning a dog is hugely rewarding, but it\'s also a big responsibility. You may be wondering which dog breed you should get, which is why we\'re here to help you find a breed that suits your unique lifestyle to ensure that you can both share happy adventures together.',
+                  style: TextStyle(
+//                fontFamily: 'Gabriola',
+                    fontSize: 20,
+                    color: const Color(0xff0e0e0e),
+                     height: 0.9,
+                     ),
+                   textAlign: TextAlign.center,
+                  ),
               ) ,
-    RaisedButton(
-    padding: EdgeInsets.all(20.0),
-    textColor: Colors.black,
-    color: Colors.deepOrangeAccent,
-    child: Text('Take the breed selector quiz!'),
-    onPressed: () {
-    datas = [];
-    Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
-    },
-    ),
-        ],
+              Container(
+                height: 20.0,
+              ),
+              Container(
+                  padding: EdgeInsets.all(10.0),
+                  height: MediaQuery.of(context).size.height/3,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('images/1_3.jpg'),
+                        fit: BoxFit.fitHeight
+                    ),
+                  )
+              ),
+              Container(
+                height: 20.0,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  'We’ve brought together experts in pet nutrition, health and behavior, ensuring we ask the right questions, to help you find the right dog for you.',
+                  style: TextStyle(
+//                fontFamily: 'Gabriola',
+                    fontSize: 20,
+                    color: const Color(0xff0e0e0e),
+                    height: 0.9,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ) ,
+              Container(
+                height: 20.0,
+              ),
+              Container(
+                  padding: EdgeInsets.all(10.0),
+                  height: MediaQuery.of(context).size.height/3,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('images/1_4.jpg'),
+                        fit: BoxFit.fitHeight
+                    ),
+                  )
+              ),
+              Container(
+                height: 20.0,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  'We understand that the bond between people and their dogs differs from one household to another, that\'s why we\'ll show you which breeds seem most suited to your preferences, as well as those which might not be. Our dog breed selector tool can help steer you in the right direction, leading you closer to your perfect match.',
+                  style: TextStyle(
+//                fontFamily: 'Gabriola',
+                    fontSize: 20,
+                    color: const Color(0xff0e0e0e),
+                    height: 0.9,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ) ,
+              Container(
+                height: 20.0,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: RaisedButton(
+                  padding: EdgeInsets.all(20.0),
+                  textColor: Colors.black,
+                  color: Colors.deepOrangeAccent,
+                  child: Text('Take the breed selector quiz!'),
+                  onPressed: () {
+                    datas = [];
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
+                  },
+                ),
+              ),
+              Container(
+                height: 20.0,
+              ),
+          ],
+          ),
         ),
     );
 
   }
-
-
 }
 
 
