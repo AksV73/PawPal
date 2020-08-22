@@ -58,9 +58,6 @@ class PawPals extends State<PawPal> {
       //backgroundColor: Colors.grey[900],
       body: Container(
         decoration: BoxDecoration(
-          gradient: new LinearGradient(
-              colors: _colors,
-          ),
           image: DecorationImage(
               image: AssetImage('images/pawpal_dog.jpg'),
               fit: BoxFit.cover

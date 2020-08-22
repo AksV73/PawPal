@@ -2,78 +2,118 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project/main.dart';
 
+class qu1 extends StatefulWidget {
+  @override
+  _qu1State createState() => _qu1State();
+}
 
-class qu1 extends StatelessWidget {
+class _qu1State extends State<qu1> {
   void addData(value){
     datas.add(value);
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.blue, Colors.yellow];
-
+  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context)
+  {
+    var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
         appBar: AppBar(
-          title: Text("Question 1"),
-        ),
-        body: Column(
-          children: <Widget>[
-            SizedBox(
-                width: 458.0,
-                height: 86.0,
-                child: Container(
-                  Text("pawpal"),
-                  Color: Colors.amber,
-                ),
-
+          backgroundColor: Colors.grey,
+          title: Text(
+            "Pawpal",
+            textAlign: TextAlign.start,
+          ),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.pets),
+              iconSize: 30.0,
             ),
-            FlatButton(
-              onPressed: (){},
-              child: Text("What kind of accommodation would you provide your dog ?"),
-            ),
-            Column(
-                children: <Widget>[
-                  RaisedButton(
-                      onPressed: (){
-                        temp = "apartment ";
-                      },
-                      highlightColor: Colors.green,
-                      child: Text("An apartment")),
-
-                  RaisedButton(
-                    onPressed: (){
-                      temp = "independent house";
-                    },
-                    highlightColor: Colors.green,
-                    child: Text("An Independent house"),
-                  ),
-                  RaisedButton(
-                    onPressed: (){
-                      temp = "ranch";
-                    },
-                    highlightColor: Colors.green,
-                    child: Text("A farmhouse/ranch"),
-                  ),
-
-                  RaisedButton(
-                    textColor: Colors.white,
-                    color: Colors.blue,
-                    highlightColor: Colors.red,
-                    child: Text('next'),
-                    onPressed: () {
-
-                      addData(temp);
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => qu2()));
-                    },
-                  )
-                ]
+            IconButton(
+              icon: Icon(Icons.home),
+              iconSize: 30.0,
+              tooltip: 'Go to Home',
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
+              },
             ),
           ],
+        ),
+        body: Container(
+//          decoration: BoxDecoration(
+//            image: DecorationImage(
+//              image: AssetImage('images/1_1.jpg'),
+//              fit: BoxFit.fill,
+//
+//            )
+//          ),
+          child: Column(
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.all(15.0),
+                height: 70.0,
+                width: devwidth - 10.0,
+                color: Colors.white24,
+                child: Text(
+                    'Question 1',
+                    style: TextStyle( fontSize: 30.0 ),
+                    textAlign: TextAlign.center,
+                ),
+              ),
+
+              Container(
+                padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
+                height: 300.0,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: _colors,
+                  ),
+                ),
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
+                      child: Text(
+                          "What kind of accommodation would you provide your dog ?",
+                        style: TextStyle( fontSize: 20.0),
+                      ),
+                    ),
+                    RaisedButton(
+                        onPressed: (){
+                          temp = "apartment ";
+                        },
+                        highlightColor: Colors.green,
+                        child: Text("An apartment")),
+                    RaisedButton(
+                      onPressed: (){
+                        temp = "independent house";
+                      },
+                      highlightColor: Colors.green,
+                      child: Text("An Independent house"),
+                    ),
+                    RaisedButton(
+                      onPressed: (){ temp = "ranch"; },
+                      highlightColor: Colors.green,
+                      child: Text("A farmhouse/ranch"),
+                    ),
+                  ],
+                ),
+              ),
+              RaisedButton(
+                textColor: Colors.white,
+                color: Colors.blue,
+                highlightColor: Colors.red,
+                child: Text('Next'),
+                onPressed: () {
+                  addData(temp);
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => qu2()));
+                },
+              )
+            ],
+          ),
         )
-
     );
-
   }
 }
 
