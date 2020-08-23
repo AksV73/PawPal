@@ -1,4 +1,8 @@
 import 'dart:async';
+
+//import 'dart:html';
+//import 'dart:html';
+
 import 'package:flutter/cupertino.dart';
 import 'package:project/quizfile.dart';
 import 'package:flutter/services.dart' show rootBundle;
@@ -17,6 +21,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'DancingScript'
+      ),
       home: PawPal(),
       routes: <String, WidgetBuilder> {
         '/welcome page' : (context) => welcome(),
@@ -38,7 +45,7 @@ class PawPals extends State<PawPal> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 1), ()
+    Timer(Duration(seconds: 3), ()
     {
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => welcome()));
@@ -74,6 +81,7 @@ class PawPals extends State<PawPal> {
               children: <Widget>[
                 Container(
                   child: IconButton(
+                    onPressed: (){},
                     icon: Icon(Icons.pets),
                     iconSize: 100.0,
                     color: Colors.blue,
@@ -139,10 +147,14 @@ class _welcomeState extends State<welcome> {
           backgroundColor: Colors.grey,
           title: Text(
             "Pawpal",
+            style: TextStyle(
+              fontFamily: 'DancingScript'
+            ),
             textAlign: TextAlign.start,
           ),
           actions: <Widget>[
             IconButton(
+              onPressed: (){},
               icon: Icon(Icons.pets),
               iconSize: 30.0,
             ),
@@ -172,12 +184,13 @@ class _welcomeState extends State<welcome> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'Welcome everyone to the world of dogs \nWhere everything is about drooling and paws\n\nAnd a woof every now and then\nWhen a hooman rubs my tummy and go amen\n\nAnd a wag in my tail \nWhen I play with a butterfly and garden snail\n\nAnd I lick to my heart’s content \nA big bowl of peanut butter with my vet’s content \n\nAnd I run quickly towards the ball\nWhen my hooman said, “Fetch! Before the night befalls!”.\n',
+                  ' \"Welcome everyone to the world of dogs, \nWhere everything is about drooling and paws,\n\nAnd a woof every now and then,\nWhen a hooman rubs my tummy and I go Amen! \n\nAnd a wag in my tail, \nWhen I play with a butterfly & a garden snail,\n\nAnd I lick to my heart’s content, \nA big bowl of peanut butter with my vet’s consent; \n\nAnd I run quickly towards the ball,\nWhen my hooman said, “Fetch! Before the night falls!”. \"\n -poetry of a pawpal\n',
                   style: TextStyle(
 //                fontFamily: 'Gabriola',
                     fontSize: 20,
                     color: const Color(0xff0e0e0e),
                     height: 0.8,
+                    //fontFamily: 'Indie',
                   ),
                   textAlign: TextAlign.left,
                 ),
@@ -188,7 +201,9 @@ class _welcomeState extends State<welcome> {
                    padding: EdgeInsets.all(20.0),
                    textColor: Colors.black,
                    color: Colors.deepOrangeAccent,
-                   child: Text('Take the breed selector quiz!'),
+                   child: Text(
+                       'Take the breed selector quiz!'),
+
                    onPressed: () {
                      datas = [];
                      Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
@@ -211,9 +226,9 @@ class _welcomeState extends State<welcome> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'At PawPal, we believe in that magical bond between people and their pets, and that together we can live richer, happier lives. Our pets are more than just pets, they\'re our best friends, closest confidants and family members. Owning a dog is hugely rewarding, but it\'s also a big responsibility. You may be wondering which dog breed you should get, which is why we\'re here to help you find a breed that suits your unique lifestyle to ensure that you can both share happy adventures together.',
+                  'At PawPal, we believe in the magical bond between pet parents and their pets. Pets end up becoming our best friends, closest confidants and family members. Adopting a dog is hugely rewarding, but it\'s also a big responsibility. You might be wondering which dog breed suits you the best? Hence we are here to help you find a breed that suits your personality, temperament  and social environment to ensure that both of you can share exciting adventures together!',
                   style: TextStyle(
-//                fontFamily: 'Gabriola',
+                  fontFamily: 'DancingScript',
                     fontSize: 20,
                     color: const Color(0xff0e0e0e),
                      height: 0.9,
@@ -240,9 +255,9 @@ class _welcomeState extends State<welcome> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'We’ve brought together experts in pet nutrition, health and behavior, ensuring we ask the right questions, to help you find the right dog for you.',
+                  'We’ve sought experts in the field of pet nutrition, health and behavior, to ensure that you find the right pawpal.',
                   style: TextStyle(
-//                fontFamily: 'Gabriola',
+                  fontFamily: 'DancingScript',
                     fontSize: 20,
                     color: const Color(0xff0e0e0e),
                     height: 0.9,
@@ -269,9 +284,9 @@ class _welcomeState extends State<welcome> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'We understand that the bond between people and their dogs differs from one household to another, that\'s why we\'ll show you which breeds seem most suited to your preferences, as well as those which might not be. Our dog breed selector tool can help steer you in the right direction, leading you closer to your perfect match.',
+                  'We understand that the bond between pet parents and their dogs differ from one household to another. Therefore we will show you dog breeds that seem the most suited to your preferences. Our dog breed selector tool can help steer you in the right direction, leading you closer to your perfect match.',
                   style: TextStyle(
-//                fontFamily: 'Gabriola',
+                  fontFamily: 'DancingScript',
                     fontSize: 20,
                     color: const Color(0xff0e0e0e),
                     height: 0.9,
@@ -342,15 +357,23 @@ class MyAppState extends  State<MyApps> {
       ),
       body: Column(
         children: <Widget>[
+
           Expanded(
             child: Image.asset('images/$name.jpg'),
           ),
+
           ListTile(
-            title: Text("Name: " + name + "\nGroup1: " + group1 + "\nGroup2: " + group2 + "\nTemperment: "+ temper + "\nWatchDog: " + watch +"\nWeight: "+ weight +" kg" + "\nType of home required: "+ house + "\nKid Friendly: " + kid + "\nActivity level: "+ activity + "\nShedding: "+ shed),
-          ),
+
+                title: Text("Name: " + name + "\nCharacteristics: " + group1 + ", " + group2 + "\nTemperment: "+ temper + "\nWatchDog: " + watch +"\nIndependence: "+ indi+"\nWeight: "+ weight +" kg" + "\nType of home required: "+ house + "\nKid Friendly: " + kid + "\nActivity level: "+ activity + "\nShedding: "+ shed
+
+                ),
+
+              ),
+          Image.asset('images/license.png'),
         ],
 
       ),
+
     );
 
   }
@@ -362,7 +385,11 @@ class MyAppState extends  State<MyApps> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blue,
-          title: Text("Your Matches!"),
+          title: Text("Your Matches!",
+          style: TextStyle(
+              fontFamily: 'DancingScript'
+          ),
+        ),
           actions: <Widget>[
             IconButton(
               icon: Icon(

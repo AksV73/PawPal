@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project/main.dart';
+import 'package:project/quizfile.dart';
 
 void main()  {
   runApp(MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: adobe(),
-      },
+
     );
   }
 }
@@ -20,12 +21,12 @@ class adobe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        sizedBox(
-          height: 586.0,
-          width 200.0,
-          child: Text('Hello')
-        ),
-    )
+       // sizedBox(
+         // height: 586.0,
+          //width: 200.0,
+          //child: Text('Hello')
+        //),
+    );
   }
 }
 
@@ -124,9 +125,10 @@ class Ques extends StatelessWidget {
         ),
         actions: <Widget>[
           IconButton(
+            onPressed: (){},
             icon: Icon(Icons.pets),
             iconSize: 10.0,
-          )
+          ),
           IconButton(
               icon: Icon(Icons.home),
               iconSize: 10.0,
@@ -161,6 +163,7 @@ class qu1 extends StatelessWidget {
           ),
           actions: <Widget>[
             IconButton(
+              onPressed: (){},
               icon: Icon(Icons.pets),
               iconSize: 30.0,
             ),

@@ -27,6 +27,7 @@ class _qu1State extends State<qu1> {
           ),
           actions: <Widget>[
             IconButton(
+              onPressed: (){},
               icon: Icon(Icons.pets),
               iconSize: 30.0,
             ),
@@ -580,7 +581,7 @@ class preferance1 extends StatelessWidget {
                       firstchoice = 2;
                     },
                     highlightColor: Colors.green,
-                    child: Text('Accompany '),
+                    child: Text('Independent nature '),
                   ),
 
                   RaisedButton(
