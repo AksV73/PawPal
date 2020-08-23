@@ -1287,7 +1287,7 @@ class preferance1 extends StatelessWidget {
                               )),
                           RaisedButton(
                             onPressed: (){
-                              firstchoice = 0;
+                              firstchoice = 1;
                             },
                             splashColor: Colors.green,
                             child: Text("Barking ability",
@@ -1295,7 +1295,7 @@ class preferance1 extends StatelessWidget {
                             ),
                           ),
                           RaisedButton(
-                            onPressed: (){ firstchoice = 0; },
+                            onPressed: (){ firstchoice = 2; },
                             splashColor: Colors.green,
                             child: Text("Independent nature",
                               style: TextStyle( fontFamily: 'Roboto'),
@@ -1445,7 +1445,9 @@ class preferance2 extends StatelessWidget {
                             ),
                           ),
                           RaisedButton(
-                            onPressed: (){ secondchoice = 4; },
+                            onPressed: (){
+                              secondchoice = 5;
+                              },
                             splashColor: Colors.green,
                             child: Text("Kids",
                               style: TextStyle( fontFamily: 'Roboto'),
