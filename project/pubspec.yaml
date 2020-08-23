@@ -53,6 +53,7 @@ flutter:
       - dataasset/dogbreeddata.json
 
       - images/
+      - images/paw-trail.jpg
 
 
 
@@ -68,18 +69,23 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-     - family: DancingScript
-       fonts:
-         - asset: fonts/DancingScript-VariableFont_wght.ttf
-         - asset: fonts/IndieFlower-Regular.ttf
-         - asset: fonts/Schoolbell-Regular.ttf
-         - asset: fonts/Pacifico-Regular.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
+    - family: DancingScript
+      fonts:
+        - asset: fonts/DancingScript-VariableFont_wght.ttf
+
+    - family: Raleway
+      fonts:
+        - asset: fonts/Raleway-Regular.ttf
+
+    - family: Courgette
+      fonts:
+        - asset: fonts/Courgette-Regular.ttf
+
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto-Regular.ttf
+
+
+
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

@@ -2,12 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project/main.dart';
 
-class qu1 extends StatefulWidget {
-  @override
-  _qu1State createState() => _qu1State();
-}
 
-class _qu1State extends State<qu1> {
+class qu1 extends StatelessWidget {
   void addData(value){
     datas.add(value);
     print(datas);
@@ -23,12 +19,16 @@ class _qu1State extends State<qu1> {
           backgroundColor: Colors.grey,
           title: Text(
             "Pawpal",
+            style: TextStyle(
+              fontFamily: 'Courgette',
+            ),
             textAlign: TextAlign.start,
           ),
           actions: <Widget>[
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
+              color: Colors.black,
               iconSize: 30.0,
             ),
             IconButton(
@@ -61,7 +61,10 @@ class _qu1State extends State<qu1> {
                     color: Colors.white24,
                     child: Text(
                         'Question 1',
-                        style: TextStyle( fontSize: 30.0 ),
+                        style: TextStyle(
+                            fontSize: 30.0,
+                          fontFamily: 'DancingScript',
+                        ),
                         textAlign: TextAlign.center,
                     ),
                   ),
@@ -80,7 +83,7 @@ class _qu1State extends State<qu1> {
                           padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                           child: Text(
                               "What kind of accommodation would you provide your dog ?",
-                            style: TextStyle( fontSize: 20.0),
+                            style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', fontStyle: FontStyle.italic),
                           ),
                         ),
                         RaisedButton(
@@ -88,32 +91,64 @@ class _qu1State extends State<qu1> {
                               temp = "apartment ";
                             },
                             highlightColor: Colors.green,
-                            child: Text("An apartment")),
+                            child: Text("An apartment",
+                            style: TextStyle( fontFamily: 'Roboto'),
+                            )),
                         RaisedButton(
                           onPressed: (){
                             temp = "independent house";
                           },
                           highlightColor: Colors.green,
-                          child: Text("An Independent house"),
+                          child: Text("An Independent house",
+                            style: TextStyle( fontFamily: 'Roboto'),
+                          ),
                         ),
                         RaisedButton(
                           onPressed: (){ temp = "ranch"; },
                           highlightColor: Colors.green,
-                          child: Text("A farmhouse/ranch"),
+                          child: Text("A farmhouse/ranch",
+                            style: TextStyle( fontFamily: 'Roboto'),
+                          ),
                         ),
                       ],
                     ),
                   ),
-                  RaisedButton(
-                    textColor: Colors.white,
-                    color: Colors.blue,
-                    highlightColor: Colors.red,
-                    child: Text('Next'),
-                    onPressed: () {
-                      addData(temp);
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => qu2()));
-                    },
-                  )
+                  Container(
+                    height: 50.0,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: RaisedButton(
+                      elevation: 60.0 ,
+                      textColor: Colors.white,
+                      color: Colors.black54,
+                      highlightColor: Colors.red,
+                      child: Text(
+                          'Next',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontFamily: 'DancingScript'
+                        ),
+                      ),
+                      onPressed: () {
+                        addData(temp);
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => qu2()));
+                      },
+                    ),
+                  ),
+                 Container(
+                   height: 100.0,
+                   decoration: BoxDecoration(
+                       image: DecorationImage(
+                         image: AssetImage('images/paw-trail.jpg'),
+                         fit: BoxFit.fill,
+                   ),
+                 ),
+                 ),
+                  Text(
+                'Partners in pethood',
+                    style: TextStyle( fontFamily: 'Courgette'),
+              )
                 ],
               ),
             ),
