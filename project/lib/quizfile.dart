@@ -42,13 +42,6 @@ class qu1 extends StatelessWidget {
           ],
         ),
         body: Container(
-//          decoration: BoxDecoration(
-//            image: DecorationImage(
-//              image: AssetImage('images/1_1.jpg'),
-//              fit: BoxFit.fill,
-//
-//            )
-//          ),
           child: Card(
             child: Container(
               padding: EdgeInsets.all(10.0),
@@ -157,6 +150,7 @@ class qu1 extends StatelessWidget {
     );
   }
 }
+
 
 class qu2 extends StatelessWidget {
   void addData(value){

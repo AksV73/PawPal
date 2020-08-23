@@ -4,7 +4,7 @@ import 'dart:async';
 //import 'dart:html';
 
 import 'package:flutter/cupertino.dart';
-import 'package:project/quizfile.dart';
+import 'package:project/quiz.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
 import 'dart:convert';
