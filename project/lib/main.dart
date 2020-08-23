@@ -120,7 +120,6 @@ class PawPals extends State<PawPal> {
             ),
           ),
         ],
-
       ),
       );
   }
