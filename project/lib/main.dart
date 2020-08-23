@@ -45,7 +45,7 @@ class PawPals extends State<PawPal> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 3), ()
+    Timer(Duration(seconds: 4), ()
     {
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => welcome()));
@@ -84,17 +84,18 @@ class PawPals extends State<PawPal> {
                     onPressed: (){},
                     icon: Icon(Icons.pets),
                     iconSize: 100.0,
-                    color: Colors.blue,
+                    color: Colors.black,
                   ),
                 ),
                 Container(
-                  color: Colors.black45,
+                  color: Colors.black54,
                   height: 80.0,
                   width: 200.0,
                   child: Center(
                     child: Text(
                       'PawPal',
                       style: TextStyle(
+                          color: Colors.white,
                           fontSize: 50.0,
                           fontWeight: FontWeight.bold
                       ),
@@ -105,14 +106,14 @@ class PawPals extends State<PawPal> {
                   height: 20.0,
                 ),
                 Container(
-                  color: Colors.black45,
+                  color: Colors.black54,
                   height: 80.0,
                   width: 300.0,
                   child: Center(
                     child: Text(
                       'Partners in Pethood',
                       style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.deepOrange[400],
                           fontSize: 30.0,
                           fontWeight: FontWeight.w100,
                         fontStyle: FontStyle.italic
@@ -157,6 +158,7 @@ class _welcomeState extends State<welcome> {
               onPressed: (){},
               icon: Icon(Icons.pets),
               iconSize: 30.0,
+              color: Colors.black,
             ),
             IconButton(
               icon: Icon(Icons.home),
