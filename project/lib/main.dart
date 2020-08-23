@@ -21,6 +21,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'DancingScript'
+      ),
       home: PawPal(),
       routes: <String, WidgetBuilder> {
         '/welcome page' : (context) => welcome(),
@@ -94,8 +97,7 @@ class PawPals extends State<PawPal> {
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 50.0,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Courgette',
+                          fontWeight: FontWeight.bold
                       ),
                     ),
                   ),
@@ -114,7 +116,7 @@ class PawPals extends State<PawPal> {
                           color: Colors.deepOrange[400],
                           fontSize: 30.0,
                           fontWeight: FontWeight.w100,
-                          fontFamily: 'Courgette',
+                        fontStyle: FontStyle.italic
                       ),
                     ),
                   ),
@@ -147,7 +149,7 @@ class _welcomeState extends State<welcome> {
           title: Text(
             "Pawpal",
             style: TextStyle(
-              fontFamily: 'Courgette',
+              fontFamily: 'DancingScript'
             ),
             textAlign: TextAlign.start,
           ),
@@ -186,7 +188,7 @@ class _welcomeState extends State<welcome> {
                 child: Text(
                   ' \"Welcome everyone to the world of dogs, \nWhere everything is about drooling and paws,\n\nAnd a woof every now and then,\nWhen a hooman rubs my tummy and I go Amen! \n\nAnd a wag in my tail, \nWhen I play with a butterfly & a garden snail,\n\nAnd I lick to my heart’s content, \nA big bowl of peanut butter with my vet’s consent; \n\nAnd I run quickly towards the ball,\nWhen my hooman said, “Fetch! Before the night falls!”. \"\n -poetry of a pawpal\n',
                   style: TextStyle(
-                fontFamily: 'DancingScript',
+//                fontFamily: 'Gabriola',
                     fontSize: 20,
                     color: const Color(0xff0e0e0e),
                     height: 0.8,
@@ -203,6 +205,7 @@ class _welcomeState extends State<welcome> {
                    color: Colors.deepOrangeAccent,
                    child: Text(
                        'Take the breed selector quiz!'),
+
                    onPressed: () {
                      datas = [];
                      Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
@@ -227,7 +230,7 @@ class _welcomeState extends State<welcome> {
                 child: Text(
                   'At PawPal, we believe in the magical bond between pet parents and their pets. Pets end up becoming our best friends, closest confidants and family members. Adopting a dog is hugely rewarding, but it\'s also a big responsibility. You might be wondering which dog breed suits you the best? Hence we are here to help you find a breed that suits your personality, temperament  and social environment to ensure that both of you can share exciting adventures together!',
                   style: TextStyle(
-                    fontFamily: 'Raleway',
+                  fontFamily: 'DancingScript',
                     fontSize: 20,
                     color: const Color(0xff0e0e0e),
                      height: 0.9,
@@ -256,7 +259,7 @@ class _welcomeState extends State<welcome> {
                 child: Text(
                   'We’ve sought experts in the field of pet nutrition, health and behavior, to ensure that you find the right pawpal.',
                   style: TextStyle(
-                    fontFamily: 'Raleway',
+                  fontFamily: 'DancingScript',
                     fontSize: 20,
                     color: const Color(0xff0e0e0e),
                     height: 0.9,
@@ -285,7 +288,7 @@ class _welcomeState extends State<welcome> {
                 child: Text(
                   'We understand that the bond between pet parents and their dogs differ from one household to another. Therefore we will show you dog breeds that seem the most suited to your preferences. Our dog breed selector tool can help steer you in the right direction, leading you closer to your perfect match.',
                   style: TextStyle(
-                    fontFamily: 'Raleway',
+                  fontFamily: 'DancingScript',
                     fontSize: 20,
                     color: const Color(0xff0e0e0e),
                     height: 0.9,
