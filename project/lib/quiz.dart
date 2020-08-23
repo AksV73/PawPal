@@ -84,7 +84,7 @@ class qu1 extends StatelessWidget {
                               onPressed: (){
                                 temp = "apartment ";
                               },
-                              highlightColor: Colors.green,
+                              splashColor: Colors.green,
                               child: Text("An apartment",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
@@ -92,14 +92,14 @@ class qu1 extends StatelessWidget {
                             onPressed: (){
                               temp = "independent house";
                             },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("An Independent house",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
                           ),
                           RaisedButton(
                             onPressed: (){ temp = "ranch"; },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("A farmhouse/ranch",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -116,7 +116,7 @@ class qu1 extends StatelessWidget {
                         elevation: 60.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                        highlightColor: Colors.red,
+                       // highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
@@ -128,6 +128,7 @@ class qu1 extends StatelessWidget {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => qu2()));
                         },
+                        splashColor: Colors.green,
                       ),
                     ),
                     Container(
@@ -234,7 +235,7 @@ class qu2 extends StatelessWidget {
                               onPressed: (){
                                 temp = "high ";
                               },
-                              highlightColor: Colors.green,
+                              splashColor: Colors.green,
                               child: Text("Enough to blow the roof off!",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
@@ -242,14 +243,14 @@ class qu2 extends StatelessWidget {
                             onPressed: (){
                               temp = "low";
                             },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("A woof once in a while",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
                           ),
                           RaisedButton(
                             onPressed: (){ temp = "moderate"; },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("Somewhere in between the two",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -266,7 +267,7 @@ class qu2 extends StatelessWidget {
                         elevation: 60.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                        highlightColor: Colors.red,
+                       // highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
@@ -278,6 +279,7 @@ class qu2 extends StatelessWidget {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => qu3()));
                         },
+                        splashColor: Colors.green,
                       ),
                     ),
 
@@ -390,7 +392,7 @@ class qu3 extends StatelessWidget {
                               onPressed: (){
                                 temp = "very independent ";
                               },
-                              highlightColor: Colors.green,
+                              splashColor: Colors.green,
                               child: Text("For 8-10 hours",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
@@ -398,14 +400,14 @@ class qu3 extends StatelessWidget {
                             onPressed: (){
                               temp = "moderate";
                             },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("For 4-6 hours",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
                           ),
                           RaisedButton(
                             onPressed: (){ temp = "not independent"; },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("The dog would never be alone",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -422,7 +424,7 @@ class qu3 extends StatelessWidget {
                         elevation: 60.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                        highlightColor: Colors.red,
+                        //highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
@@ -434,6 +436,7 @@ class qu3 extends StatelessWidget {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => qu4()));
                         },
+                        splashColor: Colors.green,
                       ),
                     ),
                     Container(
@@ -541,7 +544,7 @@ class qu4 extends StatelessWidget {
                               onPressed: (){
                                 temp = "high ";
                               },
-                              highlightColor: Colors.green,
+                              splashColor: Colors.green,
                               child: Text("Very active",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
@@ -549,14 +552,14 @@ class qu4 extends StatelessWidget {
                             onPressed: (){
                               temp = "medium";
                             },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("Moderate",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
                           ),
                           RaisedButton(
                             onPressed: (){ temp = "low"; },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("Inactive",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -573,7 +576,7 @@ class qu4 extends StatelessWidget {
                         elevation: 60.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                        highlightColor: Colors.red,
+                        //highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
@@ -585,6 +588,7 @@ class qu4 extends StatelessWidget {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => qu5()));
                         },
+                        splashColor: Colors.green,
                       ),
                     ),
                     Container(
@@ -691,7 +695,7 @@ class qu5 extends StatelessWidget {
                               onPressed: (){
                                 temp = "frequent ";
                               },
-                              highlightColor: Colors.green,
+                              splashColor: Colors.green,
                               child: Text("High",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
@@ -699,14 +703,14 @@ class qu5 extends StatelessWidget {
                             onPressed: (){
                               temp = "seasonal";
                             },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("Moderate",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
                           ),
                           RaisedButton(
                             onPressed: (){ temp = "low"; },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("Low",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -723,7 +727,7 @@ class qu5 extends StatelessWidget {
                         elevation: 60.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                        highlightColor: Colors.red,
+                        //highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
@@ -735,6 +739,7 @@ class qu5 extends StatelessWidget {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => qu6()));
                         },
+                        splashColor: Colors.green,
                       ),
                     ),
                     Container(
@@ -841,7 +846,7 @@ class qu6 extends StatelessWidget {
                               onPressed: (){
                                 temp = "yes ";
                               },
-                              highlightColor: Colors.green,
+                              splashColor: Colors.green,
                               child: Text("Yes",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
@@ -849,7 +854,7 @@ class qu6 extends StatelessWidget {
                             onPressed: (){
                               temp = "no";
                             },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("No",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -867,7 +872,7 @@ class qu6 extends StatelessWidget {
                         elevation: 60.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                        highlightColor: Colors.red,
+                        //highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
@@ -879,6 +884,7 @@ class qu6 extends StatelessWidget {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => qu7()));
                         },
+                        splashColor: Colors.green,
                       ),
                     ),
                     Container(
@@ -985,7 +991,7 @@ class qu7 extends StatelessWidget {
                               onPressed: (){
                                 temp = "yes";
                               },
-                              highlightColor: Colors.green,
+                              splashColor: Colors.green,
                               child: Text("Guard",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
@@ -993,7 +999,7 @@ class qu7 extends StatelessWidget {
                             onPressed: (){
                               temp = "no";
                             },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("Companion",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -1011,7 +1017,7 @@ class qu7 extends StatelessWidget {
                         elevation: 60.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                        highlightColor: Colors.red,
+                        //highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
@@ -1023,6 +1029,7 @@ class qu7 extends StatelessWidget {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => qu8()));
                         },
+                        splashColor: Colors.green,
                       ),
                     ),
                     Container(
@@ -1129,7 +1136,7 @@ class qu8 extends StatelessWidget {
                               onPressed: (){
                                 temp = "not particular ";
                               },
-                              highlightColor: Colors.green,
+                              splashColor: Colors.green,
                               child: Text("Vegan/ Vegetarian",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
@@ -1137,7 +1144,7 @@ class qu8 extends StatelessWidget {
                             onPressed: (){
                               temp = "meat rich";
                             },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("Diet with meat",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -1155,7 +1162,7 @@ class qu8 extends StatelessWidget {
                         elevation: 60.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                        highlightColor: Colors.red,
+                       // highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
@@ -1167,6 +1174,7 @@ class qu8 extends StatelessWidget {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => preferance1()));
                         },
+                        splashColor: Colors.green,
                       ),
                     ),
                     Container(
@@ -1273,7 +1281,7 @@ class preferance1 extends StatelessWidget {
                               onPressed: (){
                                 firstchoice = 0;
                               },
-                              highlightColor: Colors.green,
+                              splashColor: Colors.green,
                               child: Text("Accomadation",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
@@ -1281,14 +1289,14 @@ class preferance1 extends StatelessWidget {
                             onPressed: (){
                               firstchoice = 0;
                             },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("Barking ability",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
                           ),
                           RaisedButton(
                             onPressed: (){ firstchoice = 0; },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("Independent nature",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -1305,7 +1313,7 @@ class preferance1 extends StatelessWidget {
                         elevation: 60.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                        highlightColor: Colors.red,
+                        //highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
@@ -1316,6 +1324,7 @@ class preferance1 extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(context, MaterialPageRoute(builder: (context) => preferance2()));
                         },
+                        splashColor: Colors.green,
                       ),
                     ),
                     Container(
@@ -1422,7 +1431,7 @@ class preferance2 extends StatelessWidget {
                               onPressed: (){
                                 secondchoice = 3;
                               },
-                              highlightColor: Colors.green,
+                              splashColor: Colors.green,
                               child: Text("Activity level",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
@@ -1430,14 +1439,14 @@ class preferance2 extends StatelessWidget {
                             onPressed: (){
                               secondchoice = 4;
                             },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("Shedding",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
                           ),
                           RaisedButton(
                             onPressed: (){ secondchoice = 4; },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("Kids",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -1454,7 +1463,7 @@ class preferance2 extends StatelessWidget {
                         elevation: 60.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                        highlightColor: Colors.red,
+                        //highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
@@ -1465,6 +1474,7 @@ class preferance2 extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(context, MaterialPageRoute(builder: (context) => preferance3()));
                         },
+                        splashColor: Colors.green,
                       ),
                     ),
                     Container(
@@ -1572,7 +1582,7 @@ class preferance3 extends StatelessWidget {
                               onPressed: (){
                                 thirdchoice = 6;
                               },
-                              highlightColor: Colors.green,
+                              splashColor: Colors.green,
                               child: Text("Guard/ Companion",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
@@ -1580,7 +1590,7 @@ class preferance3 extends StatelessWidget {
                             onPressed: (){
                               thirdchoice = 7;
                             },
-                            highlightColor: Colors.green,
+                            splashColor: Colors.green,
                             child: Text("Diet",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -1597,7 +1607,7 @@ class preferance3 extends StatelessWidget {
                         elevation: 60.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                        highlightColor: Colors.red,
+                        //highlightColor: Colors.red,
                         child: Text(
                           'Click here to see RESULTS!',
                           style: TextStyle(
@@ -1605,6 +1615,7 @@ class preferance3 extends StatelessWidget {
                               fontFamily: 'DancingScript'
                           ),
                         ),
+                        splashColor: Colors.green,
                         onPressed: (){
                           Navigator.push(context, MaterialPageRoute(builder: (context) => MyApps()));
                         },
