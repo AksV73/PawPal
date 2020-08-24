@@ -233,7 +233,7 @@ class qu2 extends StatelessWidget {
                           ),
                           RaisedButton(
                               onPressed: (){
-                                temp = "high ";
+                                temp = "high";
                               },
                               splashColor: Colors.green,
                               child: Text("Enough to blow the roof off!",
@@ -390,7 +390,7 @@ class qu3 extends StatelessWidget {
                           ),
                           RaisedButton(
                               onPressed: (){
-                                temp = "very independent ";
+                                temp = "very independent";
                               },
                               splashColor: Colors.green,
                               child: Text("For 8-10 hours",
@@ -542,7 +542,7 @@ class qu4 extends StatelessWidget {
                           ),
                           RaisedButton(
                               onPressed: (){
-                                temp = "high ";
+                                temp = "high";
                               },
                               splashColor: Colors.green,
                               child: Text("Very active",
@@ -693,7 +693,7 @@ class qu5 extends StatelessWidget {
                           ),
                           RaisedButton(
                               onPressed: (){
-                                temp = "frequent ";
+                                temp = "frequent";
                               },
                               splashColor: Colors.green,
                               child: Text("High",
@@ -844,7 +844,7 @@ class qu6 extends StatelessWidget {
                           ),
                           RaisedButton(
                               onPressed: (){
-                                temp = "yes ";
+                                temp = "yes";
                               },
                               splashColor: Colors.green,
                               child: Text("Yes",
@@ -1134,7 +1134,7 @@ class qu8 extends StatelessWidget {
                           ),
                           RaisedButton(
                               onPressed: (){
-                                temp = "not particular ";
+                                temp = "not particular";
                               },
                               splashColor: Colors.green,
                               child: Text("Vegan/ Vegetarian",
@@ -1295,7 +1295,9 @@ class preferance1 extends StatelessWidget {
                             ),
                           ),
                           RaisedButton(
-                            onPressed: (){ firstchoice = 2; },
+                            onPressed: (){
+                              firstchoice = 2;
+                              },
                             splashColor: Colors.green,
                             child: Text("Independent nature",
                               style: TextStyle( fontFamily: 'Roboto'),
