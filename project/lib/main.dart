@@ -254,7 +254,7 @@ class _welcomeState extends State<welcome> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'We’ve sought experts in the field of pet nutrition, health and behavior, to ensure that you find the right pawpal.',
+                  'We’ve done extensive research in the field of pet nutrition, health and behavior, to ensure that you find the right pawpal.',
                   style: TextStyle(
                     fontFamily: 'Raleway',
                     fontSize: 20,
@@ -350,27 +350,115 @@ class MyAppState extends  State<MyApps> {
   @override
   Widget _newpage(String name, String group1, String group2, String temper, String weight, String watch, String house, String diet, String bark, String kid, String indi, String activity, String shed)
   {
+    List<Color> _colors = [Colors.black26, Colors.grey ];
     return Scaffold(
       appBar: AppBar(
-        title: Text(name),
-      ),
-      body: Column(
-        children: <Widget>[
-
-          Expanded(
-            child: Image.asset('images/$name.jpg'),
+        backgroundColor: Colors.grey,
+        title: Text(
+          'PawPal',
+          style: TextStyle(
+            fontFamily: 'Courgette',
           ),
-
-          ListTile(
-
-                title: Text("Name: " + name + "\nCharacteristics: " + group1 + ", " + group2 + "\nTemperment: "+ temper + "\nWatchDog: " + watch +"\nIndependence: "+ indi+"\nWeight: "+ weight +" kg" + "\nType of home required: "+ house + "\nKid Friendly: " + kid + "\nActivity level: "+ activity + "\nShedding: "+ shed
-
-                ),
-
-              ),
-          Image.asset('images/license.png'),
+          textAlign: TextAlign.start,
+        ),
+        actions: <Widget>[
+          IconButton(
+            onPressed: (){},
+            icon: Icon(Icons.pets),
+            color: Colors.black,
+            iconSize: 30.0,
+          ),
+          IconButton(
+            icon: Icon(Icons.home),
+            iconSize: 30.0,
+            tooltip: 'Go to Home',
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
+            },
+          ),
         ],
+      ),
 
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Container(
+              height: 20.0,
+            ),
+            Text(
+              name,
+              style: TextStyle(
+                fontFamily: 'DancingScript',
+                fontSize: 40.0,
+              )
+            ),
+
+            Container(
+              height: 20.0,
+            ),
+
+            Container(
+              child: Image.asset('images/$name.jpg'),
+            ),
+
+            Container(
+              height: 20.0,
+            ),
+
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: _colors,
+                )
+              ),
+              child: ListTile(
+                    title: Text("Name: " + name +
+                        "\nCharacteristics: " + group1 + ", " + group2 +
+                        "\nTemperment: "+ temper +
+                        "\nWatchDog: " + watch +
+                        "\nIndependence: "+ indi+
+                        "\nWeight: "+ weight +" kg" +
+                        "\nType of home required: "+ house +
+                        "\nKid Friendly: " + kid +
+                        "\nActivity level: "+ activity +
+                        "\nShedding: "+ shed,
+                      style: TextStyle(
+                        fontFamily: 'Raleway',
+                        fontSize: 20.0,
+                      ),
+                    ),
+
+                  ),
+            ),
+            Container(
+              height: 20.0,
+            ),
+
+            Text(
+              'Partners in pethood',
+              style: TextStyle( fontFamily: 'Courgette'),
+            ),
+            Container(
+              height: 20.0,
+            ),
+
+            Center(
+              child: Row(
+                children: <Widget>[
+                  Text(
+                    'License for images : '
+                  ),
+                  Image.asset(
+                    'images/license.png',
+                    height: 20.0,
+                  ),
+                ],
+              )
+            ),
+
+          ],
+
+        ),
       ),
 
     );
@@ -383,29 +471,33 @@ class MyAppState extends  State<MyApps> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blue,
-          title: Text("Your Matches!",
-          style: TextStyle(
-              fontFamily: 'DancingScript'
+          backgroundColor: Colors.grey,
+          title: Text(
+            "MATCHES!",
+            style: TextStyle(
+              fontFamily: 'Courgette',
+            ),
+            textAlign: TextAlign.start,
           ),
-        ),
           actions: <Widget>[
             IconButton(
-              icon: Icon(
-                Icons.home,
-                color: Colors.white,
-
-              ),
+              onPressed: (){},
+              icon: Icon(Icons.pets),
+              color: Colors.black,
+              iconSize: 30.0,
+            ),
+            IconButton(
+              icon: Icon(Icons.home),
+              iconSize: 30.0,
+              tooltip: 'Go to Home',
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
-
-
             ),
           ],
         ),
         body: Container(
-
+          color: Colors.white70,
           child: Center(
             child: FutureBuilder(
                 future: DefaultAssetBundle
@@ -434,34 +526,55 @@ class MyAppState extends  State<MyApps> {
                       if((house == datas[firstchoice] || bark == datas[firstchoice] || indi == datas[firstchoice]) && (activity == datas[secondchoice] || shed == datas[secondchoice] || kid == datas[secondchoice]) && (watch == datas[thirdchoice] || diet == datas[thirdchoice])) {
 
                             return FlatButton(
+                              padding: EdgeInsets.all(10.0),
                               onPressed: (){
                                 Navigator.push(context, MaterialPageRoute(builder: (context) => _newpage(name, group1, group2, temper, weight, watch, house, diet, bark, kid, indi, activity, shed)));
                               },
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: <Widget>[
-                                  Text(name),
-                                 
-
+                                  Text(
+                                    name,
+                                    style: TextStyle(
+                                        fontFamily: 'Raleway',
+                                    ),
+                                  ),
                                 ],
                               ),
                             );
 
-
                       }
                       else{
-                        return new Container();
+                        return new Column(
+//                          children: <Widget>[
+//                            Text(
+//                              'No suitable matches were found! Try taking the quiz again.'
+//                            ),
+//                            Padding(
+//                              padding: const EdgeInsets.all(10.0),
+//                              child: RaisedButton(
+//                                padding: EdgeInsets.all(20.0),
+//                                textColor: Colors.black,
+//                                color: Colors.deepOrangeAccent,
+//                                child: Text(
+//                                    'Take the breed selector quiz!'),
+//                                onPressed: () {
+//                                  datas = [];
+//                                  Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
+//                                },
+//                              ),
+//                            ),
+//                          ],
+
+                        );
                       }
                     },
                     itemCount: new_data == null ? 0 : new_data.length,
                   );
                 }),
           ),
-
         ));
   }
-
-
 }
 
 
