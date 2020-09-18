@@ -348,7 +348,7 @@ class MyAppState extends  State<MyApps> {
   List data;
 
   @override
-  Widget _newpage(String name, String group1, String group2, String temper, String weight, String watch, String house, String diet, String bark, String kid, String indi, String activity, String shed)
+  Widget _newpage(String name, String group1, String group2, String temper, String watch, String house, String diet, String bark, String kid, String indi, String activity, String shed)
   {
     List<Color> _colors = [Colors.black26, Colors.grey ];
     return Scaffold(
@@ -417,7 +417,6 @@ class MyAppState extends  State<MyApps> {
                         "\nTemperment: "+ temper +
                         "\nWatchDog: " + watch +
                         "\nIndependence: "+ indi+
-                        "\nWeight: "+ weight +" kg" +
                         "\nType of home required: "+ house +
                         "\nKid Friendly: " + kid +
                         "\nActivity level: "+ activity +
@@ -502,7 +501,7 @@ class MyAppState extends  State<MyApps> {
             child: FutureBuilder(
                 future: DefaultAssetBundle
                     .of(context)
-                    .loadString('dataasset/dogbreeddata.json'),
+                    .loadString('dataasset/dogdataupdated.json'),
                 builder: (context, snapshot) {
                   // Decode the JSON
                   var new_data = json.decode(snapshot.data.toString());
@@ -514,7 +513,7 @@ class MyAppState extends  State<MyApps> {
                       String group1 = new_data[index]['Group1'];
                       String group2 = new_data[index]['Group2'];
                       String temper = new_data[index]['Temperment'];
-                      String weight = new_data[index]['MaleWtKg'];
+                      //String weight = new_data[index]['MaleWtKg'];
                       String watch = new_data[index]['Watchdog'];
                       String house = new_data[index]['Type of home required'];
                       String diet = new_data[index]['Eating habits'];
@@ -528,7 +527,7 @@ class MyAppState extends  State<MyApps> {
                             return FlatButton(
                               padding: EdgeInsets.all(10.0),
                               onPressed: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (context) => _newpage(name, group1, group2, temper, weight, watch, house, diet, bark, kid, indi, activity, shed)));
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => _newpage(name, group1, group2, temper, watch, house, diet, bark, kid, indi, activity, shed)));
                               },
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.stretch,

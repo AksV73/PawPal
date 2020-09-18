@@ -51,6 +51,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
       - dataasset/dogbreeddata.json
+      - dataasset/dogdataupdated.json
 
       - images/
       - images/paw-trail.jpg

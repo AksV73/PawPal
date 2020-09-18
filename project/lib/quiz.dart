@@ -82,7 +82,7 @@ class qu1 extends StatelessWidget {
                           ),
                           RaisedButton(
                               onPressed: (){
-                                temp = "apartment ";
+                                temp = "apartment";
                               },
                               splashColor: Colors.green,
                               child: Text("An apartment",
