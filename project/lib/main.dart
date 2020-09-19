@@ -9,8 +9,10 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
-
-
+TextEditingController etUsername = new TextEditingController();
+TextEditingController etEmailid = new TextEditingController();
+String nUsername = "";
+String nEmailid = "";
 void main()  {
   runApp(MyApp());
 }
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
       home: PawPal(),
       routes: <String, WidgetBuilder> {
         '/welcome page' : (context) => welcome(),
-        '/quiz' : (context) => qu1(),
+        '/quiz' : (context) => qu0(),
         //
         // '/data' : (context) => dogo()
        // '/category1' : (context) => Category1(),
@@ -206,7 +208,7 @@ class _welcomeState extends State<welcome> {
                        'Take the breed selector quiz!'),
                    onPressed: () {
                      datas = [];
-                     Navigator.push(context, MaterialPageRoute(builder: (context) => qu0()));
+                     Navigator.push(context, MaterialPageRoute(builder: (context) => Page1()));
                 },
            ),
              ),
@@ -307,7 +309,7 @@ class _welcomeState extends State<welcome> {
                   onPressed: () {
                     datas = [];
                     score = 0;
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => qu0()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Page1()));
                   },
                 ),
               ),
@@ -346,6 +348,17 @@ class MyApps extends StatefulWidget {
 
 class MyAppState extends  State<MyApps> {
   List data;
+  String useremail = "";
+
+  void addemail(String enteredemail){
+
+    useremail = enteredemail;
+    print(useremail);
+  }
+
+
+
+
 
   @override
   Widget _newpage(String name, String group1, String group2, String temper, String watch, String house, String diet, String bark, String kid, String indi, String activity, String shed, int score)
@@ -368,6 +381,7 @@ class MyAppState extends  State<MyApps> {
             color: Colors.black,
             iconSize: 30.0,
           ),
+
           IconButton(
             icon: Icon(Icons.home),
             iconSize: 30.0,
@@ -485,6 +499,7 @@ class MyAppState extends  State<MyApps> {
               color: Colors.black,
               iconSize: 30.0,
             ),
+
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,

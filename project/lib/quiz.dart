@@ -2,10 +2,94 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project/main.dart';
 
+
+
+class Page1 extends StatefulWidget {
+  @override
+  _Page1State createState() => _Page1State();
+}
+
+class _Page1State extends State<Page1> {
+
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        title: Text('Details'),
+      ),
+
+      body: Form(
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(top: 35.0),
+            ),
+
+            Text('Register Form',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0),),
+
+            TextFormField(
+              controller: etUsername,
+              decoration: InputDecoration(
+                  hintText: 'Name'
+              ),
+            ),
+            TextFormField(
+              controller: etEmailid,
+              decoration: InputDecoration(
+                  hintText: 'Email Id'
+              ),
+            ),
+
+
+            Container(
+              alignment: Alignment.centerRight,
+              child: MaterialButton(onPressed: () {
+                setState(() {
+                  nUsername = etUsername.text;
+                  nEmailid = etEmailid.text;
+                });
+                Navigator.push(context, MaterialPageRoute(builder: (context) => qu0()));
+              },
+
+                color: Colors.orange,
+                textColor: Colors.white,
+                child: Text('Submit'),
+              ),
+
+            ),
+
+
+
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class qu0 extends StatelessWidget {
   void addData(value){
     datas.add(value);
     print(datas);
+    print(nUsername);
+    print(nEmailid);
   }
   String temp = '';
   List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
