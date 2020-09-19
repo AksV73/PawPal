@@ -15,6 +15,7 @@ void main()  {
   runApp(MyApp());
 }
 List datas = [];
+int score = 0;
 
 class MyApp extends StatelessWidget {
 
@@ -305,6 +306,7 @@ class _welcomeState extends State<welcome> {
                   child: Text('Take the breed selector quiz!'),
                   onPressed: () {
                     datas = [];
+                    score = 0;
                     Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
                   },
                 ),
@@ -329,9 +331,7 @@ class _welcomeState extends State<welcome> {
 
 
 
-int firstchoice = 0;
-int secondchoice = 0;
-int thirdchoice = 0;
+
 
 
 
@@ -348,7 +348,7 @@ class MyAppState extends  State<MyApps> {
   List data;
 
   @override
-  Widget _newpage(String name, String group1, String group2, String temper, String watch, String house, String diet, String bark, String kid, String indi, String activity, String shed)
+  Widget _newpage(String name, String group1, String group2, String temper, String watch, String house, String diet, String bark, String kid, String indi, String activity, String shed, int score)
   {
     List<Color> _colors = [Colors.black26, Colors.grey ];
     return Scaffold(
@@ -522,12 +522,41 @@ class MyAppState extends  State<MyApps> {
                       String indi = new_data[index]['Independence'];
                       String activity = new_data[index]['activity level'];
                       String shed = new_data[index]['Shedding'];
-                      if((house == datas[firstchoice] || bark == datas[firstchoice] || indi == datas[firstchoice]) && (activity == datas[secondchoice] || shed == datas[secondchoice] || kid == datas[secondchoice]) && (watch == datas[thirdchoice] || diet == datas[thirdchoice])) {
-
+                      score = 0;
+                      if(house == datas[0] && kid == datas[5]) {
+                        if(bark == datas[1])
+                          score = score+1;
+                        if(indi == datas[2])
+                          score = score+1;
+                        if(activity == datas[3])
+                          score = score+1;
+                        if(shed == datas[4])
+                          score = score+1;
+                        if(watch == datas[6])
+                          score = score+1;
+                        if(diet == datas[7])
+                          score = score+1;
+                        double finalpercent = (score*100)/6;
+                          if(score>=3) {
                             return FlatButton(
                               padding: EdgeInsets.all(10.0),
-                              onPressed: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (context) => _newpage(name, group1, group2, temper, watch, house, diet, bark, kid, indi, activity, shed)));
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(
+                                    builder: (context) =>
+                                        _newpage(
+                                            name,
+                                            group1,
+                                            group2,
+                                            temper,
+                                            watch,
+                                            house,
+                                            diet,
+                                            bark,
+                                            kid,
+                                            indi,
+                                            activity,
+                                            shed,
+                                            score)));
                               },
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -535,13 +564,19 @@ class MyAppState extends  State<MyApps> {
                                   Text(
                                     name,
                                     style: TextStyle(
-                                        fontFamily: 'Raleway',
+                                      fontFamily: 'Raleway',
                                     ),
+
                                   ),
+                                  Text(finalpercent.toStringAsFixed(2))
                                 ],
                               ),
                             );
+                          }
+                          else{
+                            return new Column();
 
+                          }
                       }
                       else{
                         return new Column(
@@ -568,8 +603,11 @@ class MyAppState extends  State<MyApps> {
                         );
                       }
                     },
+
                     itemCount: new_data == null ? 0 : new_data.length,
                   );
+
+
                 }),
           ),
         ));
