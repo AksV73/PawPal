@@ -206,7 +206,7 @@ class _welcomeState extends State<welcome> {
                        'Take the breed selector quiz!'),
                    onPressed: () {
                      datas = [];
-                     Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
+                     Navigator.push(context, MaterialPageRoute(builder: (context) => qu0()));
                 },
            ),
              ),
@@ -307,7 +307,7 @@ class _welcomeState extends State<welcome> {
                   onPressed: () {
                     datas = [];
                     score = 0;
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => qu0()));
                   },
                 ),
               ),
@@ -522,22 +522,24 @@ class MyAppState extends  State<MyApps> {
                       String indi = new_data[index]['Independence'];
                       String activity = new_data[index]['activity level'];
                       String shed = new_data[index]['Shedding'];
+                      String weather = new_data[index]['Weather'];
+                      String allergy = new_data[index]['hypoallergenic'];
                       score = 0;
-                      if(house == datas[0] && kid == datas[5]) {
-                        if(bark == datas[1])
+                      if(weather == datas[0] && house == datas[1] && allergy == datas[2] && kid == datas[7]) {
+                        if(bark == datas[3])
                           score = score+1;
-                        if(indi == datas[2])
+                        if(indi == datas[4])
                           score = score+1;
-                        if(activity == datas[3])
+                        if(activity == datas[5])
                           score = score+1;
-                        if(shed == datas[4])
+                        if(shed == datas[6])
                           score = score+1;
-                        if(watch == datas[6])
+                        if(watch == datas[8])
                           score = score+1;
-                        if(diet == datas[7])
+                        if(diet == datas[9])
                           score = score+1;
                         double finalpercent = (score*100)/6;
-                          if(score>=3) {
+                          if(score>=1) {
                             return FlatButton(
                               padding: EdgeInsets.all(10.0),
                               onPressed: () {
