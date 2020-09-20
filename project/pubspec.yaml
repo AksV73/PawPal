@@ -21,6 +21,8 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  flutter_email_sender: ^3.0.1
+  mailer: ^3.2.1
   flutter:
     sdk: flutter
   adobe_xd: ^1.0.0+1
