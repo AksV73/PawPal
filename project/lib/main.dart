@@ -11,7 +11,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
-TextEditingController etUsername = new TextEditingController();
+final TextEditingController etUsername = new TextEditingController();
 TextEditingController etEmailid = new TextEditingController();
 String nUsername = "";
 String nEmailid = "";

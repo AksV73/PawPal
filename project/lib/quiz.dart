@@ -11,7 +11,10 @@ class Page1 extends StatefulWidget {
 
 class _Page1State extends State<Page1> {
 
-  
+  clearTextInput(){
+    etUsername.clear();
+    etEmailid.clear();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -75,6 +78,7 @@ class _Page1State extends State<Page1> {
                   nUsername = etUsername.text;
                   nEmailid = etEmailid.text;
                 });
+                clearTextInput();
                 Navigator.push(context, MaterialPageRoute(builder: (context) => qu0()));
               },
 
