@@ -17,8 +17,31 @@ class _Page1State extends State<Page1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
-        title: Text('Details'),
+        backgroundColor: Colors.grey,
+        title: Text(
+          'PawPal',
+          style: TextStyle(
+            fontFamily: 'Courgette',
+          ),
+          textAlign: TextAlign.start,
+        ),
+        actions: <Widget>[
+          IconButton(
+            onPressed: (){},
+            icon: Icon(Icons.pets),
+            color: Colors.black,
+            iconSize: 30.0,
+          ),
+
+          IconButton(
+            icon: Icon(Icons.home),
+            iconSize: 30.0,
+            tooltip: 'Go to Home',
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
+            },
+          ),
+        ],
       ),
 
       body: Form(
