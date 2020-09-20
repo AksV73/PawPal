@@ -2,7 +2,9 @@ import 'dart:async';
 
 //import 'dart:html';
 //import 'dart:html';
-
+import 'package:flutter_email_sender/flutter_email_sender.dart';
+import 'package:mailer/mailer.dart';
+import 'package:mailer/smtp_server.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:project/quiz.dart';
 import 'package:flutter/services.dart' show rootBundle;
@@ -348,12 +350,29 @@ class MyApps extends StatefulWidget {
 
 class MyAppState extends  State<MyApps> {
   List data;
-  String useremail = "";
 
-  void addemail(String enteredemail){
+  main() async{
+    String username = 'pawpalpetpartners@gmail.com';
+    String password = 'paw123pal';
 
-    useremail = enteredemail;
-    print(useremail);
+    // ignore: deprecated_member_use
+    final smtpServer = gmail(username, password);
+    // Creating the Gmail server
+
+    // Create our email message.
+    final message = Message()
+      ..from = Address(username)
+      ..recipients.add('akshayavijay109@gmail.com') //recipent email
+      ..subject = 'Test Dart Mailer library :: 😀 :: ${DateTime.now()}' //subject of the email
+      ..text = 'This is the plain text.\nThis is line 2 of the text part.'; //body of the email
+
+    try {
+      final sendReport = await send(message, smtpServer);
+      print('Message sent: ' + sendReport.toString()); //print if the email is sent
+    } on MailerException catch (e) {
+      print('Message not sent. \n'+ e.toString()); //print if the email is not sent
+      // e.toString() will show why the email is not sending
+    }
   }
 
 
@@ -494,7 +513,9 @@ class MyAppState extends  State<MyApps> {
           ),
           actions: <Widget>[
             IconButton(
-              onPressed: (){},
+              onPressed: (){
+               main();
+              },
               icon: Icon(Icons.pets),
               color: Colors.black,
               iconSize: 30.0,
@@ -630,7 +651,6 @@ class MyAppState extends  State<MyApps> {
         ));
   }
 }
-
 
 
 
