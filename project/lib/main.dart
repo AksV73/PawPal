@@ -209,6 +209,8 @@ class _welcomeState extends State<welcome> {
                    child: Text(
                        'Take the breed selector quiz!'),
                    onPressed: () {
+                     score = 0;
+
                      datas = [];
                      Navigator.push(context, MaterialPageRoute(builder: (context) => Page1()));
                 },
@@ -311,6 +313,7 @@ class _welcomeState extends State<welcome> {
                   onPressed: () {
                     datas = [];
                     score = 0;
+
                     Navigator.push(context, MaterialPageRoute(builder: (context) => Page1()));
                   },
                 ),
@@ -362,9 +365,9 @@ class MyAppState extends  State<MyApps> {
     // Create our email message.
     final message = Message()
       ..from = Address(username)
-      ..recipients.add('akshayavijay109@gmail.com') //recipent email
-      ..subject = 'Test Dart Mailer library :: 😀 :: ${DateTime.now()}' //subject of the email
-      ..text = 'This is the plain text.\nThis is line 2 of the text part.'; //body of the email
+      ..recipients.add(nEmailid) //recipent email
+      ..subject = 'Greetings from PawPal!' //subject of the email
+      ..text = 'Dear $nUsername,\n Greetings from PawPal! \n We wish you a happy journey into pet parenting'; //body of the email
 
     try {
       final sendReport = await send(message, smtpServer);
@@ -514,11 +517,17 @@ class MyAppState extends  State<MyApps> {
           actions: <Widget>[
             IconButton(
               onPressed: (){
-               main();
+
               },
               icon: Icon(Icons.pets),
               color: Colors.black,
               iconSize: 30.0,
+            ),
+            IconButton(
+              onPressed: (){
+                main();
+              },
+              icon:  Icon(Icons.mail),
             ),
 
             IconButton(
@@ -562,6 +571,7 @@ class MyAppState extends  State<MyApps> {
                       String allergy = new_data[index]['hypoallergenic'];
                       score = 0;
                       if(weather == datas[0] && house == datas[1] && allergy == datas[2] && kid == datas[7]) {
+                        score = 4;
                         if(bark == datas[3])
                           score = score+1;
                         if(indi == datas[4])
@@ -574,8 +584,8 @@ class MyAppState extends  State<MyApps> {
                           score = score+1;
                         if(diet == datas[9])
                           score = score+1;
-                        double finalpercent = (score*100)/6;
-                          if(score>=1) {
+                        double finalpercent = (score*100)/10;
+                          if(score>=5) {
                             return FlatButton(
                               padding: EdgeInsets.all(10.0),
                               onPressed: () {
