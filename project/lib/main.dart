@@ -194,9 +194,9 @@ class _welcomeState extends State<welcome> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  ' \"Welcome everyone to the world of dogs, \nWhere everything is about drooling and paws,\n\nAnd a woof every now and then,\nWhen a hooman rubs my tummy and I go Amen! \n\nAnd a wag in my tail, \nWhen I play with a butterfly & a garden snail,\n\nAnd I lick to my heart’s content, \nA big bowl of peanut butter with my vet’s consent; \n\nAnd I run quickly towards the ball,\nWhen my hooman said, “Fetch! Before the night falls!”. \"\n -poetry of a pawpal\n',
+                  ' \"Welcome everyone to the world of dogs, \nWhere everything is about drooling and paws,\n\nAnd I lick to my heart’s content, \nA big bowl of peanut butter with my vet’s consent, \n\nAnd I run quickly towards the ball,\nWhen my hooman said, “Fetch! Before the night falls!”. \"\n -poetry of a pawpal\n',
                   style: TextStyle(
-                fontFamily: 'DancingScript',
+                fontFamily: 'Raleway',
                     fontSize: 20,
                     color: const Color(0xff0e0e0e),
                     height: 0.8,
@@ -372,7 +372,7 @@ class MyAppState extends  State<MyApps> {
       ..from = Address(username)
       ..recipients.add(nEmailid) //recipent email
       ..subject = 'Greetings from PawPal!' //subject of the email
-      ..text = "Dear $nUsername \n These are the matches as per your requirements: \n"+ typedata; //body of the email
+      ..text = "Dear $nUsername, \n These are the matches as per your requirements: \n"+ typedata; //body of the email
 
     try {
       final sendReport = await send(message, smtpServer);
