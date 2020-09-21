@@ -569,9 +569,11 @@ class MyAppState extends  State<MyApps> {
                 builder: (context, snapshot) {
                   // Decode the JSON
                   var new_data = json.decode(snapshot.data.toString());
-
+                  finalpickno = 0;
+                  finalpick = "";
                   return ListView.builder(
                     // Build the ListView
+
                     itemBuilder: (BuildContext context, int index) {
                       String name  = new_data[index]['BreedName'];
                       String group1 = new_data[index]['Group1'];
@@ -589,6 +591,7 @@ class MyAppState extends  State<MyApps> {
                       String weather = new_data[index]['Weather'];
                       String allergy = new_data[index]['hypoallergenic'];
                       score = 0;
+
                       if(weather == datas[0] && house == datas[1] && allergy == datas[2] && kid == datas[7]) {
                         score = 4;
                         if(bark == datas[3])
