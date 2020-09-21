@@ -1,11 +1,14 @@
 import 'dart:async';
+import 'dart:io';
 
 //import 'dart:html';
 //import 'dart:html';
+import 'package:pdf/pdf.dart' ;
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
 import 'package:flutter/cupertino.dart';
+
 import 'package:project/quiz.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
@@ -378,9 +381,23 @@ class MyAppState extends  State<MyApps> {
     }
   }
 
+  /*PdfDocument _generateDocument() {
+    final pdf = new PdfDocument(deflate: zlib.encode);
+    final page = new PdfPage(pdf, pageFormat: PdfPageFormat.a4);
+    final g = page.getGraphics();
+    final font = new PdfFont.courier(pdf);
+    final top = page.pageFormat.height;
 
-
-
+    g.setColor(new PdfColor(0.0, 1.0, 1.0));
+    g.setColor(new PdfColor(0.3, 0.3, 0.3));
+    List your_words = ['hello', 'hi', 'bye'];
+    double height = 0.0;
+    for(var prop in your_words) {
+      height += 20.0;
+      g.drawString(font, 30.0,prop, 10.0 * PdfPageFormat.mm, top - (height +20.0)* PdfPageFormat.mm);
+    }
+    return pdf;
+  }*/
 
   @override
   Widget _newpage(String name, String group1, String group2, String temper, String watch, String house, String diet, String bark, String kid, String indi, String activity, String shed, int score)
@@ -517,7 +534,7 @@ class MyAppState extends  State<MyApps> {
           actions: <Widget>[
             IconButton(
               onPressed: (){
-
+                //_generateDocument();
               },
               icon: Icon(Icons.pets),
               color: Colors.black,
@@ -616,7 +633,7 @@ class MyAppState extends  State<MyApps> {
                                     ),
 
                                   ),
-                                  Text(finalpercent.toStringAsFixed(2))
+                                  Text(finalpercent.toStringAsFixed(2)+"%")
                                 ],
                               ),
                             );
