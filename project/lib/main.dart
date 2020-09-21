@@ -23,6 +23,8 @@ void main()  {
 }
 List datas = [];
 int score = 0;
+String finalpick = "";
+int finalpickno = 0;
 
 class MyApp extends StatelessWidget {
 
@@ -357,7 +359,7 @@ class MyApps extends StatefulWidget {
 class MyAppState extends  State<MyApps> {
   List data;
 
-  main() async{
+  main(String typedata) async{
     String username = 'pawpalpetpartners@gmail.com';
     String password = 'paw123pal';
 
@@ -370,7 +372,7 @@ class MyAppState extends  State<MyApps> {
       ..from = Address(username)
       ..recipients.add(nEmailid) //recipent email
       ..subject = 'Greetings from PawPal!' //subject of the email
-      ..text = 'Dear $nUsername,\n Greetings from PawPal! \n We wish you a happy journey into pet parenting'; //body of the email
+      ..text = "Dear $nUsername \n These are the matches as per your requirements: \n"+ typedata; //body of the email
 
     try {
       final sendReport = await send(message, smtpServer);
@@ -542,7 +544,7 @@ class MyAppState extends  State<MyApps> {
             ),
             IconButton(
               onPressed: (){
-                main();
+                main(finalpick);
               },
               icon:  Icon(Icons.mail),
             ),
@@ -603,6 +605,8 @@ class MyAppState extends  State<MyApps> {
                           score = score+1;
                         double finalpercent = (score*100)/10;
                           if(score>=5) {
+                            finalpickno = finalpickno + 1;
+                            finalpick = finalpick + finalpickno.toString()+". " + name+" - "+ finalpercent.toStringAsFixed(2)+"%"+ "\n";
                             return FlatButton(
                               padding: EdgeInsets.all(10.0),
                               onPressed: () {
