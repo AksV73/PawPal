@@ -604,7 +604,7 @@ class MyAppState extends  State<MyApps> {
                         if(diet == datas[9])
                           score = score+1;
                         double finalpercent = (score*100)/10;
-                          if(score>=5) {
+                          if(score>=3) {
                             finalpickno = finalpickno + 1;
                             finalpick = finalpick + finalpickno.toString()+". " + name+" - "+ finalpercent.toStringAsFixed(2)+"%"+ "\n";
                             return FlatButton(
