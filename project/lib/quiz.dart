@@ -19,12 +19,14 @@ class _Page1State extends State<Page1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.grey,
+      backgroundColor: Colors.red[50],
+      appBar:  AppBar(
+        backgroundColor: Colors.red[300],
         title: Text(
-          'PawPal',
+          "PawPal",
           style: TextStyle(
             fontFamily: 'Courgette',
+            color: Colors.black,
           ),
           textAlign: TextAlign.start,
         ),
@@ -32,14 +34,14 @@ class _Page1State extends State<Page1> {
           IconButton(
             onPressed: (){},
             icon: Icon(Icons.pets),
-            color: Colors.black,
             iconSize: 30.0,
+            color: Colors.black54,
           ),
-
           IconButton(
             icon: Icon(Icons.home),
             iconSize: 30.0,
             tooltip: 'Go to Home',
+            color: Colors.white70,
             onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
             },
@@ -51,45 +53,85 @@ class _Page1State extends State<Page1> {
         child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(top: 35.0),
+              padding: const EdgeInsets.only(top: 45.0),
             ),
-
-            Text('Register Form',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0),),
-
-            TextFormField(
-              controller: etUsername,
-              decoration: InputDecoration(
-                  hintText: 'Name'
-              ),
-            ),
-            TextFormField(
-              controller: etEmailid,
-              decoration: InputDecoration(
-                  hintText: 'Email Id'
-              ),
-            ),
-
 
             Container(
-              alignment: Alignment.centerRight,
-              child: MaterialButton(onPressed: () {
-                setState(() {
-                  nUsername = etUsername.text;
-                  nEmailid = etEmailid.text;
-                });
-                clearTextInput();
-                Navigator.push(context, MaterialPageRoute(builder: (context) => qu0()));
-              },
-
-                color: Colors.orange,
-                textColor: Colors.white,
-                child: Text('Submit'),
+              child: Text('Registeration Form',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0),
               ),
+            ),
 
+            Padding(
+              padding: EdgeInsets.only(top: 20.0),
             ),
 
 
+            Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: TextFormField(
+                controller: etUsername,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  filled: true,
+                  fillColor: Colors.white,
+                  labelText: 'Name',
+                  labelStyle: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.red,
+                  ),
+                ),
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: TextFormField(
+                controller: etEmailid,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  filled: true,
+                  fillColor: Colors.white,
+                  labelText: 'Email Id',
+                  labelStyle: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.red,
+                  ),
+                ),
+              ),
+            ),
+
+
+
+            Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: Container(
+                width: 200.0,
+//                padding: EdgeInsets.all(25.0),
+                alignment: Alignment.center,
+                child: MaterialButton(onPressed: () {
+                  setState(() {
+                    nUsername = etUsername.text;
+                    nEmailid = etEmailid.text;
+                  });
+                  clearTextInput();
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => qu0()));
+                },
+                  color: Colors.red[300],
+                  textColor: Colors.black,
+                  child: Text(
+                      'Submit',
+                    style: TextStyle(
+                      fontSize: 25.0,
+                    ),
+
+                  ),
+                ),
+
+              ),
+            ),
 
           ],
         ),
@@ -119,18 +161,19 @@ class qu0 extends StatelessWidget {
     print(nEmailid);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -138,13 +181,14 @@ class qu0 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -179,6 +223,8 @@ class qu0 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -210,7 +256,7 @@ class qu0 extends StatelessWidget {
                           RaisedButton(
                             onPressed: (){ temp = "cold"; },
                             splashColor: Colors.green,
-                            child: Text("below 15 degrees",
+                            child: Text("Cold (below 15 degrees)" ,
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
                           ),
@@ -269,18 +315,19 @@ class qu1 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -288,13 +335,14 @@ class qu1 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -329,6 +377,8 @@ class qu1 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -419,18 +469,19 @@ class qu2 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -438,13 +489,14 @@ class qu2 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -479,6 +531,8 @@ class qu2 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -563,18 +617,19 @@ class qu3 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -582,13 +637,14 @@ class qu3 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -623,6 +679,8 @@ class qu3 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -720,18 +778,19 @@ class qu4 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -739,13 +798,14 @@ class qu4 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -780,6 +840,8 @@ class qu4 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -872,18 +934,19 @@ class qu5 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -891,13 +954,14 @@ class qu5 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -932,6 +996,8 @@ class qu5 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -1023,18 +1089,19 @@ class qu6 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -1042,13 +1109,14 @@ class qu6 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -1083,6 +1151,8 @@ class qu6 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -1174,18 +1244,19 @@ class qu7 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -1193,13 +1264,14 @@ class qu7 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -1234,6 +1306,8 @@ class qu7 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -1319,18 +1393,19 @@ class qu8 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -1338,13 +1413,14 @@ class qu8 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -1379,6 +1455,8 @@ class qu8 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -1464,18 +1542,19 @@ class qu9 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -1483,13 +1562,14 @@ class qu9 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -1524,6 +1604,8 @@ class qu9 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
