@@ -3,6 +3,7 @@ import 'dart:io';
 
 //import 'dart:html';
 //import 'dart:html';
+import 'package:flutter/rendering.dart';
 import 'package:pdf/pdf.dart' ;
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:mailer/mailer.dart';
@@ -196,12 +197,14 @@ class _welcomeState extends State<welcome> {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  ' \"Welcome everyone to the world of dogs, \nWhere everything is about drooling and paws,\n\nAnd I lick to my heart’s content, \nA big bowl of peanut butter with my vet’s consent, \n\nAnd I run quickly towards the ball,\nWhen my hooman said, “Fetch! Before the night falls!”. \"\n -poetry of a pawpal\n',
+                  ' \"Welcome everyone to the world of dogs, \nWhere everything is about drooling and paws,\n\nAnd I lick to my heart’s content, \nA big bowl of peanut butter with my vet’s consent, \n\nAnd I run quickly towards the ball,\nWhen my hooman said, “Fetch! Before the night falls!”. \"\n\n -poetry of a PawPal\n',
                   style: TextStyle(
-                fontFamily: 'Raleway',
+//                fontFamily: 'Raleway',
                     fontSize: 20,
                     color: const Color(0xff0e0e0e),
                     height: 0.8,
+                    fontWeight: FontWeight.w100,
+                    fontStyle: FontStyle.italic,
                     //fontFamily: 'Indie',
                   ),
                   textAlign: TextAlign.left,
@@ -211,10 +214,18 @@ class _welcomeState extends State<welcome> {
                padding: const EdgeInsets.all(10.0),
                child: RaisedButton(
                    padding: EdgeInsets.all(20.0),
+                   elevation: 15.0,
+                   shape: RoundedRectangleBorder(
+                     borderRadius: BorderRadius.circular(30),
+                   ),
                    textColor: Colors.black,
-                   color: Colors.deepOrangeAccent,
+                   color: Colors.deepPurple[200],
                    child: Text(
-                       'Take the breed selector quiz!'),
+                       'Take the breed selector quiz!',
+                     style: TextStyle(
+                       fontSize: 15.0,
+                     ),
+                   ),
                    onPressed: () {
                      score = 0;
 
@@ -223,6 +234,9 @@ class _welcomeState extends State<welcome> {
                 },
            ),
              ),
+              Padding(
+                padding: EdgeInsets.only(top: 10.0),
+              ),
               Container(
                   padding: EdgeInsets.all(10.0),
                   height: MediaQuery.of(context).size.height/3,
@@ -314,13 +328,21 @@ class _welcomeState extends State<welcome> {
                 padding: const EdgeInsets.all(10.0),
                 child: RaisedButton(
                   padding: EdgeInsets.all(20.0),
+                  elevation: 15.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
                   textColor: Colors.black,
-                  color: Colors.deepOrangeAccent,
-                  child: Text('Take the breed selector quiz!'),
+                  color: Colors.deepPurple[200],
+                  child: Text(
+                    'Take the breed selector quiz!',
+                    style: TextStyle(
+                      fontSize: 15.0,
+                    ),
+                  ),
                   onPressed: () {
-                    datas = [];
                     score = 0;
-
+                    datas = [];
                     Navigator.push(context, MaterialPageRoute(builder: (context) => Page1()));
                   },
                 ),
