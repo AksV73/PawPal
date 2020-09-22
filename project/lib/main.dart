@@ -153,11 +153,12 @@ class _welcomeState extends State<welcome> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.grey,
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -166,12 +167,13 @@ class _welcomeState extends State<welcome> {
               onPressed: (){},
               icon: Icon(Icons.pets),
               iconSize: 30.0,
-              color: Colors.black,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -406,12 +408,13 @@ class MyAppState extends  State<MyApps> {
   {
     List<Color> _colors = [Colors.black26, Colors.grey ];
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.grey,
+      appBar:  AppBar(
+        backgroundColor: Colors.red[300],
         title: Text(
-          'PawPal',
+          "PawPal",
           style: TextStyle(
             fontFamily: 'Courgette',
+            color: Colors.black,
           ),
           textAlign: TextAlign.start,
         ),
@@ -419,14 +422,14 @@ class MyAppState extends  State<MyApps> {
           IconButton(
             onPressed: (){},
             icon: Icon(Icons.pets),
-            color: Colors.black,
             iconSize: 30.0,
+            color: Colors.black54,
           ),
-
           IconButton(
             icon: Icon(Icons.home),
             iconSize: 30.0,
             tooltip: 'Go to Home',
+            color: Colors.white70,
             onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
             },
@@ -524,35 +527,28 @@ class MyAppState extends  State<MyApps> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "MATCHES!",
+            "Matches!",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
           actions: <Widget>[
             IconButton(
-              onPressed: (){
-                //_generateDocument();
-              },
+              onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
-            IconButton(
-              onPressed: (){
-                main(finalpick);
-              },
-              icon:  Icon(Icons.mail),
-            ),
-
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },

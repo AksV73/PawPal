@@ -19,12 +19,13 @@ class _Page1State extends State<Page1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.grey,
+      appBar:  AppBar(
+        backgroundColor: Colors.red[300],
         title: Text(
-          'PawPal',
+          "PawPal",
           style: TextStyle(
             fontFamily: 'Courgette',
+            color: Colors.black,
           ),
           textAlign: TextAlign.start,
         ),
@@ -32,14 +33,14 @@ class _Page1State extends State<Page1> {
           IconButton(
             onPressed: (){},
             icon: Icon(Icons.pets),
-            color: Colors.black,
             iconSize: 30.0,
+            color: Colors.black54,
           ),
-
           IconButton(
             icon: Icon(Icons.home),
             iconSize: 30.0,
             tooltip: 'Go to Home',
+            color: Colors.white70,
             onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
             },
@@ -125,12 +126,13 @@ class qu0 extends StatelessWidget {
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -138,13 +140,14 @@ class qu0 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -275,12 +278,13 @@ class qu1 extends StatelessWidget {
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -288,13 +292,14 @@ class qu1 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -425,12 +430,13 @@ class qu2 extends StatelessWidget {
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -438,13 +444,14 @@ class qu2 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -569,12 +576,13 @@ class qu3 extends StatelessWidget {
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -582,13 +590,14 @@ class qu3 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -726,12 +735,13 @@ class qu4 extends StatelessWidget {
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -739,13 +749,14 @@ class qu4 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -878,12 +889,13 @@ class qu5 extends StatelessWidget {
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -891,13 +903,14 @@ class qu5 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -1029,12 +1042,13 @@ class qu6 extends StatelessWidget {
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -1042,13 +1056,14 @@ class qu6 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -1180,12 +1195,13 @@ class qu7 extends StatelessWidget {
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -1193,13 +1209,14 @@ class qu7 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -1325,12 +1342,13 @@ class qu8 extends StatelessWidget {
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -1338,13 +1356,14 @@ class qu8 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
@@ -1470,12 +1489,13 @@ class qu9 extends StatelessWidget {
   {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey,
+        appBar:  AppBar(
+          backgroundColor: Colors.red[300],
           title: Text(
-            "Pawpal",
+            "PawPal",
             style: TextStyle(
               fontFamily: 'Courgette',
+              color: Colors.black,
             ),
             textAlign: TextAlign.start,
           ),
@@ -1483,13 +1503,14 @@ class qu9 extends StatelessWidget {
             IconButton(
               onPressed: (){},
               icon: Icon(Icons.pets),
-              color: Colors.black,
               iconSize: 30.0,
+              color: Colors.black54,
             ),
             IconButton(
               icon: Icon(Icons.home),
               iconSize: 30.0,
               tooltip: 'Go to Home',
+              color: Colors.white70,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
               },
