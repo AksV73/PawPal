@@ -19,6 +19,7 @@ class _Page1State extends State<Page1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.red[50],
       appBar:  AppBar(
         backgroundColor: Colors.red[300],
         title: Text(
@@ -52,45 +53,85 @@ class _Page1State extends State<Page1> {
         child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(top: 35.0),
+              padding: const EdgeInsets.only(top: 45.0),
             ),
-
-            Text('Register Form',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0),),
-
-            TextFormField(
-              controller: etUsername,
-              decoration: InputDecoration(
-                  hintText: 'Name'
-              ),
-            ),
-            TextFormField(
-              controller: etEmailid,
-              decoration: InputDecoration(
-                  hintText: 'Email Id'
-              ),
-            ),
-
 
             Container(
-              alignment: Alignment.centerRight,
-              child: MaterialButton(onPressed: () {
-                setState(() {
-                  nUsername = etUsername.text;
-                  nEmailid = etEmailid.text;
-                });
-                clearTextInput();
-                Navigator.push(context, MaterialPageRoute(builder: (context) => qu0()));
-              },
-
-                color: Colors.orange,
-                textColor: Colors.white,
-                child: Text('Submit'),
+              child: Text('Registeration Form',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0),
               ),
+            ),
 
+            Padding(
+              padding: EdgeInsets.only(top: 20.0),
             ),
 
 
+            Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: TextFormField(
+                controller: etUsername,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  filled: true,
+                  fillColor: Colors.white,
+                  labelText: 'Name',
+                  labelStyle: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.red,
+                  ),
+                ),
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: TextFormField(
+                controller: etEmailid,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  filled: true,
+                  fillColor: Colors.white,
+                  labelText: 'Email Id',
+                  labelStyle: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.red,
+                  ),
+                ),
+              ),
+            ),
+
+
+
+            Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: Container(
+                width: 200.0,
+//                padding: EdgeInsets.all(25.0),
+                alignment: Alignment.center,
+                child: MaterialButton(onPressed: () {
+                  setState(() {
+                    nUsername = etUsername.text;
+                    nEmailid = etEmailid.text;
+                  });
+                  clearTextInput();
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => qu0()));
+                },
+                  color: Colors.red[300],
+                  textColor: Colors.black,
+                  child: Text(
+                      'Submit',
+                    style: TextStyle(
+                      fontSize: 25.0,
+                    ),
+
+                  ),
+                ),
+
+              ),
+            ),
 
           ],
         ),
