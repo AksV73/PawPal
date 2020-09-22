@@ -255,7 +255,7 @@ class _welcomeState extends State<welcome> {
                 child: Text(
                   'At PawPal, we believe in the magical bond between pet parents and their pets. Pets end up becoming our best friends, closest confidants and family members. Adopting a dog is hugely rewarding, but it\'s also a big responsibility. You might be wondering which dog breed suits you the best? Hence we are here to help you find a breed that suits your personality, temperament  and social environment to ensure that both of you can share exciting adventures together!',
                   style: TextStyle(
-                    fontFamily: 'Raleway',
+//                    fontFamily: 'Raleway',
                     fontSize: 20,
                     color: const Color(0xff0e0e0e),
                      height: 0.9,
@@ -284,7 +284,7 @@ class _welcomeState extends State<welcome> {
                 child: Text(
                   'We’ve done extensive research in the field of pet nutrition, health and behavior, to ensure that you find the right pawpal.',
                   style: TextStyle(
-                    fontFamily: 'Raleway',
+//                    fontFamily: 'Raleway',
                     fontSize: 20,
                     color: const Color(0xff0e0e0e),
                     height: 0.9,
@@ -313,8 +313,9 @@ class _welcomeState extends State<welcome> {
                 child: Text(
                   'We understand that the bond between pet parents and their dogs differ from one household to another. Therefore we will show you dog breeds that seem the most suited to your preferences. Our dog breed selector tool can help steer you in the right direction, leading you closer to your perfect match.',
                   style: TextStyle(
-                    fontFamily: 'Raleway',
+//                    fontFamily: 'Raleway',
                     fontSize: 20,
+                    fontWeight: FontWeight.w100,
                     color: const Color(0xff0e0e0e),
                     height: 0.9,
                   ),
