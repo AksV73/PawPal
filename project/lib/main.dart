@@ -1,18 +1,24 @@
 import 'dart:async';
 import 'dart:io';
+import 'dart:typed_data';
 
 //import 'dart:html';
 //import 'dart:html';
-import 'package:pdf/pdf.dart' ;
+
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
 import 'package:flutter/cupertino.dart';
-
+import 'package:project/pdfview.dart';
 import 'package:project/quiz.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
 import 'dart:convert';
+
+import 'package:pdf/pdf.dart' ;
+import 'package:path_provider/path_provider.dart';
+import 'package:pdf/widgets.dart' as pw;
+import 'package:project/pdfscreen.dart';
 
 final TextEditingController etUsername = new TextEditingController();
 TextEditingController etEmailid = new TextEditingController();
@@ -163,7 +169,9 @@ class _welcomeState extends State<welcome> {
           ),
           actions: <Widget>[
             IconButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => pdfmaker()));
+              },
               icon: Icon(Icons.pets),
               iconSize: 30.0,
               color: Colors.black,
@@ -358,8 +366,50 @@ class MyApps extends StatefulWidget {
 
 class MyAppState extends  State<MyApps> {
   List data;
+  final pdf = pw.Document();
+
+  writeOnPdf() async{
+
+    var datafont = await rootBundle.load("fonts/Roboto-Regular.ttf");
+    var myFont = pw.Font.ttf(datafont);
+    var myStyle = pw.TextStyle(font: myFont);
+    pdf.addPage(
+      pw.MultiPage(
+          pageFormat: PdfPageFormat.a5,
+          margin: pw.EdgeInsets.all(32),
+
+          build: (pw.Context context) {
+            return <pw.Widget> [
+            pw.Header(
+                level: 0,
+                child: pw.Text("Easy Approach Document")
+            ),
+              pw.Paragraph(
+                  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada fames ac turpis egestas sed tempus urna. Quisque sagittis purus sit amet. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Ipsum dolor sit amet consectetur adipiscing elit pellentesque. Viverra justo nec ultrices dui sapien eget mi proin sed."
+              )
+            ];
+
+          }) // Page
+    );
+
+
+
+  }
+
 
   main(String typedata) async{
+    final documentDirectory = await getTemporaryDirectory();
+
+    String documentPath = documentDirectory.path;
+    // File file =
+    //String fullPath = "$documentPath/example.pdf";
+   //  File file = File("$documentPath/example.pdf");
+    //file.writeAsBytesSync(pdf.save());
+    //print(documentPath);
+    //File file = File();
+
+    //file.writeAsBytesSync(pdf.save());
+
     String username = 'pawpalpetpartners@gmail.com';
     String password = 'paw123pal';
 
@@ -372,7 +422,8 @@ class MyAppState extends  State<MyApps> {
       ..from = Address(username)
       ..recipients.add(nEmailid) //recipent email
       ..subject = 'Greetings from PawPal!' //subject of the email
-      ..text = "Dear $nUsername, \n These are the matches as per your requirements: \n"+ typedata; //body of the email
+      ..text = "Dear $nUsername, \n These are the matches as per your requirements: \n"+ typedata;
+      //..attachments.add(FileAttachment(file)); //body of the email
 
     try {
       final sendReport = await send(message, smtpServer);

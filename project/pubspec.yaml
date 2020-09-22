@@ -23,7 +23,10 @@ environment:
 dependencies:
   flutter_email_sender: ^3.0.1
   mailer: ^3.2.1
+  mailer2: ^1.2.5
   pdf: ^1.11.2
+  path_provider: ^1.6.16
+  flutter_full_pdf_viewer: ^1.0.6
   flutter:
     sdk: flutter
   adobe_xd: ^1.0.0+1
@@ -73,6 +76,10 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: OpenSans
+      fonts:
+        - asset: fonts/OpenSans-Regular.ttf
+
     - family: DancingScript
       fonts:
         - asset: fonts/DancingScript-VariableFont_wght.ttf
