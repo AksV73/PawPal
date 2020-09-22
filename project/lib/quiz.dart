@@ -161,7 +161,7 @@ class qu0 extends StatelessWidget {
     print(nEmailid);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
@@ -223,6 +223,8 @@ class qu0 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -254,7 +256,7 @@ class qu0 extends StatelessWidget {
                           RaisedButton(
                             onPressed: (){ temp = "cold"; },
                             splashColor: Colors.green,
-                            child: Text("below 15 degrees",
+                            child: Text("Cold (below 15 degrees)" ,
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
                           ),
@@ -313,7 +315,7 @@ class qu1 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
@@ -375,6 +377,8 @@ class qu1 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -465,7 +469,7 @@ class qu2 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
@@ -527,6 +531,8 @@ class qu2 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -611,7 +617,7 @@ class qu3 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
@@ -673,6 +679,8 @@ class qu3 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -770,7 +778,7 @@ class qu4 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
@@ -832,6 +840,8 @@ class qu4 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -924,7 +934,7 @@ class qu5 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
@@ -986,6 +996,8 @@ class qu5 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -1077,7 +1089,7 @@ class qu6 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
@@ -1139,6 +1151,8 @@ class qu6 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -1230,7 +1244,7 @@ class qu7 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
@@ -1292,6 +1306,8 @@ class qu7 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -1377,7 +1393,7 @@ class qu8 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
@@ -1439,6 +1455,8 @@ class qu8 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
@@ -1524,7 +1542,7 @@ class qu9 extends StatelessWidget {
     print(datas);
   }
   String temp = '';
-  List<Color> _colors = [Colors.green[500], Colors.teal[200], Colors.yellow[100], ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
   @override
   Widget build(BuildContext context)
   {
@@ -1586,6 +1604,8 @@ class qu9 extends StatelessWidget {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
+                          end: Alignment.bottomCenter,
+                          begin: Alignment.topRight,
                         ),
                       ),
                       child: Column(
