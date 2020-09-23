@@ -2057,6 +2057,7 @@ class _qu9State extends State<qu9> {
                         onPressed: () {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => MyApps()));
+
                         },
                         splashColor: Colors.green,
                       ),

@@ -173,9 +173,9 @@ class _welcomeState extends State<welcome> {
           ),
           actions: <Widget>[
             IconButton(
-//              onPressed: (){
+             onPressed: (){
 //                Navigator.push(context, MaterialPageRoute(builder: (context) => pdfmaker()));
-//              },
+              },
               icon: Icon(Icons.pets),
               iconSize: 30.0,
               color: Colors.black54,
@@ -385,6 +385,7 @@ class _welcomeState extends State<welcome> {
 
 
 
+
 class MyApps extends StatefulWidget {
   @override
   MyAppState createState() => MyAppState();
@@ -393,49 +394,9 @@ class MyApps extends StatefulWidget {
 
 class MyAppState extends  State<MyApps> {
   List data;
-  final pdf = pw.Document();
-
-  writeOnPdf() async{
-
-    var datafont = await rootBundle.load("fonts/Roboto-Regular.ttf");
-    var myFont = pw.Font.ttf(datafont);
-    var myStyle = pw.TextStyle(font: myFont);
-    pdf.addPage(
-      pw.MultiPage(
-          pageFormat: PdfPageFormat.a5,
-          margin: pw.EdgeInsets.all(32),
-
-          build: (pw.Context context) {
-            return <pw.Widget> [
-            pw.Header(
-                level: 0,
-                child: pw.Text("Easy Approach Document")
-            ),
-              pw.Paragraph(
-                  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada fames ac turpis egestas sed tempus urna. Quisque sagittis purus sit amet. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Ipsum dolor sit amet consectetur adipiscing elit pellentesque. Viverra justo nec ultrices dui sapien eget mi proin sed."
-              )
-            ];
-
-          }) // Page
-    );
+  mail(String typedata) async{
 
 
-
-  }
-
-
-  main(String typedata) async{
-//    final documentDirectory = await getTemporaryDirectory();
-
-//    String documentPath = documentDirectory.path;
-    // File file =
-    //String fullPath = "$documentPath/example.pdf";
-   //  File file = File("$documentPath/example.pdf");
-    //file.writeAsBytesSync(pdf.save());
-    //print(documentPath);
-    //File file = File();
-
-    //file.writeAsBytesSync(pdf.save());
 
     String username = 'pawpalpetpartners@gmail.com';
     String password = 'paw123pal';
@@ -450,7 +411,7 @@ class MyAppState extends  State<MyApps> {
       ..recipients.add(nEmailid) //recipent email
       ..subject = 'Greetings from PawPal!' //subject of the email
       ..text = "Dear $nUsername, \n These are the matches as per your requirements: \n"+ typedata;
-      //..attachments.add(FileAttachment(file)); //body of the email
+    //..attachments.add(FileAttachment(file)); //body of the email
 
     try {
       final sendReport = await send(message, smtpServer);
@@ -460,24 +421,6 @@ class MyAppState extends  State<MyApps> {
       // e.toString() will show why the email is not sending
     }
   }
-
-  /*PdfDocument _generateDocument() {
-    final pdf = new PdfDocument(deflate: zlib.encode);
-    final page = new PdfPage(pdf, pageFormat: PdfPageFormat.a4);
-    final g = page.getGraphics();
-    final font = new PdfFont.courier(pdf);
-    final top = page.pageFormat.height;
-
-    g.setColor(new PdfColor(0.0, 1.0, 1.0));
-    g.setColor(new PdfColor(0.3, 0.3, 0.3));
-    List your_words = ['hello', 'hi', 'bye'];
-    double height = 0.0;
-    for(var prop in your_words) {
-      height += 20.0;
-      g.drawString(font, 30.0,prop, 10.0 * PdfPageFormat.mm, top - (height +20.0)* PdfPageFormat.mm);
-    }
-    return pdf;
-  }*/
 
   @override
   Widget _newpage(String name, String group1, String group2, String temper, String watch, String house, String diet, String bark, String kid, String indi, String activity, String shed, int score)
@@ -643,7 +586,8 @@ class MyAppState extends  State<MyApps> {
                   var new_data = json.decode(snapshot.data.toString());
                   finalpickno = 0;
                   finalpick = "";
-                  return ListView.builder(
+
+                   return ListView.builder(
                     // Build the ListView
 
                     itemBuilder: (BuildContext context, int index) {
@@ -682,6 +626,7 @@ class MyAppState extends  State<MyApps> {
                           if(score>=3) {
                             finalpickno = finalpickno + 1;
                             finalpick = finalpick + finalpickno.toString()+". " + name+" - "+ finalpercent.toStringAsFixed(2)+"%"+ "\n";
+                           
                             return FlatButton(
                               padding: EdgeInsets.all(10.0),
                               onPressed: () {
@@ -751,10 +696,13 @@ class MyAppState extends  State<MyApps> {
                     itemCount: new_data == null ? 0 : new_data.length,
                   );
 
+                })
 
-                }),
+  ),
+
           ),
-        ));
+
+        );
   }
 }
 
