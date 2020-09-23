@@ -205,7 +205,7 @@ class _welcomeState extends State<welcome> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Text(
-                ' \"Welcome everyone to the world of dogs, \nWhere everything is about drooling and paws,\n\nAnd I lick to my heart’s content, \nA big bowl of peanut butter with my vet’s consent, \n\nAnd I run quickly towards the ball,\nWhen my hooman said, “Fetch! Before the night falls!”. \"\n\n -poetry of a PawPal\n',
+                ' \"Welcome to the world of dogs, \nWhere everything is about \ndrooling and paws,\n\nAnd I lick to my heart’s content, \nA big bowl of peanut butter \nwith my vet’s consent, \n\nAnd I run quickly towards the ball,\nWhen my hooman said,\n “Fetch! Before the night falls!”. \"\n\n -poetry of a PawPal\n',
                 style: TextStyle(
 //                fontFamily: 'Raleway',
                   fontSize: 20,
