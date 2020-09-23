@@ -1597,6 +1597,7 @@ class _qu7State extends State<qu7> {
                     Container(
                       padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
                       height: 300.0,
+                      width: 400.0,
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: _colors,
@@ -1605,6 +1606,7 @@ class _qu7State extends State<qu7> {
                         ),
                       ),
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
                           Container(
                             padding:
@@ -1615,6 +1617,8 @@ class _qu7State extends State<qu7> {
                                 fontSize: 20.0,
                                 fontFamily: 'Roboto',
                               ),
+                              textAlign: TextAlign.left,
+
                             ),
                           ),
                           RaisedButton(
