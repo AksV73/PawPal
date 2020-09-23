@@ -153,15 +153,27 @@ class _Page1State extends State<Page1> {
 
 
 
-class qu0 extends StatelessWidget {
+class qu0 extends StatefulWidget {
+  @override
+  _qu0State createState() => _qu0State();
+}
+
+class _qu0State extends State<qu0> {
+  bool selectedbutton1 = false;
+  bool selectedbutton2 = false;
+  bool selectedbutton3 = false;
+
   void addData(value){
     datas.add(value);
     print(datas);
     print(nUsername);
     print(nEmailid);
   }
+
   String temp = '';
+
   List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+
   @override
   Widget build(BuildContext context)
   {
@@ -197,125 +209,171 @@ class qu0 extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Container(
-            child: Card(
-              child: Container(
-                padding: EdgeInsets.all(10.0),
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      padding: EdgeInsets.all(15.0),
-                      height: 70.0,
-                      width: devwidth - 10.0,
-                      color: Colors.white24,
-                      child: Text(
-                        'Question 1',
-                        style: TextStyle(
-                          fontSize: 30.0,
-                          fontFamily: 'DancingScript',
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
+            padding: EdgeInsets.all(10.0),
+            child: Column(
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.all(15.0),
+                  height: 70.0,
+                  width: devwidth - 10.0,
+                  color: Colors.white24,
+                  child: Text(
+                    'Question 1',
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      fontFamily: 'Courgette',
                     ),
-
-                    Container(
-                      padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
-                      height: 300.0,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: _colors,
-                          end: Alignment.bottomCenter,
-                          begin: Alignment.topRight,
-                        ),
-                      ),
-                      child: Column(
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
-                            child: Text(
-                              "What is the weather condition at your place?",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', fontStyle: FontStyle.italic),
-                            ),
-                          ),
-                          RaisedButton(
-                              onPressed: (){
-                                temp = "hot";
-                              },
-                              splashColor: Colors.green,
-                              child: Text("Hot (25 degrees to 35 degree)",
-                                style: TextStyle( fontFamily: 'Roboto'),
-                              )),
-                          RaisedButton(
-                            onPressed: (){
-                              temp = "warm";
-                            },
-                            splashColor: Colors.green,
-                            child: Text("Warm (15 degrees to 25 degrees)",
-                              style: TextStyle( fontFamily: 'Roboto'),
-                            ),
-                          ),
-                          RaisedButton(
-                            onPressed: (){ temp = "cold"; },
-                            splashColor: Colors.green,
-                            child: Text("Cold (below 15 degrees)" ,
-                              style: TextStyle( fontFamily: 'Roboto'),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      height: 50.0,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: RaisedButton(
-                        elevation: 60.0 ,
-                        textColor: Colors.white,
-                        color: Colors.black54,
-                        // highlightColor: Colors.red,
-                        child: Text(
-                          'Next',
-                          style: TextStyle(
-                              fontSize: 20.0,
-                              fontFamily: 'DancingScript'
-                          ),
-                        ),
-                        onPressed: () {
-                          addData(temp);
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
-                        },
-                        splashColor: Colors.green,
-                      ),
-                    ),
-                    Container(
-                      height: 100.0,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('images/paw-trail.jpg'),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      'Partners in pethood',
-                      style: TextStyle( fontFamily: 'Courgette'),
-                    )
-                  ],
+                    textAlign: TextAlign.center,
+                  ),
                 ),
-              ),
+
+                Container(
+                  padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
+                  height: 300.0,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: _colors,
+                      end: Alignment.bottomCenter,
+                      begin: Alignment.topRight,
+                    ),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+//                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Container(
+                        padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 20.0),
+                        child: Text(
+                          "What are the weather conditions at your place?",
+                          style: TextStyle( fontSize: 20.0 ),
+                        ),
+                      ),
+                      RaisedButton(
+                          onPressed: (){
+                            temp = "hot";
+                            setState(() {
+                              selectedbutton1 = true;
+                              selectedbutton2 = false;
+                              selectedbutton3 = false;
+                            });
+                          },
+                          splashColor: Colors.purple[100],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
+                          child: Text("Hot (25 °C to 35 °C)",
+                            style: TextStyle( fontFamily: 'Roboto'),
+                          ),
+                      ),
+                      RaisedButton(
+                        onPressed: (){
+                          temp = "warm";
+                          setState(() {
+                            selectedbutton2 = true;
+                            selectedbutton1 = false;
+                            selectedbutton3 = false;
+                          });
+                        },
+                        splashColor: Colors.purple[100],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
+                        child: Text("Warm (15 °C to 25 °C)",
+                          style: TextStyle( fontFamily: 'Roboto'),
+                        ),
+                      ),
+                      RaisedButton(
+                        onPressed: (){ temp = "cold";
+                        setState(() {
+                          selectedbutton3 = true;
+                          selectedbutton1 = false;
+                          selectedbutton2 = false;
+                        });
+                        },
+                        splashColor: Colors.purple[100],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
+                        child: Text("Cold (below 15 °C)" ,
+                          style: TextStyle( fontFamily: 'Roboto'),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: RaisedButton(
+                    elevation: 10.0 ,
+                    textColor: Colors.white,
+                    color: Colors.black54,
+                    // highlightColor: Colors.red,
+                    child: Text(
+                      'Next',
+                      style: TextStyle(
+                          fontSize: 20.0,
+                          fontFamily: 'Courgette'
+                      ),
+                    ),
+                    onPressed: () {
+                      addData(temp);
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
+                    },
+                    splashColor: Colors.purple[100],
+                  ),
+                ),
+//                RaisedButton(
+//                  child: Text('Why?'),
+//                  onPressed: () {
+//                    return Container(
+//                      color: Colors.blue,
+//                      child: Text('it is imposrtant'),
+//                    );
+//                  },
+//                ),
+
+                Container(
+                  height: 80.0,
+                  width: devwidth,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('images/paw-trail.jpg'),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+                Text(
+                  'Partners in pethood',
+                  style: TextStyle( fontFamily: 'Courgette'),
+                )
+              ],
             ),
           ),
         )
     );
   }
 }
-class qu1 extends StatelessWidget {
+class qu1 extends StatefulWidget {
+  @override
+  _qu1State createState() => _qu1State();
+}
+
+class _qu1State extends State<qu1> {
+  bool selectedbutton1 = false;
+  bool selectedbutton2 = false;
+  bool selectedbutton3 = false;
   void addData(value){
     datas.add(value);
     print(datas);
   }
+
   String temp = '';
+
   List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+
   @override
   Widget build(BuildContext context)
   {
@@ -365,7 +423,7 @@ class qu1 extends StatelessWidget {
                         'Question 2',
                         style: TextStyle(
                           fontSize: 30.0,
-                          fontFamily: 'DancingScript',
+                          fontFamily: 'Courgette',
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -387,29 +445,58 @@ class qu1 extends StatelessWidget {
                             padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
                               "What kind of accommodation would you provide your dog ?",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', fontStyle: FontStyle.italic),
+                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
                             ),
                           ),
                           RaisedButton(
                               onPressed: (){
                                 temp = "apartment";
+                                setState(() {
+                                  selectedbutton1 = true;
+                                  selectedbutton2 = false;
+                                  selectedbutton3 = false;
+                                });
                               },
-                              splashColor: Colors.green,
+                              splashColor: Colors.purple[100],
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
                               child: Text("An apartment",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
                             onPressed: (){
                               temp = "independent house";
+                              setState(() {
+                                selectedbutton2 = true;
+                                selectedbutton1 = false;
+                                selectedbutton3 = false;
+                              });
                             },
-                            splashColor: Colors.green,
+                            splashColor: Colors.purple[100],
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
                             child: Text("An Independent house",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
                           ),
                           RaisedButton(
-                            onPressed: (){ temp = "ranch"; },
-                            splashColor: Colors.green,
+                            onPressed: (){
+                              temp = "ranch";
+                              setState(() {
+                                selectedbutton3 = true;
+                                selectedbutton2 = false;
+                                selectedbutton1 = false;
+                              });
+                            },
+                            splashColor: Colors.purple[100],
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
                             child: Text("A farmhouse/ranch",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -423,7 +510,7 @@ class qu1 extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
-                        elevation: 60.0 ,
+                        elevation: 10.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
                        // highlightColor: Colors.red,
@@ -431,7 +518,7 @@ class qu1 extends StatelessWidget {
                           'Next',
                           style: TextStyle(
                               fontSize: 20.0,
-                              fontFamily: 'DancingScript'
+                              fontFamily: 'Courgette'
                           ),
                         ),
                         onPressed: () {
@@ -463,13 +550,24 @@ class qu1 extends StatelessWidget {
     );
   }
 }
-class qu2 extends StatelessWidget {
+class qu2 extends StatefulWidget {
+  @override
+  _qu2State createState() => _qu2State();
+}
+
+class _qu2State extends State<qu2> {
+  bool selectedbutton1 = false;
+  bool selectedbutton2 = false;
+
   void addData(value){
     datas.add(value);
     print(datas);
   }
+
   String temp = '';
+
   List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+
   @override
   Widget build(BuildContext context)
   {
@@ -519,7 +617,7 @@ class qu2 extends StatelessWidget {
                         'Question 3',
                         style: TextStyle(
                           fontSize: 30.0,
-                          fontFamily: 'DancingScript',
+                          fontFamily: 'Courgette',
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -541,22 +639,38 @@ class qu2 extends StatelessWidget {
                             padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
                               "Do you or your family members face any kind of allergies with respect to dogs?",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', fontStyle: FontStyle.italic),
+                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
                             ),
                           ),
                           RaisedButton(
                               onPressed: (){
                                 temp = "no";
+                                setState(() {
+                                  selectedbutton1 = true;
+                                  selectedbutton2 = false;
+                                });
                               },
-                              splashColor: Colors.green,
+                              splashColor: Colors.purple[100],
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
                               child: Text("No",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
                             onPressed: (){
                               temp = "yes";
+                              setState(() {
+                                selectedbutton2 = true;
+                                selectedbutton1 = false;
+                              });
                             },
-                            splashColor: Colors.green,
+                            splashColor: Colors.purple[100],
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
                             child: Text("yes",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -571,7 +685,7 @@ class qu2 extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
-                        elevation: 60.0 ,
+                        elevation: 10.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
                         // highlightColor: Colors.red,
@@ -579,7 +693,7 @@ class qu2 extends StatelessWidget {
                           'Next',
                           style: TextStyle(
                               fontSize: 20.0,
-                              fontFamily: 'DancingScript'
+                              fontFamily: 'Courgette'
                           ),
                         ),
                         onPressed: () {
@@ -611,13 +725,25 @@ class qu2 extends StatelessWidget {
     );
   }
 }
-class qu3 extends StatelessWidget {
+class qu3 extends StatefulWidget {
+  @override
+  _qu3State createState() => _qu3State();
+}
+
+class _qu3State extends State<qu3> {
+  bool selectedbutton1 = false;
+  bool selectedbutton2 = false;
+  bool selectedbutton3 = false;
+
   void addData(value){
     datas.add(value);
     print(datas);
   }
+
   String temp = '';
+
   List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+
   @override
   Widget build(BuildContext context)
   {
@@ -667,7 +793,7 @@ class qu3 extends StatelessWidget {
                         'Question 4',
                         style: TextStyle(
                           fontSize: 30.0,
-                          fontFamily: 'DancingScript',
+                          fontFamily: 'Courgette',
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -689,29 +815,58 @@ class qu3 extends StatelessWidget {
                             padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
                               "How much barking does your society allow ?",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', fontStyle: FontStyle.italic),
+                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
                             ),
                           ),
                           RaisedButton(
                               onPressed: (){
                                 temp = "high";
+                                setState(() {
+                                  selectedbutton1 = true;
+                                  selectedbutton2 = false;
+                                  selectedbutton3 = false;
+                                });
                               },
-                              splashColor: Colors.green,
+                              splashColor: Colors.purple[100],
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
                               child: Text("Enough to blow the roof off!",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
                             onPressed: (){
                               temp = "low";
+                              setState(() {
+                                selectedbutton2 = true;
+                                selectedbutton1 = false;
+                                selectedbutton3 = false;
+                              });
                             },
-                            splashColor: Colors.green,
+                            splashColor: Colors.purple[100],
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
                             child: Text("A woof once in a while",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
                           ),
                           RaisedButton(
-                            onPressed: (){ temp = "moderate"; },
-                            splashColor: Colors.green,
+                            onPressed: (){
+                              temp = "moderate";
+                              setState(() {
+                                selectedbutton3 = true;
+                                selectedbutton2 = false;
+                                selectedbutton1 = false;
+                              });
+                            },
+                            splashColor: Colors.purple[100],
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
                             child: Text("Somewhere in between the two",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -772,13 +927,25 @@ class qu3 extends StatelessWidget {
   }
 }
 
-class qu4 extends StatelessWidget {
+class qu4 extends StatefulWidget {
+  @override
+  _qu4State createState() => _qu4State();
+}
+
+class _qu4State extends State<qu4> {
+  bool selectedbutton1 = false;
+  bool selectedbutton2 = false;
+  bool selectedbutton3 = false;
+
   void addData(value){
     datas.add(value);
     print(datas);
   }
+
   String temp = '';
+
   List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+
   @override
   Widget build(BuildContext context)
   {
@@ -828,7 +995,7 @@ class qu4 extends StatelessWidget {
                         'Question 5',
                         style: TextStyle(
                           fontSize: 30.0,
-                          fontFamily: 'DancingScript',
+                          fontFamily: 'Courgette',
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -850,29 +1017,57 @@ class qu4 extends StatelessWidget {
                             padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
                               "For how long will your dog be alone",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', fontStyle: FontStyle.italic),
+                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
                             ),
                           ),
                           RaisedButton(
                               onPressed: (){
                                 temp = "very independent";
+                                setState(() {
+                                  selectedbutton1 = true;
+                                  selectedbutton2 = false;
+                                  selectedbutton3 = false;
+                                });
                               },
-                              splashColor: Colors.green,
+                              splashColor: Colors.purple[100],
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
                               child: Text("For 6-8 hours",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
                             onPressed: (){
                               temp = "moderate";
+                              setState(() {
+                                selectedbutton2 = true;
+                                selectedbutton1 = false;
+                                selectedbutton3 = false;
+                              });
                             },
-                            splashColor: Colors.green,
+                            splashColor: Colors.purple[100],
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
                             child: Text("For 2-4 hours",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
                           ),
                           RaisedButton(
-                            onPressed: (){ temp = "not independent"; },
-                            splashColor: Colors.green,
+                            onPressed: (){ temp = "not independent";
+                            setState(() {
+                              selectedbutton3 = true;
+                              selectedbutton2 = false;
+                              selectedbutton1 = false;
+                            });
+                            },
+                            splashColor: Colors.purple[100],
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
                             child: Text("The dog would never be alone",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -886,7 +1081,7 @@ class qu4 extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
-                        elevation: 60.0 ,
+                        elevation: 10.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
                         //highlightColor: Colors.red,
@@ -894,7 +1089,7 @@ class qu4 extends StatelessWidget {
                           'Next',
                           style: TextStyle(
                               fontSize: 20.0,
-                              fontFamily: 'DancingScript'
+                              fontFamily: 'Courgette'
                           ),
                         ),
                         onPressed: () {
@@ -928,13 +1123,25 @@ class qu4 extends StatelessWidget {
 }
 
 
-class qu5 extends StatelessWidget {
+class qu5 extends StatefulWidget {
+  @override
+  _qu5State createState() => _qu5State();
+}
+
+class _qu5State extends State<qu5> {
+  bool selectedbutton1 = false;
+  bool selectedbutton2 = false;
+  bool selectedbutton3 = false;
+
   void addData(value){
     datas.add(value);
     print(datas);
   }
+
   String temp = '';
+
   List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+
   @override
   Widget build(BuildContext context)
   {
@@ -984,7 +1191,7 @@ class qu5 extends StatelessWidget {
                         'Question 6',
                         style: TextStyle(
                           fontSize: 30.0,
-                          fontFamily: 'DancingScript',
+                          fontFamily: 'Courgette',
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -1006,29 +1213,57 @@ class qu5 extends StatelessWidget {
                             padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
                               "How active would you like your dog to be?",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', fontStyle: FontStyle.italic),
+                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
                             ),
                           ),
                           RaisedButton(
                               onPressed: (){
                                 temp = "high";
+                                setState(() {
+                                  selectedbutton1 = true;
+                                  selectedbutton2 = false;
+                                  selectedbutton3 = false;
+                                });
                               },
-                              splashColor: Colors.green,
+                              splashColor: Colors.purple[100],
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
                               child: Text("Very active",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
                             onPressed: (){
                               temp = "medium";
+                              setState(() {
+                                selectedbutton2 = true;
+                                selectedbutton1 = false;
+                                selectedbutton3 = false;
+                              });
                             },
-                            splashColor: Colors.green,
+                            splashColor: Colors.purple[100],
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
                             child: Text("Moderate",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
                           ),
                           RaisedButton(
-                            onPressed: (){ temp = "low"; },
-                            splashColor: Colors.green,
+                            onPressed: (){ temp = "low";
+                            setState(() {
+                              selectedbutton3 = true;
+                              selectedbutton2 = false;
+                              selectedbutton1 = false;
+                            });
+                            },
+                            splashColor: Colors.purple[100],
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
                             child: Text("Inactive",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -1042,7 +1277,7 @@ class qu5 extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
-                        elevation: 60.0 ,
+                        elevation: 10.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
                         //highlightColor: Colors.red,
@@ -1050,7 +1285,7 @@ class qu5 extends StatelessWidget {
                           'Next',
                           style: TextStyle(
                               fontSize: 20.0,
-                              fontFamily: 'DancingScript'
+                              fontFamily: 'Courgette'
                           ),
                         ),
                         onPressed: () {
@@ -1083,13 +1318,25 @@ class qu5 extends StatelessWidget {
   }
 }
 
-class qu6 extends StatelessWidget {
+class qu6 extends StatefulWidget {
+  @override
+  _qu6State createState() => _qu6State();
+}
+
+class _qu6State extends State<qu6> {
+  bool selectedbutton1 = false;
+  bool selectedbutton2 = false;
+  bool selectedbutton3 = false;
+
   void addData(value){
     datas.add(value);
     print(datas);
   }
+
   String temp = '';
+
   List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+
   @override
   Widget build(BuildContext context)
   {
@@ -1139,7 +1386,7 @@ class qu6 extends StatelessWidget {
                         'Question 7',
                         style: TextStyle(
                           fontSize: 30.0,
-                          fontFamily: 'DancingScript',
+                          fontFamily: 'Courgette',
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -1161,29 +1408,57 @@ class qu6 extends StatelessWidget {
                             padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
                               "How much shedding can you tolerate?",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', fontStyle: FontStyle.italic),
+                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
                             ),
                           ),
                           RaisedButton(
                               onPressed: (){
                                 temp = "frequent";
+                                setState(() {
+                                  selectedbutton1 = true;
+                                  selectedbutton2 = false;
+                                  selectedbutton3 = false;
+                                });
                               },
-                              splashColor: Colors.green,
+                              splashColor: Colors.purple[100],
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
                               child: Text("High",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
                             onPressed: (){
                               temp = "seasonal";
+                              setState(() {
+                                selectedbutton2 = true;
+                                selectedbutton1 = false;
+                                selectedbutton3 = false;
+                              });
                             },
-                            splashColor: Colors.green,
+                            splashColor: Colors.purple[100],
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
                             child: Text("Moderate",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
                           ),
                           RaisedButton(
-                            onPressed: (){ temp = "low"; },
-                            splashColor: Colors.green,
+                            onPressed: (){ temp = "low";
+                            setState(() {
+                              selectedbutton3 = true;
+                              selectedbutton2 = false;
+                              selectedbutton1 = false;
+                            });
+                            },
+                            splashColor: Colors.purple[100],
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
                             child: Text("Low",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -1197,7 +1472,7 @@ class qu6 extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
-                        elevation: 60.0 ,
+                        elevation: 10.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
                         //highlightColor: Colors.red,
@@ -1205,7 +1480,7 @@ class qu6 extends StatelessWidget {
                           'Next',
                           style: TextStyle(
                               fontSize: 20.0,
-                              fontFamily: 'DancingScript'
+                              fontFamily: 'Courgette'
                           ),
                         ),
                         onPressed: () {
@@ -1238,13 +1513,25 @@ class qu6 extends StatelessWidget {
   }
 }
 
-class qu7 extends StatelessWidget {
+class qu7 extends StatefulWidget {
+  @override
+  _qu7State createState() => _qu7State();
+}
+
+class _qu7State extends State<qu7> {
+  bool selectedbutton1 = false;
+  bool selectedbutton2 = false;
+  bool selectedbutton3 = false;
+
   void addData(value){
     datas.add(value);
     print(datas);
   }
+
   String temp = '';
+
   List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+
   @override
   Widget build(BuildContext context)
   {
@@ -1294,7 +1581,7 @@ class qu7 extends StatelessWidget {
                         'Question 8',
                         style: TextStyle(
                           fontSize: 30.0,
-                          fontFamily: 'DancingScript',
+                          fontFamily: 'Courgette',
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -1315,23 +1602,58 @@ class qu7 extends StatelessWidget {
                           Container(
                             padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
-                              "Do you have kids ?",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', fontStyle: FontStyle.italic),
+                              "Do you have kids?",
+                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
                             ),
                           ),
                           RaisedButton(
                               onPressed: (){
                                 temp = "yes";
+                                setState(() {
+                                  selectedbutton1 = true;
+                                  selectedbutton2 = false;
+                                  selectedbutton3 = false;
+                                });
                               },
-                              splashColor: Colors.green,
-                              child: Text("Yes",
+                              splashColor: Colors.purple[100],
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
+                              child: Text("Yes, an infant",
+                                style: TextStyle( fontFamily: 'Roboto'),
+                              )),
+                          RaisedButton(
+                              onPressed: (){
+                                temp = "yes";
+                                setState(() {
+                                  selectedbutton2 = true;
+                                  selectedbutton1 = false;
+                                  selectedbutton3 = false;
+                                });
+                              },
+                              splashColor: Colors.purple[100],
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
+                              child: Text("Yes, a toddler",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
                             onPressed: (){
                               temp = "no";
+                              setState(() {
+                                selectedbutton3 = true;
+                                selectedbutton2 = false;
+                                selectedbutton1 = false;
+                              });
                             },
-                            splashColor: Colors.green,
+                            splashColor: Colors.purple[100],
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
                             child: Text("No",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -1346,7 +1668,7 @@ class qu7 extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
-                        elevation: 60.0 ,
+                        elevation: 10.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
                         //highlightColor: Colors.red,
@@ -1354,7 +1676,7 @@ class qu7 extends StatelessWidget {
                           'Next',
                           style: TextStyle(
                               fontSize: 20.0,
-                              fontFamily: 'DancingScript'
+                              fontFamily: 'Courgette'
                           ),
                         ),
                         onPressed: () {
@@ -1387,13 +1709,26 @@ class qu7 extends StatelessWidget {
   }
 }
 
-class qu8 extends StatelessWidget {
+
+
+class qu8 extends StatefulWidget {
+  @override
+  _qu8State createState() => _qu8State();
+}
+
+class _qu8State extends State<qu8> {
+  bool selectedbutton1 = false;
+  bool selectedbutton2 = false;
+
   void addData(value){
     datas.add(value);
     print(datas);
   }
+
   String temp = '';
+
   List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+
   @override
   Widget build(BuildContext context)
   {
@@ -1443,7 +1778,7 @@ class qu8 extends StatelessWidget {
                         'Question 9',
                         style: TextStyle(
                           fontSize: 30.0,
-                          fontFamily: 'DancingScript',
+                          fontFamily: 'Courgette',
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -1464,23 +1799,40 @@ class qu8 extends StatelessWidget {
                           Container(
                             padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
-                              "What kind of dog do you want",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', fontStyle: FontStyle.italic),
+                              "What type of dog do you want",
+                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
                             ),
                           ),
                           RaisedButton(
                               onPressed: (){
                                 temp = "yes";
+                                setState(() {
+                                  selectedbutton1 = true;
+                                  selectedbutton2 = false;
+                                });
                               },
-                              splashColor: Colors.green,
+                              splashColor: Colors.purple[100],
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
                               child: Text("Guard",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
+
                           RaisedButton(
                             onPressed: (){
                               temp = "no";
+                              setState(() {
+                                selectedbutton2 = true;
+                                selectedbutton1 = false;
+                              });
                             },
-                            splashColor: Colors.green,
+                            splashColor: Colors.purple[100],
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
                             child: Text("Companion",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -1495,7 +1847,7 @@ class qu8 extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
-                        elevation: 60.0 ,
+                        elevation: 10.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
                         //highlightColor: Colors.red,
@@ -1503,7 +1855,7 @@ class qu8 extends StatelessWidget {
                           'Next',
                           style: TextStyle(
                               fontSize: 20.0,
-                              fontFamily: 'DancingScript'
+                              fontFamily: 'Courgette'
                           ),
                         ),
                         onPressed: () {
@@ -1536,13 +1888,25 @@ class qu8 extends StatelessWidget {
   }
 }
 
-class qu9 extends StatelessWidget {
+class qu9 extends StatefulWidget {
+  @override
+  _qu9State createState() => _qu9State();
+}
+
+class _qu9State extends State<qu9> {
+  bool selectedbutton1 = false;
+  bool selectedbutton2 = false;
+  bool selectedbutton3 = false;
+
   void addData(value){
     datas.add(value);
     print(datas);
   }
+
   String temp = '';
+
   List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+
   @override
   Widget build(BuildContext context)
   {
@@ -1592,7 +1956,7 @@ class qu9 extends StatelessWidget {
                         'Question 10',
                         style: TextStyle(
                           fontSize: 30.0,
-                          fontFamily: 'DancingScript',
+                          fontFamily: 'Courgette',
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -1614,22 +1978,57 @@ class qu9 extends StatelessWidget {
                             padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
                               "Which diet would you provide to your dog?",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', fontStyle: FontStyle.italic),
+                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
                             ),
                           ),
                           RaisedButton(
                               onPressed: (){
                                 temp = "not particular";
+                                setState(() {
+                                  selectedbutton1 = true;
+                                  selectedbutton2 = false;
+                                  selectedbutton3 = false;
+                                });
                               },
-                              splashColor: Colors.green,
+                              splashColor: Colors.purple[100],
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
                               child: Text("Vegan/ Vegetarian",
+                                style: TextStyle( fontFamily: 'Roboto'),
+                              )),
+                          RaisedButton(
+                              onPressed: (){
+                                temp = "not particular";
+                                setState(() {
+                                  selectedbutton2 = true;
+                                  selectedbutton1 = false;
+                                  selectedbutton3 = false;
+                                });
+                              },
+                              splashColor: Colors.purple[100],
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
+                              child: Text("Eggetarian",
                                 style: TextStyle( fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
                             onPressed: (){
                               temp = "meat rich";
+                              setState(() {
+                                selectedbutton3 = true;
+                                selectedbutton2 = false;
+                                selectedbutton1 = false;
+                              });
                             },
-                            splashColor: Colors.green,
+                            splashColor: Colors.purple[100],
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
                             child: Text("Diet with meat",
                               style: TextStyle( fontFamily: 'Roboto'),
                             ),
@@ -1644,7 +2043,7 @@ class qu9 extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
-                        elevation: 60.0 ,
+                        elevation: 10.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
                        // highlightColor: Colors.red,
@@ -1652,7 +2051,7 @@ class qu9 extends StatelessWidget {
                           'Next',
                           style: TextStyle(
                               fontSize: 20.0,
-                              fontFamily: 'DancingScript'
+                              fontFamily: 'Courgette'
                           ),
                         ),
                         onPressed: () {
