@@ -2,16 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project/main.dart';
 
-
-
 class Page1 extends StatefulWidget {
   @override
   _Page1State createState() => _Page1State();
 }
 
 class _Page1State extends State<Page1> {
-
-  clearTextInput(){
+  clearTextInput() {
     etUsername.clear();
     etEmailid.clear();
   }
@@ -20,7 +17,7 @@ class _Page1State extends State<Page1> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.red[50],
-      appBar:  AppBar(
+      appBar: AppBar(
         backgroundColor: Colors.red[300],
         title: Text(
           "PawPal",
@@ -32,7 +29,7 @@ class _Page1State extends State<Page1> {
         ),
         actions: <Widget>[
           IconButton(
-            onPressed: (){},
+            onPressed: () {},
             icon: Icon(Icons.pets),
             iconSize: 30.0,
             color: Colors.black54,
@@ -42,31 +39,28 @@ class _Page1State extends State<Page1> {
             iconSize: 30.0,
             tooltip: 'Go to Home',
             color: Colors.white70,
-            onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => welcome()));
             },
           ),
         ],
       ),
-
       body: Form(
         child: Column(
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.only(top: 45.0),
             ),
-
             Container(
-              child: Text('Registration Form',
+              child: Text(
+                'Registration Form',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0),
               ),
             ),
-
             Padding(
               padding: EdgeInsets.only(top: 20.0),
             ),
-
-
             Padding(
               padding: const EdgeInsets.all(25.0),
               child: TextFormField(
@@ -84,7 +78,6 @@ class _Page1State extends State<Page1> {
                 ),
               ),
             ),
-
             Padding(
               padding: const EdgeInsets.all(25.0),
               child: TextFormField(
@@ -102,56 +95,39 @@ class _Page1State extends State<Page1> {
                 ),
               ),
             ),
-
-
-
             Padding(
               padding: const EdgeInsets.all(25.0),
               child: Container(
                 width: 200.0,
 //                padding: EdgeInsets.all(25.0),
                 alignment: Alignment.center,
-                child: MaterialButton(onPressed: () {
-                  setState(() {
-                    nUsername = etUsername.text;
-                    nEmailid = etEmailid.text;
-                  });
-                  clearTextInput();
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => qu0()));
-                },
+                child: MaterialButton(
+                  onPressed: () {
+                    setState(() {
+                      nUsername = etUsername.text;
+                      nEmailid = etEmailid.text;
+                    });
+                    clearTextInput();
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => qu0()));
+                  },
                   color: Colors.red[300],
                   textColor: Colors.black,
                   child: Text(
-                      'Submit',
+                    'Submit',
                     style: TextStyle(
                       fontSize: 25.0,
                     ),
-
                   ),
                 ),
-
               ),
             ),
-
           ],
         ),
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class qu0 extends StatefulWidget {
   @override
@@ -163,7 +139,7 @@ class _qu0State extends State<qu0> {
   bool selectedbutton2 = false;
   bool selectedbutton3 = false;
 
-  void addData(value){
+  void addData(value) {
     datas.add(value);
     print(datas);
     print(nUsername);
@@ -172,14 +148,13 @@ class _qu0State extends State<qu0> {
 
   String temp = '';
 
-  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400]];
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar:  AppBar(
+        appBar: AppBar(
           backgroundColor: Colors.red[300],
           title: Text(
             "PawPal",
@@ -191,7 +166,7 @@ class _qu0State extends State<qu0> {
           ),
           actions: <Widget>[
             IconButton(
-              onPressed: (){},
+              onPressed: () {},
               icon: Icon(Icons.pets),
               iconSize: 30.0,
               color: Colors.black54,
@@ -201,8 +176,9 @@ class _qu0State extends State<qu0> {
               iconSize: 30.0,
               tooltip: 'Go to Home',
               color: Colors.white70,
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => welcome()));
               },
             ),
           ],
@@ -226,7 +202,6 @@ class _qu0State extends State<qu0> {
                     textAlign: TextAlign.center,
                   ),
                 ),
-
                 Container(
                   padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
                   height: 300.0,
@@ -245,29 +220,32 @@ class _qu0State extends State<qu0> {
                         padding: EdgeInsets.fromLTRB(0.0, 10.0, 10.0, 20.0),
                         child: Text(
                           "What are the weather conditions at your place?",
-                          style: TextStyle( fontSize: 20.0 ),
+                          style: TextStyle(fontSize: 20.0),
                         ),
                       ),
                       RaisedButton(
-                          onPressed: (){
-                            temp = "hot";
-                            setState(() {
-                              selectedbutton1 = true;
-                              selectedbutton2 = false;
-                              selectedbutton3 = false;
-                            });
-                          },
-                          splashColor: Colors.purple[100],
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
-                          child: Text("Hot (25 °C to 35 °C)",
-                            style: TextStyle( fontFamily: 'Roboto'),
-                          ),
+                        onPressed: () {
+                          temp = "hot";
+                          setState(() {
+                            selectedbutton1 = true;
+                            selectedbutton2 = false;
+                            selectedbutton3 = false;
+                          });
+                        },
+                        splashColor: Colors.purple[100],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        color: selectedbutton1
+                            ? Colors.purple[200]
+                            : Colors.purple[50],
+                        child: Text(
+                          "Hot (25 °C to 35 °C)",
+                          style: TextStyle(fontFamily: 'Roboto'),
+                        ),
                       ),
                       RaisedButton(
-                        onPressed: (){
+                        onPressed: () {
                           temp = "warm";
                           setState(() {
                             selectedbutton2 = true;
@@ -279,26 +257,33 @@ class _qu0State extends State<qu0> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15),
                         ),
-                        color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
-                        child: Text("Warm (15 °C to 25 °C)",
-                          style: TextStyle( fontFamily: 'Roboto'),
+                        color: selectedbutton2
+                            ? Colors.purple[200]
+                            : Colors.purple[50],
+                        child: Text(
+                          "Warm (15 °C to 25 °C)",
+                          style: TextStyle(fontFamily: 'Roboto'),
                         ),
                       ),
                       RaisedButton(
-                        onPressed: (){ temp = "cold";
-                        setState(() {
-                          selectedbutton3 = true;
-                          selectedbutton1 = false;
-                          selectedbutton2 = false;
-                        });
+                        onPressed: () {
+                          temp = "cold";
+                          setState(() {
+                            selectedbutton3 = true;
+                            selectedbutton1 = false;
+                            selectedbutton2 = false;
+                          });
                         },
                         splashColor: Colors.purple[100],
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15),
                         ),
-                        color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
-                        child: Text("Cold (below 15 °C)" ,
-                          style: TextStyle( fontFamily: 'Roboto'),
+                        color: selectedbutton3
+                            ? Colors.purple[200]
+                            : Colors.purple[50],
+                        child: Text(
+                          "Cold (below 15 °C)",
+                          style: TextStyle(fontFamily: 'Roboto'),
                         ),
                       ),
                     ],
@@ -307,20 +292,18 @@ class _qu0State extends State<qu0> {
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: RaisedButton(
-                    elevation: 10.0 ,
+                    elevation: 10.0,
                     textColor: Colors.white,
                     color: Colors.black54,
                     // highlightColor: Colors.red,
                     child: Text(
                       'Next',
-                      style: TextStyle(
-                          fontSize: 20.0,
-                          fontFamily: 'Courgette'
-                      ),
+                      style: TextStyle(fontSize: 20.0, fontFamily: 'Courgette'),
                     ),
                     onPressed: () {
                       addData(temp);
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => qu1()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => qu1()));
                     },
                     splashColor: Colors.purple[100],
                   ),
@@ -337,15 +320,15 @@ class _qu0State extends State<qu0> {
                 ),
                 Text(
                   'Partners in pethood',
-                  style: TextStyle( fontFamily: 'Courgette'),
+                  style: TextStyle(fontFamily: 'Courgette'),
                 )
               ],
             ),
           ),
-        )
-    );
+        ));
   }
 }
+
 class qu1 extends StatefulWidget {
   @override
   _qu1State createState() => _qu1State();
@@ -355,21 +338,21 @@ class _qu1State extends State<qu1> {
   bool selectedbutton1 = false;
   bool selectedbutton2 = false;
   bool selectedbutton3 = false;
-  void addData(value){
+
+  void addData(value) {
     datas.add(value);
     print(datas);
   }
 
   String temp = '';
 
-  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400]];
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar:  AppBar(
+        appBar: AppBar(
           backgroundColor: Colors.red[300],
           title: Text(
             "PawPal",
@@ -381,7 +364,7 @@ class _qu1State extends State<qu1> {
           ),
           actions: <Widget>[
             IconButton(
-              onPressed: (){},
+              onPressed: () {},
               icon: Icon(Icons.pets),
               iconSize: 30.0,
               color: Colors.black54,
@@ -391,8 +374,9 @@ class _qu1State extends State<qu1> {
               iconSize: 30.0,
               tooltip: 'Go to Home',
               color: Colors.white70,
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => welcome()));
               },
             ),
           ],
@@ -417,7 +401,6 @@ class _qu1State extends State<qu1> {
                     textAlign: TextAlign.center,
                   ),
                 ),
-
                 Container(
                   padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
                   height: 300.0,
@@ -434,11 +417,14 @@ class _qu1State extends State<qu1> {
                         padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                         child: Text(
                           "What kind of accommodation would you provide your dog ?",
-                          style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontFamily: 'Roboto',
+                          ),
                         ),
                       ),
                       RaisedButton(
-                          onPressed: (){
+                          onPressed: () {
                             temp = "apartment";
                             setState(() {
                               selectedbutton1 = true;
@@ -450,12 +436,15 @@ class _qu1State extends State<qu1> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),
                           ),
-                          color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
-                          child: Text("An apartment",
-                            style: TextStyle( fontFamily: 'Roboto'),
+                          color: selectedbutton1
+                              ? Colors.purple[200]
+                              : Colors.purple[50],
+                          child: Text(
+                            "An apartment",
+                            style: TextStyle(fontFamily: 'Roboto'),
                           )),
                       RaisedButton(
-                        onPressed: (){
+                        onPressed: () {
                           temp = "independent house";
                           setState(() {
                             selectedbutton2 = true;
@@ -467,13 +456,16 @@ class _qu1State extends State<qu1> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15),
                         ),
-                        color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
-                        child: Text("An Independent house",
-                          style: TextStyle( fontFamily: 'Roboto'),
+                        color: selectedbutton2
+                            ? Colors.purple[200]
+                            : Colors.purple[50],
+                        child: Text(
+                          "An Independent house",
+                          style: TextStyle(fontFamily: 'Roboto'),
                         ),
                       ),
                       RaisedButton(
-                        onPressed: (){
+                        onPressed: () {
                           temp = "ranch";
                           setState(() {
                             selectedbutton3 = true;
@@ -485,9 +477,12 @@ class _qu1State extends State<qu1> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15),
                         ),
-                        color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
-                        child: Text("A farmhouse/ranch",
-                          style: TextStyle( fontFamily: 'Roboto'),
+                        color: selectedbutton3
+                            ? Colors.purple[200]
+                            : Colors.purple[50],
+                        child: Text(
+                          "A farmhouse/ranch",
+                          style: TextStyle(fontFamily: 'Roboto'),
                         ),
                       ),
                     ],
@@ -496,20 +491,18 @@ class _qu1State extends State<qu1> {
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: RaisedButton(
-                    elevation: 10.0 ,
+                    elevation: 10.0,
                     textColor: Colors.white,
                     color: Colors.black54,
                     // highlightColor: Colors.red,
                     child: Text(
                       'Next',
-                      style: TextStyle(
-                          fontSize: 20.0,
-                          fontFamily: 'Courgette'
-                      ),
+                      style: TextStyle(fontSize: 20.0, fontFamily: 'Courgette'),
                     ),
                     onPressed: () {
                       addData(temp);
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => qu2()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => qu2()));
                     },
                     splashColor: Colors.purple[100],
                   ),
@@ -526,15 +519,15 @@ class _qu1State extends State<qu1> {
                 ),
                 Text(
                   'Partners in pethood',
-                  style: TextStyle( fontFamily: 'Courgette'),
+                  style: TextStyle(fontFamily: 'Courgette'),
                 )
               ],
             ),
           ),
-        )
-    );
+        ));
   }
 }
+
 class qu2 extends StatefulWidget {
   @override
   _qu2State createState() => _qu2State();
@@ -544,21 +537,20 @@ class _qu2State extends State<qu2> {
   bool selectedbutton1 = false;
   bool selectedbutton2 = false;
 
-  void addData(value){
+  void addData(value) {
     datas.add(value);
     print(datas);
   }
 
   String temp = '';
 
-  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400]];
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar:  AppBar(
+        appBar: AppBar(
           backgroundColor: Colors.red[300],
           title: Text(
             "PawPal",
@@ -570,7 +562,7 @@ class _qu2State extends State<qu2> {
           ),
           actions: <Widget>[
             IconButton(
-              onPressed: (){},
+              onPressed: () {},
               icon: Icon(Icons.pets),
               iconSize: 30.0,
               color: Colors.black54,
@@ -580,8 +572,9 @@ class _qu2State extends State<qu2> {
               iconSize: 30.0,
               tooltip: 'Go to Home',
               color: Colors.white70,
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => welcome()));
               },
             ),
           ],
@@ -607,7 +600,6 @@ class _qu2State extends State<qu2> {
                         textAlign: TextAlign.center,
                       ),
                     ),
-
                     Container(
                       padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
                       height: 300.0,
@@ -621,14 +613,18 @@ class _qu2State extends State<qu2> {
                       child: Column(
                         children: <Widget>[
                           Container(
-                            padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
+                            padding:
+                                EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
                               "Do you or your family members face any kind of allergies with respect to dogs?",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontFamily: 'Roboto',
+                              ),
                             ),
                           ),
                           RaisedButton(
-                              onPressed: (){
+                              onPressed: () {
                                 temp = "no";
                                 setState(() {
                                   selectedbutton1 = true;
@@ -639,12 +635,15 @@ class _qu2State extends State<qu2> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
-                              child: Text("No",
-                                style: TextStyle( fontFamily: 'Roboto'),
+                              color: selectedbutton1
+                                  ? Colors.purple[200]
+                                  : Colors.purple[50],
+                              child: Text(
+                                "No",
+                                style: TextStyle(fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
-                            onPressed: (){
+                            onPressed: () {
                               temp = "yes";
                               setState(() {
                                 selectedbutton2 = true;
@@ -655,32 +654,33 @@ class _qu2State extends State<qu2> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
-                            child: Text("yes",
-                              style: TextStyle( fontFamily: 'Roboto'),
+                            color: selectedbutton2
+                                ? Colors.purple[200]
+                                : Colors.purple[50],
+                            child: Text(
+                              "yes",
+                              style: TextStyle(fontFamily: 'Roboto'),
                             ),
                           ),
-
                         ],
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
-                        elevation: 10.0 ,
+                        elevation: 10.0,
                         textColor: Colors.white,
                         color: Colors.black54,
                         // highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
-                              fontSize: 20.0,
-                              fontFamily: 'Courgette'
-                          ),
+                              fontSize: 20.0, fontFamily: 'Courgette'),
                         ),
                         onPressed: () {
                           addData(temp);
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => qu3()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => qu3()));
                         },
                         splashColor: Colors.purple[100],
                       ),
@@ -697,17 +697,17 @@ class _qu2State extends State<qu2> {
                     ),
                     Text(
                       'Partners in pethood',
-                      style: TextStyle( fontFamily: 'Courgette'),
+                      style: TextStyle(fontFamily: 'Courgette'),
                     )
                   ],
                 ),
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }
+
 class qu3 extends StatefulWidget {
   @override
   _qu3State createState() => _qu3State();
@@ -718,112 +718,96 @@ class _qu3State extends State<qu3> {
   bool selectedbutton2 = false;
   bool selectedbutton3 = false;
 
-  void addData(value){
+  void addData(value) {
     datas.add(value);
     print(datas);
   }
 
   String temp = '';
 
-  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400]];
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar:  AppBar(
-          backgroundColor: Colors.red[300],
-          title: Text(
-            "PawPal",
-            style: TextStyle(
-              fontFamily: 'Courgette',
-              color: Colors.black,
-            ),
-            textAlign: TextAlign.start,
+      appBar: AppBar(
+        backgroundColor: Colors.red[300],
+        title: Text(
+          "PawPal",
+          style: TextStyle(
+            fontFamily: 'Courgette',
+            color: Colors.black,
           ),
-          actions: <Widget>[
-            IconButton(
-              onPressed: (){},
-              icon: Icon(Icons.pets),
-              iconSize: 30.0,
-              color: Colors.black54,
-            ),
-            IconButton(
-              icon: Icon(Icons.home),
-              iconSize: 30.0,
-              tooltip: 'Go to Home',
-              color: Colors.white70,
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
-              },
-            ),
-          ],
+          textAlign: TextAlign.start,
         ),
-        body: SingleChildScrollView(
-          child: Container(
-            child: Card(
-              child: Container(
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.pets),
+            iconSize: 30.0,
+            color: Colors.black54,
+          ),
+          IconButton(
+            icon: Icon(Icons.home),
+            iconSize: 30.0,
+            tooltip: 'Go to Home',
+            color: Colors.white70,
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => welcome()));
+            },
+          ),
+        ],
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          child: Card(
+            child: Container(
                 padding: EdgeInsets.all(10.0),
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      padding: EdgeInsets.all(15.0),
-                      height: 70.0,
-                      width: devwidth - 10.0,
-                      color: Colors.white24,
-                      child: Text(
-                        'Question 4',
-                        style: TextStyle(
-                          fontSize: 30.0,
-                          fontFamily: 'Courgette',
-                        ),
-                        textAlign: TextAlign.center,
+                child: Column(children: <Widget>[
+                  Container(
+                    padding: EdgeInsets.all(15.0),
+                    height: 70.0,
+                    width: devwidth - 10.0,
+                    color: Colors.white24,
+                    child: Text(
+                      'Question 4',
+                      style: TextStyle(
+                        fontSize: 30.0,
+                        fontFamily: 'Courgette',
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
+                    height: 300.0,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: _colors,
+                        end: Alignment.bottomCenter,
+                        begin: Alignment.topRight,
                       ),
                     ),
-
-                    Container(
-                      padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
-                      height: 300.0,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: _colors,
-                          end: Alignment.bottomCenter,
-                          begin: Alignment.topRight,
-                        ),
-                      ),
-                      child: Column(
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
-                            child: Text(
-                              "How much barking does your society allow ?",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
+                          child: Text(
+                            "How much barking does your society allow ?",
+                            style: TextStyle(
+                              fontSize: 20.0,
+                              fontFamily: 'Roboto',
                             ),
                           ),
-                          RaisedButton(
-                              onPressed: (){
-                                temp = "high";
-                                setState(() {
-                                  selectedbutton1 = true;
-                                  selectedbutton2 = false;
-                                  selectedbutton3 = false;
-                                });
-                              },
-                              splashColor: Colors.purple[100],
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
-                              child: Text("Enough to blow the roof off!",
-                                style: TextStyle( fontFamily: 'Roboto'),
-                              )),
-                          RaisedButton(
-                            onPressed: (){
-                              temp = "low";
+                        ),
+                        RaisedButton(
+                            onPressed: () {
+                              temp = "high";
                               setState(() {
-                                selectedbutton2 = true;
-                                selectedbutton1 = false;
+                                selectedbutton1 = true;
+                                selectedbutton2 = false;
                                 selectedbutton3 = false;
                               });
                             },
@@ -831,77 +815,97 @@ class _qu3State extends State<qu3> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
-                            child: Text("A woof once in a while",
-                              style: TextStyle( fontFamily: 'Roboto'),
-                            ),
+                            color: selectedbutton1
+                                ? Colors.purple[200]
+                                : Colors.purple[50],
+                            child: Text(
+                              "Enough to blow the roof off!",
+                              style: TextStyle(fontFamily: 'Roboto'),
+                            )),
+                        RaisedButton(
+                          onPressed: () {
+                            temp = "low";
+                            setState(() {
+                              selectedbutton2 = true;
+                              selectedbutton1 = false;
+                              selectedbutton3 = false;
+                            });
+                          },
+                          splashColor: Colors.purple[100],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15),
                           ),
-                          RaisedButton(
-                            onPressed: (){
-                              temp = "moderate";
-                              setState(() {
-                                selectedbutton3 = true;
-                                selectedbutton2 = false;
-                                selectedbutton1 = false;
-                              });
-                            },
-                            splashColor: Colors.purple[100],
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
-                            child: Text("Somewhere in between the two",
-                              style: TextStyle( fontFamily: 'Roboto'),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: RaisedButton(
-                        elevation: 10.0 ,
-                        textColor: Colors.white,
-                        color: Colors.black54,
-                        // highlightColor: Colors.red,
-                        child: Text(
-                          'Next',
-                          style: TextStyle(
-                              fontSize: 20.0,
-                              fontFamily: 'Courgette'
+                          color: selectedbutton2
+                              ? Colors.purple[200]
+                              : Colors.purple[50],
+                          child: Text(
+                            "A woof once in a while",
+                            style: TextStyle(fontFamily: 'Roboto'),
                           ),
                         ),
-                        onPressed: () {
-                          addData(temp);
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => qu4()));
-                        },
-                        splashColor: Colors.purple[100],
-                      ),
-                    ),
-                    Container(
-                      height: 80.0,
-                      width: devwidth,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('images/paw-trail.jpg'),
-                          fit: BoxFit.fill,
+                        RaisedButton(
+                          onPressed: () {
+                            temp = "moderate";
+                            setState(() {
+                              selectedbutton3 = true;
+                              selectedbutton2 = false;
+                              selectedbutton1 = false;
+                            });
+                          },
+                          splashColor: Colors.purple[100],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          color: selectedbutton3
+                              ? Colors.purple[200]
+                              : Colors.purple[50],
+                          child: Text(
+                            "Somewhere in between the two",
+                            style: TextStyle(fontFamily: 'Roboto'),
+                          ),
                         ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: RaisedButton(
+                      elevation: 10.0,
+                      textColor: Colors.white,
+                      color: Colors.black54,
+                      // highlightColor: Colors.red,
+                      child: Text(
+                        'Next',
+                        style:
+                            TextStyle(fontSize: 20.0, fontFamily: 'Courgette'),
+                      ),
+                      onPressed: () {
+                        addData(temp);
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => qu4()));
+                      },
+                      splashColor: Colors.purple[100],
+                    ),
+                  ),
+                  Container(
+                    height: 80.0,
+                    width: devwidth,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('images/paw-trail.jpg'),
+                        fit: BoxFit.fill,
                       ),
                     ),
-                       Text(
-                        'Partners in pethood',
-                        style: TextStyle( fontFamily: 'Courgette'),
-                      ),
-
-                    ]
-
-                )
-                ),
-              ),
-            ),
+                  ),
+                  Text(
+                    'Partners in pethood',
+                    style: TextStyle(fontFamily: 'Courgette'),
+                  ),
+                ])),
+          ),
         ),
-        );
-
+      ),
+    );
   }
 }
 
@@ -915,21 +919,20 @@ class _qu4State extends State<qu4> {
   bool selectedbutton2 = false;
   bool selectedbutton3 = false;
 
-  void addData(value){
+  void addData(value) {
     datas.add(value);
     print(datas);
   }
 
   String temp = '';
 
-  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400]];
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar:  AppBar(
+        appBar: AppBar(
           backgroundColor: Colors.red[300],
           title: Text(
             "PawPal",
@@ -941,7 +944,7 @@ class _qu4State extends State<qu4> {
           ),
           actions: <Widget>[
             IconButton(
-              onPressed: (){},
+              onPressed: () {},
               icon: Icon(Icons.pets),
               iconSize: 30.0,
               color: Colors.black54,
@@ -951,8 +954,9 @@ class _qu4State extends State<qu4> {
               iconSize: 30.0,
               tooltip: 'Go to Home',
               color: Colors.white70,
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => welcome()));
               },
             ),
           ],
@@ -978,7 +982,6 @@ class _qu4State extends State<qu4> {
                         textAlign: TextAlign.center,
                       ),
                     ),
-
                     Container(
                       padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
                       height: 300.0,
@@ -992,14 +995,18 @@ class _qu4State extends State<qu4> {
                       child: Column(
                         children: <Widget>[
                           Container(
-                            padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
+                            padding:
+                                EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
                               "For how long will your dog be alone",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontFamily: 'Roboto',
+                              ),
                             ),
                           ),
                           RaisedButton(
-                              onPressed: (){
+                              onPressed: () {
                                 temp = "very independent";
                                 setState(() {
                                   selectedbutton1 = true;
@@ -1011,12 +1018,15 @@ class _qu4State extends State<qu4> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
-                              child: Text("For 6-8 hours",
-                                style: TextStyle( fontFamily: 'Roboto'),
+                              color: selectedbutton1
+                                  ? Colors.purple[200]
+                                  : Colors.purple[50],
+                              child: Text(
+                                "For 6-8 hours",
+                                style: TextStyle(fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
-                            onPressed: (){
+                            onPressed: () {
                               temp = "moderate";
                               setState(() {
                                 selectedbutton2 = true;
@@ -1028,26 +1038,33 @@ class _qu4State extends State<qu4> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
-                            child: Text("For 2-4 hours",
-                              style: TextStyle( fontFamily: 'Roboto'),
+                            color: selectedbutton2
+                                ? Colors.purple[200]
+                                : Colors.purple[50],
+                            child: Text(
+                              "For 2-4 hours",
+                              style: TextStyle(fontFamily: 'Roboto'),
                             ),
                           ),
                           RaisedButton(
-                            onPressed: (){ temp = "not independent";
-                            setState(() {
-                              selectedbutton3 = true;
-                              selectedbutton2 = false;
-                              selectedbutton1 = false;
-                            });
+                            onPressed: () {
+                              temp = "not independent";
+                              setState(() {
+                                selectedbutton3 = true;
+                                selectedbutton2 = false;
+                                selectedbutton1 = false;
+                              });
                             },
                             splashColor: Colors.purple[100],
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
-                            child: Text("The dog would never be alone",
-                              style: TextStyle( fontFamily: 'Roboto'),
+                            color: selectedbutton3
+                                ? Colors.purple[200]
+                                : Colors.purple[50],
+                            child: Text(
+                              "The dog would never be alone",
+                              style: TextStyle(fontFamily: 'Roboto'),
                             ),
                           ),
                         ],
@@ -1056,20 +1073,19 @@ class _qu4State extends State<qu4> {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
-                        elevation: 10.0 ,
+                        elevation: 10.0,
                         textColor: Colors.white,
                         color: Colors.black54,
                         // highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
-                              fontSize: 20.0,
-                              fontFamily: 'Courgette'
-                          ),
+                              fontSize: 20.0, fontFamily: 'Courgette'),
                         ),
                         onPressed: () {
                           addData(temp);
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => qu5()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => qu5()));
                         },
                         splashColor: Colors.purple[100],
                       ),
@@ -1086,18 +1102,16 @@ class _qu4State extends State<qu4> {
                     ),
                     Text(
                       'Partners in pethood',
-                      style: TextStyle( fontFamily: 'Courgette'),
+                      style: TextStyle(fontFamily: 'Courgette'),
                     )
                   ],
                 ),
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }
-
 
 class qu5 extends StatefulWidget {
   @override
@@ -1109,21 +1123,20 @@ class _qu5State extends State<qu5> {
   bool selectedbutton2 = false;
   bool selectedbutton3 = false;
 
-  void addData(value){
+  void addData(value) {
     datas.add(value);
     print(datas);
   }
 
   String temp = '';
 
-  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400]];
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar:  AppBar(
+        appBar: AppBar(
           backgroundColor: Colors.red[300],
           title: Text(
             "PawPal",
@@ -1135,7 +1148,7 @@ class _qu5State extends State<qu5> {
           ),
           actions: <Widget>[
             IconButton(
-              onPressed: (){},
+              onPressed: () {},
               icon: Icon(Icons.pets),
               iconSize: 30.0,
               color: Colors.black54,
@@ -1145,8 +1158,9 @@ class _qu5State extends State<qu5> {
               iconSize: 30.0,
               tooltip: 'Go to Home',
               color: Colors.white70,
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => welcome()));
               },
             ),
           ],
@@ -1172,7 +1186,6 @@ class _qu5State extends State<qu5> {
                         textAlign: TextAlign.center,
                       ),
                     ),
-
                     Container(
                       padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
                       height: 300.0,
@@ -1186,14 +1199,18 @@ class _qu5State extends State<qu5> {
                       child: Column(
                         children: <Widget>[
                           Container(
-                            padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
+                            padding:
+                                EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
                               "How active would you like your dog to be?",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontFamily: 'Roboto',
+                              ),
                             ),
                           ),
                           RaisedButton(
-                              onPressed: (){
+                              onPressed: () {
                                 temp = "high";
                                 setState(() {
                                   selectedbutton1 = true;
@@ -1205,12 +1222,15 @@ class _qu5State extends State<qu5> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
-                              child: Text("Very active",
-                                style: TextStyle( fontFamily: 'Roboto'),
+                              color: selectedbutton1
+                                  ? Colors.purple[200]
+                                  : Colors.purple[50],
+                              child: Text(
+                                "Very active",
+                                style: TextStyle(fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
-                            onPressed: (){
+                            onPressed: () {
                               temp = "medium";
                               setState(() {
                                 selectedbutton2 = true;
@@ -1222,26 +1242,33 @@ class _qu5State extends State<qu5> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
-                            child: Text("Moderate",
-                              style: TextStyle( fontFamily: 'Roboto'),
+                            color: selectedbutton2
+                                ? Colors.purple[200]
+                                : Colors.purple[50],
+                            child: Text(
+                              "Moderate",
+                              style: TextStyle(fontFamily: 'Roboto'),
                             ),
                           ),
                           RaisedButton(
-                            onPressed: (){ temp = "low";
-                            setState(() {
-                              selectedbutton3 = true;
-                              selectedbutton2 = false;
-                              selectedbutton1 = false;
-                            });
+                            onPressed: () {
+                              temp = "low";
+                              setState(() {
+                                selectedbutton3 = true;
+                                selectedbutton2 = false;
+                                selectedbutton1 = false;
+                              });
                             },
                             splashColor: Colors.purple[100],
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
-                            child: Text("Inactive",
-                              style: TextStyle( fontFamily: 'Roboto'),
+                            color: selectedbutton3
+                                ? Colors.purple[200]
+                                : Colors.purple[50],
+                            child: Text(
+                              "Inactive",
+                              style: TextStyle(fontFamily: 'Roboto'),
                             ),
                           ),
                         ],
@@ -1250,20 +1277,19 @@ class _qu5State extends State<qu5> {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
-                        elevation: 10.0 ,
+                        elevation: 10.0,
                         textColor: Colors.white,
                         color: Colors.black54,
                         // highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
-                              fontSize: 20.0,
-                              fontFamily: 'Courgette'
-                          ),
+                              fontSize: 20.0, fontFamily: 'Courgette'),
                         ),
                         onPressed: () {
                           addData(temp);
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => qu6()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => qu6()));
                         },
                         splashColor: Colors.purple[100],
                       ),
@@ -1280,15 +1306,14 @@ class _qu5State extends State<qu5> {
                     ),
                     Text(
                       'Partners in pethood',
-                      style: TextStyle( fontFamily: 'Courgette'),
+                      style: TextStyle(fontFamily: 'Courgette'),
                     )
                   ],
                 ),
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }
 
@@ -1302,21 +1327,20 @@ class _qu6State extends State<qu6> {
   bool selectedbutton2 = false;
   bool selectedbutton3 = false;
 
-  void addData(value){
+  void addData(value) {
     datas.add(value);
     print(datas);
   }
 
   String temp = '';
 
-  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400]];
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar:  AppBar(
+        appBar: AppBar(
           backgroundColor: Colors.red[300],
           title: Text(
             "PawPal",
@@ -1328,7 +1352,7 @@ class _qu6State extends State<qu6> {
           ),
           actions: <Widget>[
             IconButton(
-              onPressed: (){},
+              onPressed: () {},
               icon: Icon(Icons.pets),
               iconSize: 30.0,
               color: Colors.black54,
@@ -1338,8 +1362,9 @@ class _qu6State extends State<qu6> {
               iconSize: 30.0,
               tooltip: 'Go to Home',
               color: Colors.white70,
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => welcome()));
               },
             ),
           ],
@@ -1365,7 +1390,6 @@ class _qu6State extends State<qu6> {
                         textAlign: TextAlign.center,
                       ),
                     ),
-
                     Container(
                       padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
                       height: 300.0,
@@ -1379,14 +1403,18 @@ class _qu6State extends State<qu6> {
                       child: Column(
                         children: <Widget>[
                           Container(
-                            padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
+                            padding:
+                                EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
                               "How much shedding can you tolerate?",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontFamily: 'Roboto',
+                              ),
                             ),
                           ),
                           RaisedButton(
-                              onPressed: (){
+                              onPressed: () {
                                 temp = "frequent";
                                 setState(() {
                                   selectedbutton1 = true;
@@ -1398,12 +1426,15 @@ class _qu6State extends State<qu6> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
-                              child: Text("High",
-                                style: TextStyle( fontFamily: 'Roboto'),
+                              color: selectedbutton1
+                                  ? Colors.purple[200]
+                                  : Colors.purple[50],
+                              child: Text(
+                                "High",
+                                style: TextStyle(fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
-                            onPressed: (){
+                            onPressed: () {
                               temp = "seasonal";
                               setState(() {
                                 selectedbutton2 = true;
@@ -1415,26 +1446,33 @@ class _qu6State extends State<qu6> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
-                            child: Text("Moderate",
-                              style: TextStyle( fontFamily: 'Roboto'),
+                            color: selectedbutton2
+                                ? Colors.purple[200]
+                                : Colors.purple[50],
+                            child: Text(
+                              "Moderate",
+                              style: TextStyle(fontFamily: 'Roboto'),
                             ),
                           ),
                           RaisedButton(
-                            onPressed: (){ temp = "low";
-                            setState(() {
-                              selectedbutton3 = true;
-                              selectedbutton2 = false;
-                              selectedbutton1 = false;
-                            });
+                            onPressed: () {
+                              temp = "low";
+                              setState(() {
+                                selectedbutton3 = true;
+                                selectedbutton2 = false;
+                                selectedbutton1 = false;
+                              });
                             },
                             splashColor: Colors.purple[100],
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
-                            child: Text("Low",
-                              style: TextStyle( fontFamily: 'Roboto'),
+                            color: selectedbutton3
+                                ? Colors.purple[200]
+                                : Colors.purple[50],
+                            child: Text(
+                              "Low",
+                              style: TextStyle(fontFamily: 'Roboto'),
                             ),
                           ),
                         ],
@@ -1443,20 +1481,19 @@ class _qu6State extends State<qu6> {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
-                        elevation: 10.0 ,
+                        elevation: 10.0,
                         textColor: Colors.white,
                         color: Colors.black54,
                         // highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
-                              fontSize: 20.0,
-                              fontFamily: 'Courgette'
-                          ),
+                              fontSize: 20.0, fontFamily: 'Courgette'),
                         ),
                         onPressed: () {
                           addData(temp);
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => qu7()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => qu7()));
                         },
                         splashColor: Colors.purple[100],
                       ),
@@ -1473,15 +1510,14 @@ class _qu6State extends State<qu6> {
                     ),
                     Text(
                       'Partners in pethood',
-                      style: TextStyle( fontFamily: 'Courgette'),
+                      style: TextStyle(fontFamily: 'Courgette'),
                     )
                   ],
                 ),
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }
 
@@ -1495,21 +1531,20 @@ class _qu7State extends State<qu7> {
   bool selectedbutton2 = false;
   bool selectedbutton3 = false;
 
-  void addData(value){
+  void addData(value) {
     datas.add(value);
     print(datas);
   }
 
   String temp = '';
 
-  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400]];
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar:  AppBar(
+        appBar: AppBar(
           backgroundColor: Colors.red[300],
           title: Text(
             "PawPal",
@@ -1521,7 +1556,7 @@ class _qu7State extends State<qu7> {
           ),
           actions: <Widget>[
             IconButton(
-              onPressed: (){},
+              onPressed: () {},
               icon: Icon(Icons.pets),
               iconSize: 30.0,
               color: Colors.black54,
@@ -1531,8 +1566,9 @@ class _qu7State extends State<qu7> {
               iconSize: 30.0,
               tooltip: 'Go to Home',
               color: Colors.white70,
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => welcome()));
               },
             ),
           ],
@@ -1558,7 +1594,6 @@ class _qu7State extends State<qu7> {
                         textAlign: TextAlign.center,
                       ),
                     ),
-
                     Container(
                       padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
                       height: 300.0,
@@ -1572,14 +1607,18 @@ class _qu7State extends State<qu7> {
                       child: Column(
                         children: <Widget>[
                           Container(
-                            padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
+                            padding:
+                                EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
                               "Do you have kids?",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontFamily: 'Roboto',
+                              ),
                             ),
                           ),
                           RaisedButton(
-                              onPressed: (){
+                              onPressed: () {
                                 temp = "yes";
                                 setState(() {
                                   selectedbutton1 = true;
@@ -1591,12 +1630,15 @@ class _qu7State extends State<qu7> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
-                              child: Text("Yes, an infant",
-                                style: TextStyle( fontFamily: 'Roboto'),
+                              color: selectedbutton1
+                                  ? Colors.purple[200]
+                                  : Colors.purple[50],
+                              child: Text(
+                                "Yes, an infant",
+                                style: TextStyle(fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
-                              onPressed: (){
+                              onPressed: () {
                                 temp = "yes";
                                 setState(() {
                                   selectedbutton2 = true;
@@ -1608,12 +1650,15 @@ class _qu7State extends State<qu7> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
-                              child: Text("Yes, a toddler",
-                                style: TextStyle( fontFamily: 'Roboto'),
+                              color: selectedbutton2
+                                  ? Colors.purple[200]
+                                  : Colors.purple[50],
+                              child: Text(
+                                "Yes, a toddler",
+                                style: TextStyle(fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
-                            onPressed: (){
+                            onPressed: () {
                               temp = "no";
                               setState(() {
                                 selectedbutton3 = true;
@@ -1625,32 +1670,33 @@ class _qu7State extends State<qu7> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
-                            child: Text("No",
-                              style: TextStyle( fontFamily: 'Roboto'),
+                            color: selectedbutton3
+                                ? Colors.purple[200]
+                                : Colors.purple[50],
+                            child: Text(
+                              "No",
+                              style: TextStyle(fontFamily: 'Roboto'),
                             ),
                           ),
-
                         ],
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
-                        elevation: 10.0 ,
+                        elevation: 10.0,
                         textColor: Colors.white,
                         color: Colors.black54,
                         // highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
-                              fontSize: 20.0,
-                              fontFamily: 'Courgette'
-                          ),
+                              fontSize: 20.0, fontFamily: 'Courgette'),
                         ),
                         onPressed: () {
                           addData(temp);
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => qu8()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => qu8()));
                         },
                         splashColor: Colors.purple[100],
                       ),
@@ -1667,19 +1713,16 @@ class _qu7State extends State<qu7> {
                     ),
                     Text(
                       'Partners in pethood',
-                      style: TextStyle( fontFamily: 'Courgette'),
+                      style: TextStyle(fontFamily: 'Courgette'),
                     )
                   ],
                 ),
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }
-
-
 
 class qu8 extends StatefulWidget {
   @override
@@ -1690,21 +1733,20 @@ class _qu8State extends State<qu8> {
   bool selectedbutton1 = false;
   bool selectedbutton2 = false;
 
-  void addData(value){
+  void addData(value) {
     datas.add(value);
     print(datas);
   }
 
   String temp = '';
 
-  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400]];
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar:  AppBar(
+        appBar: AppBar(
           backgroundColor: Colors.red[300],
           title: Text(
             "PawPal",
@@ -1716,7 +1758,7 @@ class _qu8State extends State<qu8> {
           ),
           actions: <Widget>[
             IconButton(
-              onPressed: (){},
+              onPressed: () {},
               icon: Icon(Icons.pets),
               iconSize: 30.0,
               color: Colors.black54,
@@ -1726,8 +1768,9 @@ class _qu8State extends State<qu8> {
               iconSize: 30.0,
               tooltip: 'Go to Home',
               color: Colors.white70,
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => welcome()));
               },
             ),
           ],
@@ -1753,7 +1796,6 @@ class _qu8State extends State<qu8> {
                         textAlign: TextAlign.center,
                       ),
                     ),
-
                     Container(
                       padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
                       height: 300.0,
@@ -1767,14 +1809,18 @@ class _qu8State extends State<qu8> {
                       child: Column(
                         children: <Widget>[
                           Container(
-                            padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
+                            padding:
+                                EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
                               "What type of dog do you want",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontFamily: 'Roboto',
+                              ),
                             ),
                           ),
                           RaisedButton(
-                              onPressed: (){
+                              onPressed: () {
                                 temp = "yes";
                                 setState(() {
                                   selectedbutton1 = true;
@@ -1785,13 +1831,15 @@ class _qu8State extends State<qu8> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
-                              child: Text("Guard",
-                                style: TextStyle( fontFamily: 'Roboto'),
+                              color: selectedbutton1
+                                  ? Colors.purple[200]
+                                  : Colors.purple[50],
+                              child: Text(
+                                "Guard",
+                                style: TextStyle(fontFamily: 'Roboto'),
                               )),
-
                           RaisedButton(
-                            onPressed: (){
+                            onPressed: () {
                               temp = "no";
                               setState(() {
                                 selectedbutton2 = true;
@@ -1802,32 +1850,33 @@ class _qu8State extends State<qu8> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
-                            child: Text("Companion",
-                              style: TextStyle( fontFamily: 'Roboto'),
+                            color: selectedbutton2
+                                ? Colors.purple[200]
+                                : Colors.purple[50],
+                            child: Text(
+                              "Companion",
+                              style: TextStyle(fontFamily: 'Roboto'),
                             ),
                           ),
-
                         ],
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
-                        elevation: 10.0 ,
+                        elevation: 10.0,
                         textColor: Colors.white,
                         color: Colors.black54,
                         // highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
-                              fontSize: 20.0,
-                              fontFamily: 'Courgette'
-                          ),
+                              fontSize: 20.0, fontFamily: 'Courgette'),
                         ),
                         onPressed: () {
                           addData(temp);
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => qu9()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => qu9()));
                         },
                         splashColor: Colors.purple[100],
                       ),
@@ -1844,15 +1893,14 @@ class _qu8State extends State<qu8> {
                     ),
                     Text(
                       'Partners in pethood',
-                      style: TextStyle( fontFamily: 'Courgette'),
+                      style: TextStyle(fontFamily: 'Courgette'),
                     )
                   ],
                 ),
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }
 
@@ -1866,21 +1914,20 @@ class _qu9State extends State<qu9> {
   bool selectedbutton2 = false;
   bool selectedbutton3 = false;
 
-  void addData(value){
+  void addData(value) {
     datas.add(value);
     print(datas);
   }
 
   String temp = '';
 
-  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400] ];
+  List<Color> _colors = [Colors.red[100], Colors.red[200], Colors.red[400]];
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     var devwidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        appBar:  AppBar(
+        appBar: AppBar(
           backgroundColor: Colors.red[300],
           title: Text(
             "PawPal",
@@ -1892,7 +1939,7 @@ class _qu9State extends State<qu9> {
           ),
           actions: <Widget>[
             IconButton(
-              onPressed: (){},
+              onPressed: () {},
               icon: Icon(Icons.pets),
               iconSize: 30.0,
               color: Colors.black54,
@@ -1902,8 +1949,9 @@ class _qu9State extends State<qu9> {
               iconSize: 30.0,
               tooltip: 'Go to Home',
               color: Colors.white70,
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => welcome()));
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => welcome()));
               },
             ),
           ],
@@ -1929,7 +1977,6 @@ class _qu9State extends State<qu9> {
                         textAlign: TextAlign.center,
                       ),
                     ),
-
                     Container(
                       padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
                       height: 300.0,
@@ -1943,14 +1990,18 @@ class _qu9State extends State<qu9> {
                       child: Column(
                         children: <Widget>[
                           Container(
-                            padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
+                            padding:
+                                EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
                               "Which diet would you provide to your dog?",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontFamily: 'Roboto',
+                              ),
                             ),
                           ),
                           RaisedButton(
-                              onPressed: (){
+                              onPressed: () {
                                 temp = "not particular";
                                 setState(() {
                                   selectedbutton1 = true;
@@ -1962,12 +2013,15 @@ class _qu9State extends State<qu9> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
-                              child: Text("Vegan/ Vegetarian",
-                                style: TextStyle( fontFamily: 'Roboto'),
+                              color: selectedbutton1
+                                  ? Colors.purple[200]
+                                  : Colors.purple[50],
+                              child: Text(
+                                "Vegan/ Vegetarian",
+                                style: TextStyle(fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
-                              onPressed: (){
+                              onPressed: () {
                                 temp = "not particular";
                                 setState(() {
                                   selectedbutton2 = true;
@@ -1979,12 +2033,15 @@ class _qu9State extends State<qu9> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
-                              child: Text("Eggetarian",
-                                style: TextStyle( fontFamily: 'Roboto'),
+                              color: selectedbutton2
+                                  ? Colors.purple[200]
+                                  : Colors.purple[50],
+                              child: Text(
+                                "Eggetarian",
+                                style: TextStyle(fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
-                            onPressed: (){
+                            onPressed: () {
                               temp = "meat rich";
                               setState(() {
                                 selectedbutton3 = true;
@@ -1996,32 +2053,35 @@ class _qu9State extends State<qu9> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15),
                             ),
-                            color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
-                            child: Text("Diet with meat",
-                              style: TextStyle( fontFamily: 'Roboto'),
+                            color: selectedbutton3
+                                ? Colors.purple[200]
+                                : Colors.purple[50],
+                            child: Text(
+                              "Diet with meat",
+                              style: TextStyle(fontFamily: 'Roboto'),
                             ),
                           ),
-
                         ],
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
-                        elevation: 10.0 ,
+                        elevation: 10.0,
                         textColor: Colors.white,
                         color: Colors.black54,
                         // highlightColor: Colors.red,
                         child: Text(
                           'Submit',
                           style: TextStyle(
-                              fontSize: 20.0,
-                              fontFamily: 'Courgette'
-                          ),
+                              fontSize: 20.0, fontFamily: 'Courgette'),
                         ),
                         onPressed: () {
                           addData(temp);
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => MyApps()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MyApps()));
                         },
                         splashColor: Colors.purple[100],
                       ),
@@ -2038,19 +2098,16 @@ class _qu9State extends State<qu9> {
                     ),
                     Text(
                       'Partners in pethood',
-                      style: TextStyle( fontFamily: 'Courgette'),
+                      style: TextStyle(fontFamily: 'Courgette'),
                     )
                   ],
                 ),
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }
-
-
 
 /*class preferance3 extends StatelessWidget {
   void addData(value){
@@ -2196,10 +2253,3 @@ class _qu9State extends State<qu9> {
 }
 
  */
-
-
-
-
-
-
-
