@@ -626,9 +626,7 @@ class MyAppState extends  State<MyApps> {
                           if(score>=3) {
                             finalpickno = finalpickno + 1;
                             finalpick = finalpick + finalpickno.toString()+". " + name+" - "+ finalpercent.toStringAsFixed(2)+"%"+ "\n";
-                            if(name == 'Yorkshire Terrier Yorkie'){
-                              mail(finalpick);
-                            }
+                           
                             return FlatButton(
                               padding: EdgeInsets.all(10.0),
                               onPressed: () {
