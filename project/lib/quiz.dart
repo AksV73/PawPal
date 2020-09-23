@@ -57,7 +57,7 @@ class _Page1State extends State<Page1> {
             ),
 
             Container(
-              child: Text('Registeration Form',
+              child: Text('Registration Form',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0),
               ),
             ),
@@ -325,16 +325,6 @@ class _qu0State extends State<qu0> {
                     splashColor: Colors.purple[100],
                   ),
                 ),
-//                RaisedButton(
-//                  child: Text('Why?'),
-//                  onPressed: () {
-//                    return Container(
-//                      color: Colors.blue,
-//                      child: Text('it is imposrtant'),
-//                    );
-//                  },
-//                ),
-
                 Container(
                   height: 80.0,
                   width: devwidth,
@@ -409,141 +399,136 @@ class _qu1State extends State<qu1> {
         ),
         body: SingleChildScrollView(
           child: Container(
-            child: Card(
-              child: Container(
-                padding: EdgeInsets.all(10.0),
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      padding: EdgeInsets.all(15.0),
-                      height: 70.0,
-                      width: devwidth - 10.0,
-                      color: Colors.white24,
-                      child: Text(
-                        'Question 2',
-                        style: TextStyle(
-                          fontSize: 30.0,
-                          fontFamily: 'Courgette',
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
+            padding: EdgeInsets.all(10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.all(10.0),
+                  height: 70.0,
+                  width: devwidth - 10.0,
+                  color: Colors.white24,
+                  child: Text(
+                    'Question 2',
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      fontFamily: 'Courgette',
                     ),
-
-                    Container(
-                      padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
-                      height: 300.0,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: _colors,
-                          end: Alignment.bottomCenter,
-                          begin: Alignment.topRight,
-                        ),
-                      ),
-                      child: Column(
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
-                            child: Text(
-                              "What kind of accommodation would you provide your dog ?",
-                              style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
-                            ),
-                          ),
-                          RaisedButton(
-                              onPressed: (){
-                                temp = "apartment";
-                                setState(() {
-                                  selectedbutton1 = true;
-                                  selectedbutton2 = false;
-                                  selectedbutton3 = false;
-                                });
-                              },
-                              splashColor: Colors.purple[100],
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
-                              child: Text("An apartment",
-                                style: TextStyle( fontFamily: 'Roboto'),
-                              )),
-                          RaisedButton(
-                            onPressed: (){
-                              temp = "independent house";
-                              setState(() {
-                                selectedbutton2 = true;
-                                selectedbutton1 = false;
-                                selectedbutton3 = false;
-                              });
-                            },
-                            splashColor: Colors.purple[100],
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
-                            child: Text("An Independent house",
-                              style: TextStyle( fontFamily: 'Roboto'),
-                            ),
-                          ),
-                          RaisedButton(
-                            onPressed: (){
-                              temp = "ranch";
-                              setState(() {
-                                selectedbutton3 = true;
-                                selectedbutton2 = false;
-                                selectedbutton1 = false;
-                              });
-                            },
-                            splashColor: Colors.purple[100],
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
-                            child: Text("A farmhouse/ranch",
-                              style: TextStyle( fontFamily: 'Roboto'),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      height: 50.0,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: RaisedButton(
-                        elevation: 10.0 ,
-                        textColor: Colors.white,
-                        color: Colors.black54,
-                       // highlightColor: Colors.red,
-                        child: Text(
-                          'Next',
-                          style: TextStyle(
-                              fontSize: 20.0,
-                              fontFamily: 'Courgette'
-                          ),
-                        ),
-                        onPressed: () {
-                          addData(temp);
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => qu2()));
-                        },
-                        splashColor: Colors.green,
-                      ),
-                    ),
-                    Container(
-                      height: 100.0,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('images/paw-trail.jpg'),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      'Partners in pethood',
-                      style: TextStyle( fontFamily: 'Courgette'),
-                    )
-                  ],
+                    textAlign: TextAlign.center,
+                  ),
                 ),
-              ),
+
+                Container(
+                  padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),
+                  height: 300.0,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: _colors,
+                      end: Alignment.bottomCenter,
+                      begin: Alignment.topRight,
+                    ),
+                  ),
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
+                        child: Text(
+                          "What kind of accommodation would you provide your dog ?",
+                          style: TextStyle( fontSize: 20.0, fontFamily: 'Roboto', ),
+                        ),
+                      ),
+                      RaisedButton(
+                          onPressed: (){
+                            temp = "apartment";
+                            setState(() {
+                              selectedbutton1 = true;
+                              selectedbutton2 = false;
+                              selectedbutton3 = false;
+                            });
+                          },
+                          splashColor: Colors.purple[100],
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          color: selectedbutton1 ? Colors.purple[200] : Colors.purple[50],
+                          child: Text("An apartment",
+                            style: TextStyle( fontFamily: 'Roboto'),
+                          )),
+                      RaisedButton(
+                        onPressed: (){
+                          temp = "independent house";
+                          setState(() {
+                            selectedbutton2 = true;
+                            selectedbutton1 = false;
+                            selectedbutton3 = false;
+                          });
+                        },
+                        splashColor: Colors.purple[100],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        color: selectedbutton2 ? Colors.purple[200] : Colors.purple[50],
+                        child: Text("An Independent house",
+                          style: TextStyle( fontFamily: 'Roboto'),
+                        ),
+                      ),
+                      RaisedButton(
+                        onPressed: (){
+                          temp = "ranch";
+                          setState(() {
+                            selectedbutton3 = true;
+                            selectedbutton2 = false;
+                            selectedbutton1 = false;
+                          });
+                        },
+                        splashColor: Colors.purple[100],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        color: selectedbutton3 ? Colors.purple[200] : Colors.purple[50],
+                        child: Text("A farmhouse/ranch",
+                          style: TextStyle( fontFamily: 'Roboto'),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: RaisedButton(
+                    elevation: 10.0 ,
+                    textColor: Colors.white,
+                    color: Colors.black54,
+                    // highlightColor: Colors.red,
+                    child: Text(
+                      'Next',
+                      style: TextStyle(
+                          fontSize: 20.0,
+                          fontFamily: 'Courgette'
+                      ),
+                    ),
+                    onPressed: () {
+                      addData(temp);
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => qu2()));
+                    },
+                    splashColor: Colors.purple[100],
+                  ),
+                ),
+                Container(
+                  height: 80.0,
+                  width: devwidth,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('images/paw-trail.jpg'),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+                Text(
+                  'Partners in pethood',
+                  style: TextStyle( fontFamily: 'Courgette'),
+                )
+              ],
             ),
           ),
         )
@@ -679,9 +664,6 @@ class _qu2State extends State<qu2> {
                         ],
                       ),
                     ),
-                    Container(
-                      height: 50.0,
-                    ),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
@@ -700,11 +682,12 @@ class _qu2State extends State<qu2> {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => qu3()));
                         },
-                        splashColor: Colors.green,
+                        splashColor: Colors.purple[100],
                       ),
                     ),
                     Container(
-                      height: 100.0,
+                      height: 80.0,
+                      width: devwidth,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage('images/paw-trail.jpg'),
@@ -874,42 +857,37 @@ class _qu3State extends State<qu3> {
                         ],
                       ),
                     ),
-                    Container(
-                      height: 50.0,
-                    ),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
-                        elevation: 60.0 ,
+                        elevation: 10.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                       // highlightColor: Colors.red,
+                        // highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
                               fontSize: 20.0,
-                              fontFamily: 'DancingScript'
+                              fontFamily: 'Courgette'
                           ),
                         ),
                         onPressed: () {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => qu4()));
                         },
-                        splashColor: Colors.green,
+                        splashColor: Colors.purple[100],
                       ),
                     ),
-
-                       Container(
-                        height: 100.0,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('images/paw-trail.jpg'),
-                            fit: BoxFit.fill,
-                          ),
+                    Container(
+                      height: 80.0,
+                      width: devwidth,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('images/paw-trail.jpg'),
+                          fit: BoxFit.fill,
                         ),
                       ),
-
-
+                    ),
                        Text(
                         'Partners in pethood',
                         style: TextStyle( fontFamily: 'Courgette'),
@@ -1075,16 +1053,13 @@ class _qu4State extends State<qu4> {
                         ],
                       ),
                     ),
-                    Container(
-                      height: 50.0,
-                    ),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
                         elevation: 10.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                        //highlightColor: Colors.red,
+                        // highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
@@ -1096,11 +1071,12 @@ class _qu4State extends State<qu4> {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => qu5()));
                         },
-                        splashColor: Colors.green,
+                        splashColor: Colors.purple[100],
                       ),
                     ),
                     Container(
-                      height: 100.0,
+                      height: 80.0,
+                      width: devwidth,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage('images/paw-trail.jpg'),
@@ -1271,16 +1247,13 @@ class _qu5State extends State<qu5> {
                         ],
                       ),
                     ),
-                    Container(
-                      height: 50.0,
-                    ),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
                         elevation: 10.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                        //highlightColor: Colors.red,
+                        // highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
@@ -1292,11 +1265,12 @@ class _qu5State extends State<qu5> {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => qu6()));
                         },
-                        splashColor: Colors.green,
+                        splashColor: Colors.purple[100],
                       ),
                     ),
                     Container(
-                      height: 100.0,
+                      height: 80.0,
+                      width: devwidth,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage('images/paw-trail.jpg'),
@@ -1466,16 +1440,13 @@ class _qu6State extends State<qu6> {
                         ],
                       ),
                     ),
-                    Container(
-                      height: 50.0,
-                    ),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
                         elevation: 10.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                        //highlightColor: Colors.red,
+                        // highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
@@ -1487,11 +1458,12 @@ class _qu6State extends State<qu6> {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => qu7()));
                         },
-                        splashColor: Colors.green,
+                        splashColor: Colors.purple[100],
                       ),
                     ),
                     Container(
-                      height: 100.0,
+                      height: 80.0,
+                      width: devwidth,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage('images/paw-trail.jpg'),
@@ -1662,16 +1634,13 @@ class _qu7State extends State<qu7> {
                         ],
                       ),
                     ),
-                    Container(
-                      height: 50.0,
-                    ),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
                         elevation: 10.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                        //highlightColor: Colors.red,
+                        // highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
@@ -1683,11 +1652,12 @@ class _qu7State extends State<qu7> {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => qu8()));
                         },
-                        splashColor: Colors.green,
+                        splashColor: Colors.purple[100],
                       ),
                     ),
                     Container(
-                      height: 100.0,
+                      height: 80.0,
+                      width: devwidth,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage('images/paw-trail.jpg'),
@@ -1841,16 +1811,13 @@ class _qu8State extends State<qu8> {
                         ],
                       ),
                     ),
-                    Container(
-                      height: 50.0,
-                    ),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
                         elevation: 10.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                        //highlightColor: Colors.red,
+                        // highlightColor: Colors.red,
                         child: Text(
                           'Next',
                           style: TextStyle(
@@ -1862,11 +1829,12 @@ class _qu8State extends State<qu8> {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => qu9()));
                         },
-                        splashColor: Colors.green,
+                        splashColor: Colors.purple[100],
                       ),
                     ),
                     Container(
-                      height: 100.0,
+                      height: 80.0,
+                      width: devwidth,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage('images/paw-trail.jpg'),
@@ -2037,18 +2005,15 @@ class _qu9State extends State<qu9> {
                         ],
                       ),
                     ),
-                    Container(
-                      height: 50.0,
-                    ),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
                         elevation: 10.0 ,
                         textColor: Colors.white,
                         color: Colors.black54,
-                       // highlightColor: Colors.red,
+                        // highlightColor: Colors.red,
                         child: Text(
-                          'Next',
+                          'Submit',
                           style: TextStyle(
                               fontSize: 20.0,
                               fontFamily: 'Courgette'
@@ -2057,13 +2022,13 @@ class _qu9State extends State<qu9> {
                         onPressed: () {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => MyApps()));
-
                         },
-                        splashColor: Colors.green,
+                        splashColor: Colors.purple[100],
                       ),
                     ),
                     Container(
-                      height: 100.0,
+                      height: 80.0,
+                      width: devwidth,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage('images/paw-trail.jpg'),
