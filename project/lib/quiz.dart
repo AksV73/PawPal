@@ -1658,6 +1658,7 @@ class qu9 extends StatelessWidget {
                         onPressed: () {
                           addData(temp);
                           Navigator.push(context, MaterialPageRoute(builder: (context) => MyApps()));
+
                         },
                         splashColor: Colors.green,
                       ),
