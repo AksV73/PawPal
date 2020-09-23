@@ -415,6 +415,9 @@ class MyAppState extends State<MyApps> {
       String indi,
       String activity,
       String shed,
+      String maint,
+      String weather,
+      String allergy,
       int score) {
     List<Color> _colors = [Colors.black26, Colors.grey];
     return Scaffold(
@@ -480,20 +483,26 @@ class MyAppState extends State<MyApps> {
                       group1 +
                       ", " +
                       group2 +
-                      "\nTemperment: " +
+                      "\nTemperament: " +
                       temper +
-                      "\nWatchDog: " +
+                      "\nWatchdog: " +
                       watch +
-                      "\nIndependence: " +
+                      "\nIndependent: " +
                       indi +
-                      "\nType of home required: " +
+                      "\nType of accommodation required: " +
                       house +
                       "\nKid Friendly: " +
                       kid +
                       "\nActivity level: " +
                       activity +
                       "\nShedding: " +
-                      shed,
+                      shed +
+                      "\nCost of maintaining a dog per month: " +
+                       maint +
+                      "\nBest suited climate: "+
+                        weather +" climate" +
+                      "\nIs the dog hypoallergenic ?: " +
+                       allergy,
                   style: TextStyle(
                     fontFamily: 'Raleway',
                     fontSize: 20.0,
@@ -565,7 +574,7 @@ class MyAppState extends State<MyApps> {
         child: Center(
             child: FutureBuilder(
                 future: DefaultAssetBundle.of(context)
-                    .loadString('dataasset/dogdataupdated.json'),
+                    .loadString('dataasset/dogdatafinal1.json'),
                 builder: (context, snapshot) {
                   // Decode the JSON
                   var new_data = json.decode(snapshot.data.toString());
@@ -579,18 +588,19 @@ class MyAppState extends State<MyApps> {
                       String name = new_data[index]['BreedName'];
                       String group1 = new_data[index]['Group1'];
                       String group2 = new_data[index]['Group2'];
-                      String temper = new_data[index]['Temperment'];
-                      //String weight = new_data[index]['MaleWtKg'];
+                      String temper = new_data[index]['Temperament'];
+                      String weight = new_data[index]['Average weight'];
                       String watch = new_data[index]['Watchdog'];
-                      String house = new_data[index]['Type of home required'];
-                      String diet = new_data[index]['Eating habits'];
+                      String house = new_data[index]['Type of accommodation required'];
+                      String diet = new_data[index]['Diet'];
                       String bark = new_data[index]['Barking ability'];
                       String kid = new_data[index]['Kid friendly'];
-                      String indi = new_data[index]['Independence'];
-                      String activity = new_data[index]['activity level'];
+                      String indi = new_data[index]['Independent nature'];
+                      String activity = new_data[index]['Activity level'];
                       String shed = new_data[index]['Shedding'];
                       String weather = new_data[index]['Weather'];
-                      String allergy = new_data[index]['hypoallergenic'];
+                      String allergy = new_data[index]['Hypoallergenic'];
+                      String maint = new_data[index]['Maintainence cost per month'];
                       score = 0;
 
                       if (weather == datas[0] &&
@@ -635,6 +645,9 @@ class MyAppState extends State<MyApps> {
                                           indi,
                                           activity,
                                           shed,
+                                          maint,
+                                          weather,
+                                          allergy,
                                           score)));
                             },
                             child: Column(

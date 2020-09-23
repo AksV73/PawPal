@@ -225,7 +225,7 @@ class _qu0State extends State<qu0> {
                       ),
                       RaisedButton(
                         onPressed: () {
-                          temp = "hot";
+                          temp = "Hot";
                           setState(() {
                             selectedbutton1 = true;
                             selectedbutton2 = false;
@@ -246,7 +246,7 @@ class _qu0State extends State<qu0> {
                       ),
                       RaisedButton(
                         onPressed: () {
-                          temp = "warm";
+                          temp = "Warm";
                           setState(() {
                             selectedbutton2 = true;
                             selectedbutton1 = false;
@@ -267,7 +267,7 @@ class _qu0State extends State<qu0> {
                       ),
                       RaisedButton(
                         onPressed: () {
-                          temp = "cold";
+                          temp = "Cold";
                           setState(() {
                             selectedbutton3 = true;
                             selectedbutton1 = false;
@@ -425,7 +425,7 @@ class _qu1State extends State<qu1> {
                       ),
                       RaisedButton(
                           onPressed: () {
-                            temp = "apartment";
+                            temp = "Apartment";
                             setState(() {
                               selectedbutton1 = true;
                               selectedbutton2 = false;
@@ -445,7 +445,7 @@ class _qu1State extends State<qu1> {
                           )),
                       RaisedButton(
                         onPressed: () {
-                          temp = "independent house";
+                          temp = "Independent house";
                           setState(() {
                             selectedbutton2 = true;
                             selectedbutton1 = false;
@@ -466,7 +466,7 @@ class _qu1State extends State<qu1> {
                       ),
                       RaisedButton(
                         onPressed: () {
-                          temp = "ranch";
+                          temp = "Ranch";
                           setState(() {
                             selectedbutton3 = true;
                             selectedbutton2 = false;
@@ -481,7 +481,7 @@ class _qu1State extends State<qu1> {
                             ? Colors.purple[200]
                             : Colors.purple[50],
                         child: Text(
-                          "A farmhouse/ranch",
+                          "A farmhouse or a ranch",
                           style: TextStyle(fontFamily: 'Roboto'),
                         ),
                       ),
@@ -625,7 +625,7 @@ class _qu2State extends State<qu2> {
                           ),
                           RaisedButton(
                               onPressed: () {
-                                temp = "no";
+                                temp = "No";
                                 setState(() {
                                   selectedbutton1 = true;
                                   selectedbutton2 = false;
@@ -644,7 +644,7 @@ class _qu2State extends State<qu2> {
                               )),
                           RaisedButton(
                             onPressed: () {
-                              temp = "yes";
+                              temp = "Yes";
                               setState(() {
                                 selectedbutton2 = true;
                                 selectedbutton1 = false;
@@ -658,7 +658,7 @@ class _qu2State extends State<qu2> {
                                 ? Colors.purple[200]
                                 : Colors.purple[50],
                             child: Text(
-                              "yes",
+                              "Yes",
                               style: TextStyle(fontFamily: 'Roboto'),
                             ),
                           ),
@@ -804,7 +804,7 @@ class _qu3State extends State<qu3> {
                         ),
                         RaisedButton(
                             onPressed: () {
-                              temp = "high";
+                              temp = "High";
                               setState(() {
                                 selectedbutton1 = true;
                                 selectedbutton2 = false;
@@ -824,7 +824,7 @@ class _qu3State extends State<qu3> {
                             )),
                         RaisedButton(
                           onPressed: () {
-                            temp = "low";
+                            temp = "Low";
                             setState(() {
                               selectedbutton2 = true;
                               selectedbutton1 = false;
@@ -845,7 +845,7 @@ class _qu3State extends State<qu3> {
                         ),
                         RaisedButton(
                           onPressed: () {
-                            temp = "moderate";
+                            temp = "Moderate";
                             setState(() {
                               selectedbutton3 = true;
                               selectedbutton2 = false;
@@ -1007,7 +1007,7 @@ class _qu4State extends State<qu4> {
                           ),
                           RaisedButton(
                               onPressed: () {
-                                temp = "very independent";
+                                temp = "Very independent";
                                 setState(() {
                                   selectedbutton1 = true;
                                   selectedbutton2 = false;
@@ -1022,12 +1022,12 @@ class _qu4State extends State<qu4> {
                                   ? Colors.purple[200]
                                   : Colors.purple[50],
                               child: Text(
-                                "For 6-8 hours",
+                                "For 4-8 hours",
                                 style: TextStyle(fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
                             onPressed: () {
-                              temp = "moderate";
+                              temp = "Moderate";
                               setState(() {
                                 selectedbutton2 = true;
                                 selectedbutton1 = false;
@@ -1048,7 +1048,7 @@ class _qu4State extends State<qu4> {
                           ),
                           RaisedButton(
                             onPressed: () {
-                              temp = "not independent";
+                              temp = "Not independent";
                               setState(() {
                                 selectedbutton3 = true;
                                 selectedbutton2 = false;
@@ -1211,7 +1211,7 @@ class _qu5State extends State<qu5> {
                           ),
                           RaisedButton(
                               onPressed: () {
-                                temp = "high";
+                                temp = "High";
                                 setState(() {
                                   selectedbutton1 = true;
                                   selectedbutton2 = false;
@@ -1231,7 +1231,7 @@ class _qu5State extends State<qu5> {
                               )),
                           RaisedButton(
                             onPressed: () {
-                              temp = "medium";
+                              temp = "Medium";
                               setState(() {
                                 selectedbutton2 = true;
                                 selectedbutton1 = false;
@@ -1252,7 +1252,7 @@ class _qu5State extends State<qu5> {
                           ),
                           RaisedButton(
                             onPressed: () {
-                              temp = "low";
+                              temp = "Low";
                               setState(() {
                                 selectedbutton3 = true;
                                 selectedbutton2 = false;
@@ -1415,7 +1415,7 @@ class _qu6State extends State<qu6> {
                           ),
                           RaisedButton(
                               onPressed: () {
-                                temp = "frequent";
+                                temp = "Frequent";
                                 setState(() {
                                   selectedbutton1 = true;
                                   selectedbutton2 = false;
@@ -1435,7 +1435,7 @@ class _qu6State extends State<qu6> {
                               )),
                           RaisedButton(
                             onPressed: () {
-                              temp = "seasonal";
+                              temp = "Seasonal";
                               setState(() {
                                 selectedbutton2 = true;
                                 selectedbutton1 = false;
@@ -1456,7 +1456,7 @@ class _qu6State extends State<qu6> {
                           ),
                           RaisedButton(
                             onPressed: () {
-                              temp = "low";
+                              temp = "Low";
                               setState(() {
                                 selectedbutton3 = true;
                                 selectedbutton2 = false;
@@ -1623,7 +1623,7 @@ class _qu7State extends State<qu7> {
                           ),
                           RaisedButton(
                               onPressed: () {
-                                temp = "yes";
+                                temp = "Yes";
                                 setState(() {
                                   selectedbutton1 = true;
                                   selectedbutton2 = false;
@@ -1643,7 +1643,7 @@ class _qu7State extends State<qu7> {
                               )),
                           RaisedButton(
                               onPressed: () {
-                                temp = "yes";
+                                temp = "Yes";
                                 setState(() {
                                   selectedbutton2 = true;
                                   selectedbutton1 = false;
@@ -1663,7 +1663,7 @@ class _qu7State extends State<qu7> {
                               )),
                           RaisedButton(
                             onPressed: () {
-                              temp = "no";
+                              temp = "No";
                               setState(() {
                                 selectedbutton3 = true;
                                 selectedbutton2 = false;
@@ -1825,7 +1825,7 @@ class _qu8State extends State<qu8> {
                           ),
                           RaisedButton(
                               onPressed: () {
-                                temp = "yes";
+                                temp = "Yes";
                                 setState(() {
                                   selectedbutton1 = true;
                                   selectedbutton2 = false;
@@ -1844,7 +1844,7 @@ class _qu8State extends State<qu8> {
                               )),
                           RaisedButton(
                             onPressed: () {
-                              temp = "no";
+                              temp = "No";
                               setState(() {
                                 selectedbutton2 = true;
                                 selectedbutton1 = false;
@@ -1997,7 +1997,7 @@ class _qu9State extends State<qu9> {
                             padding:
                                 EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
-                              "Which diet would you provide to your dog?",
+                              "Which diet would you provide your dog?",
                               style: TextStyle(
                                 fontSize: 20.0,
                                 fontFamily: 'Roboto',
@@ -2006,7 +2006,7 @@ class _qu9State extends State<qu9> {
                           ),
                           RaisedButton(
                               onPressed: () {
-                                temp = "not particular";
+                                temp = "Doesn't require meat";
                                 setState(() {
                                   selectedbutton1 = true;
                                   selectedbutton2 = false;
@@ -2021,12 +2021,12 @@ class _qu9State extends State<qu9> {
                                   ? Colors.purple[200]
                                   : Colors.purple[50],
                               child: Text(
-                                "Vegan/ Vegetarian",
+                                "Vegan or Vegetarian",
                                 style: TextStyle(fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
                               onPressed: () {
-                                temp = "not particular";
+                                temp = "Doesn't require meat";
                                 setState(() {
                                   selectedbutton2 = true;
                                   selectedbutton1 = false;
@@ -2046,7 +2046,7 @@ class _qu9State extends State<qu9> {
                               )),
                           RaisedButton(
                             onPressed: () {
-                              temp = "meat rich";
+                              temp = "Meat rich";
                               setState(() {
                                 selectedbutton3 = true;
                                 selectedbutton2 = false;
@@ -2061,7 +2061,7 @@ class _qu9State extends State<qu9> {
                                 ? Colors.purple[200]
                                 : Colors.purple[50],
                             child: Text(
-                              "Diet with meat",
+                              "Meat rich",
                               style: TextStyle(fontFamily: 'Roboto'),
                             ),
                           ),
