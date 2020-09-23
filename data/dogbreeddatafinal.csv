@@ -1,0 +1,73 @@
+﻿BreedName,Group1,Group2,WtKg,Country,Maintainence cost per month,Temperment,Watchdog,Type of home required ,Barking ability,Kid friendly,Diet,Independence ,activity level,Shedding,Weather,hypoallergenic
+Affenpinscher,Toy,Companion,4 kg,India,3000 Rs - 4000 Rs,"Active, Adventurous, Curious, Fun loving, Playful, Stubborn",No,Apartment ,Moderate,Yes,Doen't require meat,Very independent,Medium,Seasonal,Warm,Yes
+Afghan Hound,Sporting,Sight,28 kg,India,5000 Rs - 7000 Rs,"Aloof, CLownish, Dignified, Happy, Independent",No,Apartment ,Low,Yes,Meat rich,Not independent,High,Frequent,Hot,Yes
+Akita,Working,Herding,44 kg,India,3000 Rs - 4000 Rs,"Alert, Courageous, Dignified, Docile, Friendly, Intelligent, Responsive",Yes,Ranch,High,No,Doen't require meat,Not independent,High,Frequent,Cold,No
+Alaskan Malamute,Working,Northern,40 kg,India,5000 Rs - 7000 Rs,"Affectionate, Devoted, Dignified, Friendly, Loyal, Playful",No,Ranch,High,Yes,Meat rich,Not independent,High,Frequent,Cold,No
+American Bulldog,Working,Guardian,38 kg,India,3000 Rs - 4000 Rs,"Affectionate, Alert, Courageous, Energetic, Gentle, Loving, Out going, Social",Yes,Ranch,Low,Yes,Meat rich,Not independent,High,Low,Warm,No
+Anatolian Shepherd,Working,Guardian,52 kg,India,5000 Rs - 7000 Rs,"Bold, Confident, Independent, Intelligent, Proud, Steady",Yes,Ranch,Low,No,Meat rich,Moderate,Medium,Low,Cold,No
+Bakharwal,Herding,Hunting,25 kg,India,2000 Rs - 3000 Rs,"Courageous, Obedient, Loyal, Protective, Loving",Yes,Ranch,High,Yes,Meat rich,Very independent,High,Seasonal,Cold,No
+Basset Hound,Hound,Scenthound,26 kg,India,3000 Rs - 4000 Rs,"Affectionate, Devoted, Friendly, Gentle, Sweet tempered, Tenacious",No,Apartment ,High,Yes,Doen't require meat,Moderate,Low,Frequent,Warm,No
+Beagle,Hound,Scenthound,11 kg,India,2000 Rs - 3000 Rs,"Friendly, Gentle, Independent, Intelligent, Lively, Loving, Sweet",No,Apartment ,High,Yes,Doen't require meat,Not independent,High,Seasonal,Warm,No
+Belgian Shepherd Dog Sheepdog,Herding,Herding,32 kg,India,5000 Rs - 7000 Rs,"Active, Alert, Confident, Friendly, Hard working, Protective, Stubborn, Watchful, Intelligent",Yes,Independent house,Low,Yes,Meat rich,Moderate,High,Frequent,Cold,No
+Bernese Mountain Dog,Working,Guardian,44 kg,India,5000 Rs - 7000 Rs,"Affectionate, Faithful, Intelligent, Loyal",Yes,Ranch,High,Yes,Meat rich,Not independent,High,Frequent,Cold,No
+Black Labrador Retriever,Sporting,Gun,32 kg,India,3000 Rs - 4000 Rs,"Affectionate, Alert, Cheerful, Energetic, Friendly, Gentle, Intelligent, Loving, Loyal, Outgoing, Playful, Responsive, Social",No,Ranch,High,Yes,Doen't require meat,Not independent,High,Frequent,Warm,No
+Bloodhound,Hound,Scenthound,46 kg,India,5000 Rs - 8000 Rs,"Affectionate, Even tempered, Gentle, Stubborn, Independent",No,Ranch,High,Yes,Doen't require meat,Not independent,High,Frequent,Warm,No
+Boerboel,Working,Guardian,80 kg,India,2000 Rs - 3000 Rs,"Confident, Dominant, Intelligent, Obedient, Territorial",Yes,Ranch,Moderate,Yes,Meat rich,Not independent,Medium,Seasonal,Warm,No
+Border Collie,Herding,Herding,17 kg,India,5000 Rs - 7000 Rs,"Intelligent, Energetic, Alert, Responsive, Tenacious, Loyal, Protective",Yes,Ranch,Low,Yes,Doen't require meat,Not independent,High,Seasonal,Warm,No
+Border Terrier,Terrier,Terrier,7 kg,India,3000 Rs - 4000 Rs,"Affectionate, Alert, Even tempered, Fearless, Intelligent, Obedient",Yes,Apartment ,Low,Yes,Doen't require meat,Not independent,High,Seasonal,Hot,No
+Boxer,Working,Guardian,30 kg,India,2000 Rs - 3000 Rs,"Brave, Bright, Confident, Energetic, Fearless, Friendly, Intelligent, Loyal, Playful",Yes,Apartment ,High,Yes,Meat rich,Not independent,High,Frequent,Warm,No
+Bullmastiff,Working,Guardian,55 kg,India,5000 Rs - 7000 Rs,"Alert, Calm, Courageous, Devoted, Docile, Powerful, Loyal, Protective, Reliable",Yes,Independent house,High,Yes,Meat rich,Not independent,Low,Low,Cold,No
+Cane Corso Mastiff,Working,Guardian,47 kg,India,5000 Rs - 7000 Rs,"Cheerful, Courageous, Loyal, Quiet, Social",Yes,Ranch,Moderate,No,Meat rich,Not independent,High,Seasonal,Warm,No
+Cavalier King Charles Spaniel,Toy,Companion,7 kg,India,2000 Rs - 3000 Rs,"Affectionate, Cheerful, Courageous, Gentle, Intelligent, Social",No,Apartment ,Moderate,Yes,Doen't require meat,Not independent,Medium,Seasonal,Warm,No
+Chihuahua,Toy,Companion,2 kg,India,2000 Rs - 3000 Rs,"Alert, Courageous, Devoted, Lively, Intelligent, Quick",No,Apartment ,Moderate,Yes,Doen't require meat,Not independent,Medium,Low,Hot,No
+Chocolate Labrador Retriever,Sporting,Gun,32 kg,India,3000 Rs - 4000 Rs,"Affectionate, Alert, Cheerful, Energetic, Friendly, Gentle, Intelligent, Loving, Loyal, Outgoing, Playful, Responsive, Social",No,Ranch,High,Yes,Doen't require meat,Not independent,High,Frequent,Warm,No
+Chow Chow,Non Sporting,Northern,26 kg,India,4000 Rs - 5000 Rs,"Aloof, Independent, Loyal, Quiet, Intelligent, Protective, Detached",No,Independent house,Low,No,Doen't require meat,Very independent,Low,Low,Cold,No
+Cocker Spaniel,Sporting,Gun,10 kg,India,3000 Rs - 4000 Rs,"Even Tempered, Joyful, Merry, Outgoing, Intelligent, Sociable, Trusting",No,Apartment ,Moderate,Yes,Doen't require meat,Not independent,High,Seasonal,Cold,No
+Collie,Herding,Herding,31 kg,India,4000 Rs - 5000 Rs,"Friendly, Gentle, Intelligent, Loyal, Protective, Responsive, Social",Yes,Independent house,High,Yes,Meat rich,Not independent,Medium,Frequent,Cold,No
+Dachshund,Hound,Scenthound,7 kg,India,2000 Rs - 3000 Rs,"Clever, Courageous, Devoted, Lively, Playful, Stubborn",No,Apartment ,High,Yes,Doen't require meat,Moderate,Medium,Seasonal,Warm,No
+Dalmatian,Non Sporting,Companion,25 kg,India,5000 Rs - 7000 Rs,"Active, Energetic, Friendly, Intelligent, Outgoing, Playful, Sensitive",No,Ranch,Low,Yes,Doen't require meat,Moderate,High,Frequent,Warm,No
+Doberman Pinscher,Working,Guardian,43 kg,India,4000 Rs - 5000 Rs,"Alert, Energetic, Fearless, Intelligent, Loyal, Obedient",Yes,Independent house,High,No,Meat rich,Not independent,Medium,Frequent,Warm,No
+Dogo ArgentiNo,Working,Guardian,43 kg,India,3000 Rs - 4000 Rs,"Affectionate, Cheerful, Friendly, Loyal, Protective, Tolerant, Social",Yes,Ranch,Low,No,Meat rich,Not independent,High,Low,Warm,No
+Dogue de Bordeaux,Working,Guardian,60 kg,India,3000 Rs - 4000 Rs,"Companionable, Courageous, Devoted, Even tempered, Loyal, Vigiliant",Yes,Apartment ,Low,Yes,Meat rich,Not independent,Low,Seasonal,Warm,No
+English Bulldog,Non Sporting,Companion,25 kg,India,4000 Rs - 5000 Rs,"Aggressive, Courageous, Friendly, Loving, Social, Sweet",No,Apartment ,High,Yes,Doen't require meat,Moderate,Low,Seasonal,Warm,No
+English Cocker Spaniel,Sporting,Gun,14 kg,India,3000 Rs - 4000 Rs,"Affectionate, Faithful, Friendly, Intelligent, Playful, Quiet, Trainable",Yes,Apartment ,High,Yes,Doen't require meat,Not independent,High,Seasonal,Cold,No
+Fox Terrier,Terrier,Terrier,8 kg,India,3000 Rs - 4000 Rs,"Active, Affectionate, Alert, Fearless, Intelligent, Playful",No,Independent house,Moderate,Yes,Doen't require meat,Moderate,High,Low,Warm,Yes
+French Bulldog,Non Sporting,Companion,12 kg,India,3000 Rs - 4000 Rs,"Affectionate, Playful, Alert, Athletic, Bright, Easygoing, Keen, Lively, Patient",No,Apartment ,Moderate,Yes,Meat rich,Not independent,Medium,Seasonal,Warm,No
+Gaddi,Herding,Guardian,45 kg,India,2000 Rs - 3000 Rs,"Intelligent, Gentle, Calm,Territorial",Yes,Ranch,High,No,Meat rich,Very independent,High,Frequent,Cold,No
+German Pinscher,Working,Terrier,14 kg,India,4000 Rs - 5000 Rs,"Even tempered, Familial, Courageous, Lively, Loving, Spirited",Yes,Independent house,Moderate,No,Meat rich,Moderate,High,Seasonal,Warm,No
+German Shepherd Dog,Herding,Herding,35 kg,India,4000 Rs - 5000 Rs,"Alert, Confident, Courageous, Curious, Intelligent, Loyal, Obedient, Watchful",Yes,Independent house,High,Yes,Meat rich,Not independent,High,Frequent,Cold,No
+Golden Retriever,Sporting,Gun,32 kg,India,4000 Rs - 5000 Rs,"Confident, Friendly, Intelligent, Kind, Reliable, Trustworthy",No,Ranch,Moderate,Yes,Doen't require meat,Not independent,High,Frequent,Warm,No
+Great Dane,Working,Guardian,77 kg,India,5000 Rs - 6000 Rs,"Friendly, Confident, Devoted, Intelligent, Gentle, Loving, Reserved",Yes,Ranch,High,Yes,Meat rich,Not independent,High,Frequent,Hot,No
+Havanese,Toy,Companion,5 kg,India,4000 Rs - 5000 Rs,"Affectionate, Companionable, Gentle, Intelligent, Playful, Responsive",No,Apartment ,Low,Yes,Doen't require meat,Not independent,Medium,Low,Warm,Yes
+Husky,Working,Northern,24 kg,India,5000 Rs - 7000 Rs,"Alert, Friendly, Gentle, Intelligent, Outgoing",No,Ranch,High,Yes,Meat rich,Not independent,High,Frequent,Cold,No
+Indian Mastif,Hunting,Guardian,80 kg,India,2000 Rs - 3000 Rs,"Protective, Dominant, Fearless, Obedient, Stubborn, Trainable",Yes,Ranch,High,Yes,Meat rich,Very independent,High,Frequent,Hot,No
+Indian Pariah Dog,Sporting,Companion,30 kg,India,2000 Rs - 3000 Rs,"Protective, Calm, Energetic",No,Apartment ,Moderate,Yes,Doen't require meat,Very independent,High,Low,Hot,No
+Indian Spitz,Terrier,Companion,15 kg,India,2000 Rs - 3000 Rs,"Intelligent, Kind, Playful, Athletic",No,Apartment ,Moderate,Yes,Doen't require meat,Moderate,High,Frequent,Warm,No
+Italian Greyhound,Toy,Companion,4 kg,India,2000 Rs - 3000 Rs,"Affectionate, Agile, Athletic, Companionable, Intelligent, Mischevious",No,Apartment ,Moderate,Yes,Meat rich,Not independent,High,Low,Warm,No
+Jack Russell Terrier,Terrier,Terrier,7 kg,India,3000 Rs - 4000 Rs,"Alert, Cheerful, Courageous, Energetic, Independent",Yes,Independent house,High,Yes,Doen't require meat,Moderate,High,Seasonal,Warm,No
+Kanni,Hunting,Guardian,20 kg,India,2000 Rs - 3000 Rs,"Agile, Graceful, Protective",Yes,Ranch,High,Yes,Meat rich,Very independent,High,Low,Hot,No
+Kombai,Hunting,Guardian,25 kg,India,2000 Rs - 3000 Rs,"Aggressive, Savage",,Ranch,High,Yes,Meat rich,Very independent,High,Low,Hot,No
+Lhasa Apso,Non Sporting,Companion,6 kg,India,4000 Rs - 5000 Rs,"Alert, Assertive, Devoted, Friendly, Intelligent, Lively, Obedient, Playful, Spirited, Steady",No,Apartment ,High,Yes,Doen't require meat,Very independent,High,Seasonal,Warm,Yes
+Maltese,Toy,Companion,4 kg,India,2000 Rs - 3000 Rs,"Active, Docile, Easygoing, Gentle, Intelligent, Playful, Responsive, Sweet tempered",No,Apartment ,Low,No,Doen't require meat,Not independent,Medium,Low,Warm,Yes
+Mudhol Hound,Hunting,Guardian,25 kg,India,2000 Rs - 3000 Rs,"Loyal, Graceful, Courageous, Elegant",Yes,Ranch,High,No,Meat rich,Very independent,High,Low,Hot,No
+Neapolitan Mastiff,Working,Guardian,60 kg,India,5000 Rs - 7000 Rs,"Protective, Dominant, Fearless, Obedient, Stubborn, Trainable",Yes,Ranch,Low,Yes,Meat rich,Not independent,Medium,Seasonal,Warm,No
+Newfoundland Dog,Working,Guardian,65 kg,India,7000 Rs - 10000 Rs,"Cheerful, Courageous, Intelligent, Loyal, Social, Sweet, Gentle",Yes,Ranch,High,Yes,Meat rich,Not independent,Medium,Frequent,Cold,No
+Pekingese,Toy,Companion,4 kg,India,5000 Rs - 7000 Rs,"Affectionate, Aggressive, Good-natured, Intelligent, Opinionated, Stubborn",No,Apartment ,High,No,Doen't require meat,Moderate,Low,Frequent,Cold,No
+Pit Bull Terrier,Terrier,Terrier,23 kg,India,2000 Rs - 3000 Rs,"Affectionate, Aggressive, CLownish, Courageous, Friendly, Intelligent, Loyal, Obedient, Strong willed, Stubborn",No,Independent house,Moderate,Yes,Meat rich,Not independent,High,Frequent,Warm,No
+Pomeranian,Toy,Companion,3 kg,India,2000 Rs - 3000 Rs,"Active, Extroverted, Friendly, Intelligent, Lively, Playful, Sociable",No,Apartment ,High,No,Doen't require meat,Not independent,Medium,Frequent,Cold,No
+Poodle,Non Sporting,Gun,26 kg,India,4000 Rs - 5000 Rs,"Active, Alert, Faithful, Instinctual, Intelligent, Trainable",Yes,Apartment ,Low,Yes,Doen't require meat,Not independent,High,Low,Warm,Yes
+Portuguese Water Dog,Working,Gun,22 kg,India,4000 Rs - 5000 Rs,"Brave, Docile, Impetuous, Intelligent, Obedient, Quarrelsome",Yes,Apartment ,Moderate,Yes,Doen't require meat,Not independent,High,Low,Cold,Yes
+Pug,Toy,Companion,8 kg,India,4000 Rs - 5000 Rs,"Affectionate, Cheerful, Courageous, Gentle, Intelligent, Friendly, Outgoing, Playful, Loyal",No,Apartment ,Low,Yes,Doen't require meat,Not independent,Medium,Frequent,Warm,No
+Rampur greyhound,Hunting,Guardian,30 kg,India,2000 Rs - 3000 Rs,"Loyal, Protective, Gentle",Yes,Ranch,High,Yes,Meat rich,Moderate,High,Low,Hot,No
+Rajapalayam,Hunting,Guardian,22 kg,India,3000 Rs - 15000 Rs,"Affectionate, Devoted, Loyal",Yes,Ranch,High,Yes,Meat rich,Very independent,High,Low,Hot,No
+Rhodesian Ridgeback,Hound,Sight,39 kg,India,2000 Rs - 3000 Rs,"Dignified, Intelligent, Loyal, Mischevious, Sensitive, Strong willed",No,Ranch,Low,Yes,Meat rich,Not independent,High,Frequent,Warm,No
+Rottweiler,Working,Guardian,51 kg,India,3000 Rs - 4000 Rs,"Alert, Courageous, Fearless, Good natured, Independent, Intelligent, Loyal, Protective",Yes,Ranch,High,Yes,Meat rich,Not independent,High,Frequent,Warm,No
+Saint Bernard,Working,Guardian,66 kg,India,5000 Rs - 7000 Rs,"Friendly, Gentle, Independent, Intelligent, Outgoing, Quiet, Social",No,Ranch,Low,Yes,Meat rich,Not independent,Medium,Frequent,Cold,No
+Saluki,Hound,Sight,21 kg,India,3000 Rs - 4000 Rs,"Aloof, Intelligent, Quiet, Reserverd, Loyal",No,Ranch,Low,Yes,Doen't require meat,Not independent,High,Low,Warm,No
+Shar Pei,Non Sporting,Northern,22 kg,India,3000 Rs - 4000 Rs,"Affectionate, Devoted, Independent, Loving, Reserved, Suspicious",No,Apartment ,High,No,Doen't require meat,Very independent,Low,Frequent,Warm,No
+Shih Tzu,Toy,Companion,6 kg,India,2000 Rs - 3000 Rs,"Active, Courageous, Friendly, Gentle, Happy, Intelligent, Lively, Outgoing, Playful",No,Apartment ,Low,Yes,Doen't require meat,Moderate,Low,Seasonal,Warm,Yes
+Tibetan Mastiff,Working,Guardian,71 kg,India,7000 Rs - 10000 Rs,"Aloof, Protective, Strong willed, Stubborn, Courageous, Loyal",Yes,Ranch,Low,Yes,Meat rich,Very independent,High,Low,Cold,No
+Tibetan Spaniel,Non Sporting,Companion,6 kg,India,3000 Rs - 4000 Rs,"Intelligent, Assertive, Aloof, Happy, Independent, Willful",Yes,Apartment ,High,Yes,Doen't require meat,Not independent,Medium,Seasonal,Warm,No
+Tibetan Terrier,Non Sporting,Companion,10 kg,India,3000 Rs - 4000 Rs,"Affectionate, Amiable, Energetic, Gentle, Reserved, Sensitive, Intelligent",No,Apartment ,Low,Yes,Doen't require meat,Not independent,High,Low,Cold,No
+Weimaraner,Sporting,Gun,29 kg,India,3000 Rs - 4000 Rs,"Alert, Aloof, Energetic, Fast, Intelligent, Powerful, Steady, Stubborn, Social",No,Ranch,Low,Yes,Meat rich,Not independent,High,Frequent,Warm,No
+Yorkshire Terrier Yorkie,Toy,Companion,3 kg,India,3000 Rs - 4000 Rs,"Alert, Courageous, Energetic, Independent, Intelligent, Loyal, Playful",No,Apartment ,Moderate,No,Doen't require meat,Not independent,High,Low,Hot,Yes
