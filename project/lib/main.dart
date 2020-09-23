@@ -17,9 +17,9 @@ import 'package:project/quiz.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
 import 'dart:convert';
-
-import 'package:pdf/pdf.dart' ;
-import 'package:path_provider/path_provider.dart';
+//
+//import 'package:pdf/pdf.dart' ;
+//import 'package:path_provider/path_provider.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:project/pdfscreen.dart';
 
@@ -173,9 +173,9 @@ class _welcomeState extends State<welcome> {
           ),
           actions: <Widget>[
             IconButton(
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => pdfmaker()));
-              },
+//              onPressed: (){
+//                Navigator.push(context, MaterialPageRoute(builder: (context) => pdfmaker()));
+//              },
               icon: Icon(Icons.pets),
               iconSize: 30.0,
               color: Colors.black54,
@@ -425,9 +425,9 @@ class MyAppState extends  State<MyApps> {
 
 
   main(String typedata) async{
-    final documentDirectory = await getTemporaryDirectory();
+//    final documentDirectory = await getTemporaryDirectory();
 
-    String documentPath = documentDirectory.path;
+//    String documentPath = documentDirectory.path;
     // File file =
     //String fullPath = "$documentPath/example.pdf";
    //  File file = File("$documentPath/example.pdf");
