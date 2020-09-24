@@ -480,7 +480,7 @@ class _qu1State extends State<qu1> {
                             ? Colors.purple[200]
                             : Colors.purple[50],
                         child: Text(
-                          "An Independent house",
+                          "An independent house",
                           style: TextStyle(fontFamily: 'Roboto'),
                         ),
                       ),
@@ -522,7 +522,7 @@ class _qu1State extends State<qu1> {
                     child: ListTile(
                       title: Text("Why is it important?"),
                       subtitle: Text(
-                          '~Each dog breed requires different living arrangements. \n~Dogs that are used to living in farms or ranches are not'
+                          '~Each dog breed requires different living arrangements. \n~Dogs that are used to living in farms or ranches are not suited to live in flats. '
                       ),
                     ),
                   ),
@@ -656,7 +656,7 @@ class _qu2State extends State<qu2> {
                             padding:
                                 EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
                             child: Text(
-                              "Do you or your family members face any kind of allergies with respect to dogs?",
+                              "Do you or your family members suffer from any kind of allergies with respect to dogs?",
                               style: TextStyle(
                                 fontSize: 20.0,
                                 fontFamily: 'Roboto',
@@ -719,7 +719,7 @@ class _qu2State extends State<qu2> {
                         child: ListTile(
                           title: Text("Why is it important?"),
                           subtitle: Text(
-                              '~Certain dog breeds produce proteins that end up in their dander (dead skin), saliva, and urine.' +
+                              '~Certain dog breeds produce allergens that end up in their dander (dead skin), saliva, and urine.' +
 //                             '\n~An allergic reaction occurs when a sensitive person’s immune system reacts abnormally to the usually harmless proteins.' +
                          '\n~Preference to those dog breeds that are less susceptible to produce such allergens.'
                           ),
@@ -921,7 +921,7 @@ class _qu3State extends State<qu3> {
                               ? Colors.purple[200]
                               : Colors.purple[50],
                           child: Text(
-                            "Somewhere in between the two",
+                            "Somewhere in between",
                             style: TextStyle(fontFamily: 'Roboto'),
                           ),
                         ),
@@ -1613,7 +1613,7 @@ class _qu6State extends State<qu6> {
                           title: Text("Why is it important?"),
                           subtitle: Text(
                             '~All dogs shed their old and damaged hair. But the frequency of shedding varies for each breed.' +
-                             '~If you want to minimise your dog’s shedding, make sure to groom it regularly.'
+                             '\n~If you want to minimise your dog’s shedding, make sure to groom it regularly.'
 
                           ),
                         ),
@@ -2042,7 +2042,7 @@ class _qu8State extends State<qu8> {
                         child: ListTile(
                           title: Text("Why is it important?"),
                           subtitle: Text(
-                            '~Dogs are broadly classified as a guard dog or a companion dog.' +
+                            '~Dogs are broadly classified as guard dogs or companion dogs.' +
                             '\n~A guard dog is very ferocious and is not friendly to strangers.' + '\n~A companion dog is more welcoming.'
 
                           ),
