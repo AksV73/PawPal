@@ -336,9 +336,9 @@ class _welcomeState extends State<welcome> {
                 padding: EdgeInsets.all(20.0),
                 elevation: 15.0,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(30),
                 ),
-                textColor: Colors.black,
+              textColor: Colors.black,
                 color: Colors.deepPurple[200],
                 child: Text(
                   'Take the breed selector quiz!',
@@ -419,7 +419,7 @@ class MyAppState extends State<MyApps> {
       String weather,
       String allergy,
       int score) {
-    List<Color> _colors = [Colors.black26, Colors.grey];
+    List<Color> _colors = [Colors.red[50], Colors.red[100]];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red[300],
@@ -458,7 +458,7 @@ class MyAppState extends State<MyApps> {
             ),
             Text(name,
                 style: TextStyle(
-                  fontFamily: 'DancingScript',
+                  fontFamily: 'Courgette',
                   fontSize: 40.0,
                 )),
             Container(
@@ -470,46 +470,143 @@ class MyAppState extends State<MyApps> {
             Container(
               height: 20.0,
             ),
-            Container(
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
+
+//            Container(
+//              decoration: BoxDecoration(
+//                  gradient: LinearGradient(
+//                colors: _colors,
+//              )),
+//              child: ListTile(
+//                leading: IconButton(
+//                  icon: Icon(Icons.pets),
+//                ),
+//                title: Text(
+//                  "Name: \n" +
+//                      name +
+//                      "\nCharacteristics: " +
+//                      group1 +
+//                      ", " +
+//                      group2 +
+//                      "\nTemperament: " +
+//                      temper +
+//
+//
+          Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
                 colors: _colors,
-              )),
-              child: ListTile(
-                title: Text(
-                  "Name: " +
-                      name +
-                      "\nCharacteristics: " +
-                      group1 +
-                      ", " +
-                      group2 +
-                      "\nTemperament: " +
-                      temper +
-                      "\nWatchdog: " +
-                      watch +
-                      "\nIndependent: " +
-                      indi +
-                      "\nType of accommodation required: " +
-                      house +
-                      "\nKid Friendly: " +
-                      kid +
-                      "\nActivity level: " +
-                      activity +
-                      "\nShedding: " +
-                      shed +
-                      "\nCost of maintaining a dog per month: " +
-                       maint +
-                      "\nBest suited climate: "+
-                        weather +" climate" +
-                      "\nIs the dog hypoallergenic ?: " +
-                       allergy,
-                  style: TextStyle(
-                    fontFamily: 'Raleway',
-                    fontSize: 20.0,
-                  ),
-                ),
               ),
+//              shape: RoundedRectangleBorder(
+//                  borderRadius: BorderRadius.circular(30),
+//                ),
             ),
+            child: Column(
+              children: <Widget>[
+                ListTile(
+                  leading: IconButton(
+                    icon: Icon(Icons.pets),
+                  ),
+                  title: Text("Name"),
+                  subtitle: Text(name),
+                  dense: true,
+                ),
+                ListTile(
+                  leading: IconButton(
+                    icon: Icon(Icons.pets),
+                  ),
+                  title: Text("Characteristics"),
+                  subtitle: Text(group1 + " " + group2),
+                  dense: true,
+                ),
+                ListTile(
+                  leading: IconButton(
+                    icon: Icon(Icons.pets),
+                  ),
+                  title: Text("Temperament"),
+                  subtitle: Text(temper),
+                  dense: true,
+                ),
+                ListTile(
+                  leading: IconButton(
+                    icon: Icon(Icons.pets),
+                  ),
+                  title: Text("Watchdog"),
+                  subtitle: Text(watch),
+                  dense: true,
+                ),
+                ListTile(
+                  leading: IconButton(
+                    icon: Icon(Icons.pets),
+                  ),
+                  title: Text("Level of dependency"),
+                  subtitle: Text(indi),
+                  dense: true,
+                ),
+                ListTile(
+                  leading: IconButton(
+                    icon: Icon(Icons.pets),
+                  ),
+                  title: Text("Type of accommodation required"),
+                  subtitle: Text(house),
+                  dense: true,
+                ),
+                ListTile(
+                  leading: IconButton(
+                    icon: Icon(Icons.pets),
+                  ),
+                  title: Text("Is the dog kid friendly?"),
+                  subtitle: Text(kid),
+                  dense: true,
+                ),
+
+
+                ListTile(
+                  leading: IconButton(
+                    icon: Icon(Icons.pets),
+                  ),
+                  title: Text("Activity level"),
+                  subtitle: Text(activity),
+                  dense: true,
+                ),
+                ListTile(
+                  leading: IconButton(
+                    icon: Icon(Icons.pets),
+                  ),
+                  title: Text("Shedding"),
+                  subtitle: Text(shed),
+                  dense: true,
+                ),
+                ListTile(
+                  leading: IconButton(
+                    icon: Icon(Icons.pets),
+                  ),
+                  title: Text("Cost of maintaining a dog per month"),
+                  subtitle: Text(maint),
+                  dense: true,
+                ),
+                ListTile(
+                  leading: IconButton(
+                    icon: Icon(Icons.pets),
+                  ),
+                  title: Text("Best suited climate"),
+                  subtitle: Text(weather),
+                  dense: true,
+                ),
+                ListTile(
+                  leading: IconButton(
+                    icon: Icon(Icons.pets),
+                  ),
+                  title: Text("Is the dog hypoallergenic?"),
+                  subtitle: Text(allergy),
+                  dense: true,
+                ),
+              ],
+            ),
+          ),
+
+
+
+
             Container(
               height: 20.0,
             ),
@@ -522,11 +619,12 @@ class MyAppState extends State<MyApps> {
             ),
             Center(
                 child: Row(
-              children: <Widget>[
-                Text('License for images : '),
-                Image.asset(
-                  'images/license.png',
-                  height: 20.0,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                     children: <Widget>[
+                    Text('License for images : '),
+                     Image.asset(
+                      'images/license.png',
+                      height: 20.0,
                 ),
               ],
             )),
