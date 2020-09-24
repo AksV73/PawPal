@@ -579,7 +579,7 @@ class MyAppState extends State<MyApps> {
                          shape: RoundedRectangleBorder(
                            borderRadius: BorderRadius.circular(30)
                          ),
-                         backgroundColor: Colors.red[50],
+                         backgroundColor: Colors.purple[50],
 //                         title: Text("alert!"),
                          content: Text("This is just approximate estimate of monthly expenses. This can vary based on other factors." +
                              '\n\nClick on the button below to read more!'
@@ -590,7 +590,7 @@ class MyAppState extends State<MyApps> {
                                  borderRadius: BorderRadius.circular(10)
                              ),
                                elevation: 10.0,
-                               color: Colors.red[200],
+                               color: Colors.purple[200],
                                child: Text("More Information"),
                                onPressed: () {
                                  Navigator.push(
@@ -817,7 +817,9 @@ class MyAppState extends State<MyApps> {
 
 class Cost extends StatelessWidget {
   @override
+  List<Color> _colorsp = [Colors.purple[50], Colors.purple[100]];
   List<Color> _colors = [Colors.red[50], Colors.red[100]];
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -873,7 +875,7 @@ class Cost extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    colors: _colors,
+                    colors: _colorsp,
                   ),
                 ),
                 child: ListTile(
@@ -909,7 +911,7 @@ class Cost extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: _colors,
+                      colors: _colorsp,
                     ),
                   ),
                   child: ListTile(
@@ -945,7 +947,7 @@ class Cost extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: _colors,
+                      colors: _colorsp,
                     ),
                   ),
                   child: ListTile(
