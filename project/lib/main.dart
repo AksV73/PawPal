@@ -206,7 +206,7 @@ class _welcomeState extends State<welcome> {
               padding: const EdgeInsets.only(top: 20),
               child: Text(
 
-                ' \"Welcome to the world of dogs, \nWhere everything is about \ndrooling and paws,\n\nAnd I lick to my heart’s content, \nA big bowl of peanut butter \nwith my vet’s consent, \n\nAnd I run quickly towards the ball,\nWhen my hooman said,\n “Fetch! Before the night falls!”. \"\n\n -poetry of a PawPal\n',
+                ' \"Welcome to the world of dogs, \nWhere everything is about \ndrooling and paws,\n\nAnd I lick to my heart’s content, \nA big bowl of peanut butter \nwith my vet’s consent, \n\nAnd I run quickly towards the ball,\nWhen my hooman said,\n “Fetch! Before the night falls!”. \n\n -poetry of a PawPal\n',
 
 
                 style: TextStyle(
@@ -262,7 +262,7 @@ class _welcomeState extends State<welcome> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Text(
-                'At PawPal, we believe in the magical bond between pet parents and their pets. Pets end up becoming our best friends, closest confidants and family members. Adopting a dog is hugely rewarding, but it\'s also a big responsibility. You might be wondering which dog breed suits you the best?' ,
+                'At PawPal, we believe in the magical bond between pet parents and their pets. Pets end up becoming our best friends, closest confidants and family members. Adopting a dog is hugely rewarding, but it\'s also a big responsibility.' ,
                 style: TextStyle(
 //                    fontFamily: 'Raleway',
                   fontSize: 20,
@@ -289,7 +289,7 @@ class _welcomeState extends State<welcome> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Text(
-                'Hence we are here to help you find a breed that suits your personality, temperament  and social environment to ensure that both of you can share exciting adventures together!',
+                'Hence, we are here to help you find a breed that suits your personality, temperament  and social environment so that both of you can share exciting adventures together!',
                 style: TextStyle(
 //                    fontFamily: 'Raleway',
                   fontSize: 20,
@@ -484,6 +484,7 @@ class MyAppState extends State<MyApps> {
                 ListTile(
                   leading: IconButton(
                     icon: Icon(Icons.pets),
+                    onPressed: (){},
                   ),
                   title: Text("Name"),
                   subtitle: Text(name),
@@ -491,6 +492,7 @@ class MyAppState extends State<MyApps> {
                 ),
                 ListTile(
                   leading: IconButton(
+                    onPressed: (){},
                     icon: Icon(Icons.pets),
                   ),
                   title: Text("Characteristics"),
@@ -499,6 +501,7 @@ class MyAppState extends State<MyApps> {
                 ),
                 ListTile(
                   leading: IconButton(
+                    onPressed: (){},
                     icon: Icon(Icons.pets),
                   ),
                   title: Text("Temperament"),
@@ -507,6 +510,7 @@ class MyAppState extends State<MyApps> {
                 ),
                 ListTile(
                   leading: IconButton(
+                    onPressed: (){},
                     icon: Icon(Icons.pets),
                   ),
                   title: Text("Watchdog"),
@@ -515,6 +519,7 @@ class MyAppState extends State<MyApps> {
                 ),
                 ListTile(
                   leading: IconButton(
+                    onPressed: (){},
                     icon: Icon(Icons.pets),
                   ),
                   title: Text("Level of dependency"),
@@ -523,6 +528,7 @@ class MyAppState extends State<MyApps> {
                 ),
                 ListTile(
                   leading: IconButton(
+                    onPressed: (){},
                     icon: Icon(Icons.pets),
                   ),
                   title: Text("Type of accommodation required"),
@@ -531,6 +537,7 @@ class MyAppState extends State<MyApps> {
                 ),
                 ListTile(
                   leading: IconButton(
+                    onPressed: (){},
                     icon: Icon(Icons.pets),
                   ),
                   title: Text("Is the dog kid friendly?"),
@@ -539,6 +546,7 @@ class MyAppState extends State<MyApps> {
                 ),
                 ListTile(
                   leading: IconButton(
+                    onPressed: (){},
                     icon: Icon(Icons.pets),
                   ),
                   title: Text("Activity level"),
@@ -547,6 +555,7 @@ class MyAppState extends State<MyApps> {
                 ),
                 ListTile(
                   leading: IconButton(
+                    onPressed: (){},
                     icon: Icon(Icons.pets),
                   ),
                   title: Text("Shedding"),
@@ -555,6 +564,7 @@ class MyAppState extends State<MyApps> {
                 ),
                 ListTile(
                   leading: IconButton(
+                    onPressed: (){},
                     icon: Icon(Icons.pets),
                   ),
                   title: Text("Cost of maintaining a dog per month"),
@@ -591,6 +601,7 @@ class MyAppState extends State<MyApps> {
                 ),
                 ListTile(
                   leading: IconButton(
+                    onPressed: (){},
                     icon: Icon(Icons.pets),
                   ),
                   title: Text("Best suited climate"),
@@ -599,6 +610,7 @@ class MyAppState extends State<MyApps> {
                 ),
                 ListTile(
                   leading: IconButton(
+                    onPressed: (){},
                     icon: Icon(Icons.pets),
                   ),
                   title: Text("Is the dog hypoallergenic?"),
