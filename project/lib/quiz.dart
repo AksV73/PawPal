@@ -289,6 +289,25 @@ class _qu0State extends State<qu0> {
                     ],
                   ),
                 ),
+
+                Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [Colors.purple[100], Colors.purple[200], ],
+                        begin: Alignment.bottomCenter,
+                        end: Alignment.topRight,
+                      ),
+                    ),
+                    child: ListTile(
+                      title: Text("Why is it important?"),
+                      subtitle: Text(
+                        '~Each dog breed is accustomed to  a specific climatic condition. \n~More preference for the dog breed which adapts to its natural habitat.'
+                      ),
+                    ),
+                  ),
+                ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: RaisedButton(

@@ -470,27 +470,6 @@ class MyAppState extends State<MyApps> {
             Container(
               height: 20.0,
             ),
-
-//            Container(
-//              decoration: BoxDecoration(
-//                  gradient: LinearGradient(
-//                colors: _colors,
-//              )),
-//              child: ListTile(
-//                leading: IconButton(
-//                  icon: Icon(Icons.pets),
-//                ),
-//                title: Text(
-//                  "Name: \n" +
-//                      name +
-//                      "\nCharacteristics: " +
-//                      group1 +
-//                      ", " +
-//                      group2 +
-//                      "\nTemperament: " +
-//                      temper +
-//
-//
           Container(
             decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -558,8 +537,6 @@ class MyAppState extends State<MyApps> {
                   subtitle: Text(kid),
                   dense: true,
                 ),
-
-
                 ListTile(
                   leading: IconButton(
                     icon: Icon(Icons.pets),
@@ -583,6 +560,27 @@ class MyAppState extends State<MyApps> {
                   title: Text("Cost of maintaining a dog per month"),
                   subtitle: Text(maint),
                   dense: true,
+//                  trailing: IconButton(
+//                    icon: Icon(Icons.info),
+//                    onPressed: () {
+//                     showDialog(context: context, builder:(context) {
+//                       return AlertDialog(
+//                         shape: RoundedRectangleBorder(
+//                           borderRadius: BorderRadius.circular(30)
+//                         ),
+//                         title: Text("alert!"),
+//                         content: Text("hello"),
+////                         shape:,
+//                         actions: <Widget>[
+//                           FlatButton(
+//                             child: Text("Yes"),
+//                             onPressed: () {},
+//                           ),
+//                         ],
+//                       );
+//                     });
+//                    },
+//                  ),
                 ),
                 ListTile(
                   leading: IconButton(
@@ -603,10 +601,6 @@ class MyAppState extends State<MyApps> {
               ],
             ),
           ),
-
-
-
-
             Container(
               height: 20.0,
             ),
