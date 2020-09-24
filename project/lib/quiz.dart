@@ -308,6 +308,7 @@ class _qu0State extends State<qu0> {
                     ),
                   ),
                 ),
+
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: RaisedButton(
@@ -507,6 +508,26 @@ class _qu1State extends State<qu1> {
                     ],
                   ),
                 ),
+
+                Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [Colors.purple[100], Colors.purple[200], ],
+                        begin: Alignment.bottomCenter,
+                        end: Alignment.topRight,
+                      ),
+                    ),
+                    child: ListTile(
+                      title: Text("Why is it important?"),
+                      subtitle: Text(
+                          '~Each dog breed requires different living arrangements. \n~Dogs that are used to living in farms or ranches are not'
+                      ),
+                    ),
+                  ),
+                ),
+
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: RaisedButton(
@@ -682,6 +703,27 @@ class _qu2State extends State<qu2> {
                             ),
                           ),
                         ],
+                      ),
+                    ),
+
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [Colors.purple[100], Colors.purple[200], ],
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topRight,
+                          ),
+                        ),
+                        child: ListTile(
+                          title: Text("Why is it important?"),
+                          subtitle: Text(
+                              '~Certain dog breeds produce proteins that end up in their dander (dead skin), saliva, and urine.' +
+//                             '\n~An allergic reaction occurs when a sensitive person’s immune system reacts abnormally to the usually harmless proteins.' +
+                         '\n~Preference to those dog breeds that are less susceptible to produce such allergens.'
+                          ),
+                        ),
                       ),
                     ),
                     Padding(
@@ -887,6 +929,24 @@ class _qu3State extends State<qu3> {
                     ),
                   ),
                   Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [Colors.purple[100], Colors.purple[200], ],
+                          begin: Alignment.bottomCenter,
+                          end: Alignment.topRight,
+                        ),
+                      ),
+                      child: ListTile(
+                        title: Text("Why is it important?"),
+                        subtitle: Text(
+                          '~Certain localities don’t tolerate barking.\n~More priority to those dog breeds which fulfill the norms of the society.'
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: RaisedButton(
                       elevation: 10.0,
@@ -1089,6 +1149,28 @@ class _qu4State extends State<qu4> {
                         ],
                       ),
                     ),
+
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [Colors.purple[100], Colors.purple[200], ],
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topRight,
+                          ),
+                        ),
+                        child: ListTile(
+                          title: Text("Why is it important?"),
+                          subtitle: Text(
+                            '~It is not advisable to leave your dog alone, for more than 8 hours. Such dogs end up facing separation anxiety.' +
+                                '\n~No matter how independent your dog is, it will take a few days to adjust to your schedule.'
+
+                          ),
+                        ),
+                      ),
+                    ),
+
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
@@ -1291,6 +1373,26 @@ class _qu5State extends State<qu5> {
                             ),
                           ),
                         ],
+                      ),
+                    ),
+
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [Colors.purple[100], Colors.purple[200], ],
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topRight,
+                          ),
+                        ),
+                        child: ListTile(
+                          title: Text("Why is it important?"),
+                          subtitle: Text(
+                          '~All dog breeds need some form of exercise.' +
+                          '\n~Both physical and mental exercise for the dog will keep it happy and healthy.'
+                          ),
+                        ),
                       ),
                     ),
                     Padding(
@@ -1498,6 +1600,28 @@ class _qu6State extends State<qu6> {
                       ),
                     ),
                     Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [Colors.purple[100], Colors.purple[200], ],
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topRight,
+                          ),
+                        ),
+                        child: ListTile(
+                          title: Text("Why is it important?"),
+                          subtitle: Text(
+                            '~All dogs shed their old and damaged hair. But the frequency of shedding varies for each breed.' +
+                             '~If you want to minimise your dog’s shedding, make sure to groom it regularly.'
+
+                          ),
+                        ),
+                      ),
+                    ),
+
+
+                    Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
                         elevation: 10.0,
@@ -1657,7 +1781,7 @@ class _qu7State extends State<qu7> {
                                   ? Colors.purple[200]
                                   : Colors.purple[50],
                               child: Text(
-                                "Yes, an infant",
+                                "Yes, an infant and a toddler",
                                 style: TextStyle(fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
@@ -1677,7 +1801,7 @@ class _qu7State extends State<qu7> {
                                   ? Colors.purple[200]
                                   : Colors.purple[50],
                               child: Text(
-                                "Yes, a toddler",
+                                "Yes, either an infant or a toddler",
                                 style: TextStyle(fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
@@ -1704,6 +1828,27 @@ class _qu7State extends State<qu7> {
                         ],
                       ),
                     ),
+
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [Colors.purple[100], Colors.purple[200], ],
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topRight,
+                          ),
+                        ),
+                        child: ListTile(
+                          title: Text("Why is it important?"),
+                          subtitle: Text(
+                            '~It takes time for both kids and dogs to adjust to each other. Hence, it is advised to adopt a dog that is child friendly.' +
+                                '\n~Children who are 6 years and above are matured enough to welcome a pet in their house.'
+                          ),
+                        ),
+                      ),
+                    ),
+
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
@@ -1858,7 +2003,7 @@ class _qu8State extends State<qu8> {
                                   ? Colors.purple[200]
                                   : Colors.purple[50],
                               child: Text(
-                                "Guard",
+                                "Guard Dog",
                                 style: TextStyle(fontFamily: 'Roboto'),
                               )),
                           RaisedButton(
@@ -1877,13 +2022,34 @@ class _qu8State extends State<qu8> {
                                 ? Colors.purple[200]
                                 : Colors.purple[50],
                             child: Text(
-                              "Companion",
+                              "Companion Dog",
                               style: TextStyle(fontFamily: 'Roboto'),
                             ),
                           ),
                         ],
                       ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [Colors.purple[100], Colors.purple[200], ],
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topRight,
+                          ),
+                        ),
+                        child: ListTile(
+                          title: Text("Why is it important?"),
+                          subtitle: Text(
+                            '~Dogs are broadly classified as a guard dog or a companion dog.' +
+                            '\n~A guard dog is very ferocious and is not friendly to strangers.' + '\n~A companion dog is more welcoming.'
+
+                          ),
+                        ),
+                      ),
+                    ),
+
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
@@ -2087,6 +2253,27 @@ class _qu9State extends State<qu9> {
                         ],
                       ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [Colors.purple[100], Colors.purple[200], ],
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topRight,
+                          ),
+                        ),
+                        child: ListTile(
+                          title: Text("Why is it important?"),
+                          subtitle: Text(
+                            '~Certain dog breeds require meat or egg as a source of protein, while the rest can sustain on plant based protein.'
+                              '\n~Over feeding the dog will lead to it’s ill health.'
+
+                          ),
+                        ),
+                      ),
+                    ),
+
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: RaisedButton(
