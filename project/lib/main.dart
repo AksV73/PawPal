@@ -1,6 +1,10 @@
 import 'dart:async';
 import 'dart:io';
 import 'dart:typed_data';
+import 'package:flutter/material.dart';
+import 'dart:async';
+import 'package:url_launcher/url_launcher.dart';
+
 
 //import 'dart:html';
 //import 'dart:html';
@@ -47,6 +51,7 @@ class MyApp extends StatelessWidget {
         '/welcome page': (context) => welcome(),
         '/quiz': (context) => qu0(),
         '/cost': (context) => Cost(),
+
         //
         // '/data' : (context) => dogo()
         // '/category1' : (context) => Category1(),
@@ -159,6 +164,7 @@ class welcome extends StatefulWidget {
 
 class _welcomeState extends State<welcome> {
   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -364,6 +370,8 @@ class _welcomeState extends State<welcome> {
     );
   }
 }
+
+
 
 class MyApps extends StatefulWidget {
   @override
