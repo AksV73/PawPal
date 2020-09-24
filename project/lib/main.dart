@@ -891,7 +891,7 @@ class Cost extends StatelessWidget {
                       'Cost of Neutering/Spaying'
                   ),
                   subtitle: Text(
-                      'If you are not going to breed your dog, then its better to neuter/spay it. it can help avoid some serious health complications. Neutering or spaying a dog in India can cost around ₹6,000 to ₹10,000. The cost depends on the location and the vet. Aftercare of this surgery can cost an additional ₹1,000. '
+                      'Spaying a dog can help avoid some serious health complications. Neutering or spaying a dog in India can cost around ₹6,000 to ₹10,000. The cost depends on the location and the vet. Aftercare of this surgery can cost an additional ₹1,000. '
                   ),
                 ),
               ),
