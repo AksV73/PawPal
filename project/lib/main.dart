@@ -798,3 +798,47 @@ class MyAppState extends State<MyApps> {
     );
   }
 }
+
+class Cost extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red[300],
+        title: Text(
+          "PawPal",
+          style: TextStyle(
+            fontFamily: 'Courgette',
+            color: Colors.black,
+          ),
+          textAlign: TextAlign.start,
+        ),
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.pets),
+            iconSize: 30.0,
+            color: Colors.black54,
+          ),
+          IconButton(
+            icon: Icon(Icons.home),
+            iconSize: 30.0,
+            tooltip: 'Go to Home',
+            color: Colors.white70,
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => welcome()));
+            },
+          ),
+        ],
+      ),
+      body: Column(
+        children: <Widget>[
+          ListTile(),
+
+        ],
+      ),
+
+    );
+  }
+}
