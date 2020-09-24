@@ -560,27 +560,34 @@ class MyAppState extends State<MyApps> {
                   title: Text("Cost of maintaining a dog per month"),
                   subtitle: Text(maint),
                   dense: true,
-//                  trailing: IconButton(
-//                    icon: Icon(Icons.info),
-//                    onPressed: () {
-//                     showDialog(context: context, builder:(context) {
-//                       return AlertDialog(
-//                         shape: RoundedRectangleBorder(
-//                           borderRadius: BorderRadius.circular(30)
-//                         ),
+                  trailing: IconButton(
+                    icon: Icon(Icons.info),
+                    onPressed: () {
+                     showDialog(context: context, builder:(context) {
+                       return AlertDialog(
+                         shape: RoundedRectangleBorder(
+                           borderRadius: BorderRadius.circular(30)
+                         ),
+                         backgroundColor: Colors.red[50],
 //                         title: Text("alert!"),
-//                         content: Text("hello"),
-////                         shape:,
-//                         actions: <Widget>[
-//                           FlatButton(
-//                             child: Text("Yes"),
-//                             onPressed: () {},
-//                           ),
-//                         ],
-//                       );
-//                     });
-//                    },
-//                  ),
+                         content: Text("This is just approximate estimate of monthly expenses. This can vary based on other factors." +
+                             '\n\nClick on the button below to read more!'
+                         ),
+                         actions: <Widget>[
+                           RaisedButton(
+                             shape: RoundedRectangleBorder(
+                                 borderRadius: BorderRadius.circular(10)
+                             ),
+                               elevation: 10.0,
+                               color: Colors.red[200],
+                               child: Text("More Information"),
+                               onPressed: () {},
+                             ),
+                         ],
+                       );
+                     });
+                    },
+                  ),
                 ),
                 ListTile(
                   leading: IconButton(

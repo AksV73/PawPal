@@ -2268,7 +2268,6 @@ class _qu9State extends State<qu9> {
                           subtitle: Text(
                             '~Certain dog breeds require meat or egg as a source of protein, while the rest can sustain on plant based protein.'
                               '\n~Over feeding the dog will lead to it’s ill health.'
-
                           ),
                         ),
                       ),
