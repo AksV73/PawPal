@@ -46,6 +46,7 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/welcome page': (context) => welcome(),
         '/quiz': (context) => qu0(),
+        '/cost': (context) => Cost(),
         //
         // '/data' : (context) => dogo()
         // '/category1' : (context) => Category1(),
@@ -591,7 +592,10 @@ class MyAppState extends State<MyApps> {
                                elevation: 10.0,
                                color: Colors.red[200],
                                child: Text("More Information"),
-                               onPressed: () {},
+                               onPressed: () {
+                                 Navigator.push(
+                                     context, MaterialPageRoute(builder: (context) => Cost()));
+                               },
                              ),
                          ],
                        );
@@ -845,27 +849,26 @@ class Cost extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
-        children: <Widget>[
-          Padding(
-            padding: EdgeInsets.all(10),
-            child: Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: _colors,
-                ),
-              ),
-              child: ListTile(
-                title: Text(
-                    'Cost of Neutering/Spaying'
-                ),
-                subtitle: Text(
-                    'If you are not going to breed your dog, then its better to neuter/spay it. it can help avoid some serious health complications. Neutering or spaying a dog in India can cost around ₹6,000 to ₹10,000. The cost depends on the location and the vet. Aftercare of this surgery can cost an additional ₹1,000. '
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Container(
+                height: 50.0,
+                width: 300.0,
+                color: Colors.red[200],
+                child: Text(
+                  'Maintenance Cost',
+                  style: TextStyle(
+                    fontSize: 30.0,
+                    fontFamily: "Courgette"
+                  ),
+                  textAlign: TextAlign.center ,
                 ),
               ),
             ),
-          ),
-          Padding(
+            Padding(
               padding: EdgeInsets.all(10),
               child: Container(
                 decoration: BoxDecoration(
@@ -875,15 +878,87 @@ class Cost extends StatelessWidget {
                 ),
                 child: ListTile(
                   title: Text(
-                      'Cost of Toys'
+                      'Cost of Neutering/Spaying'
                   ),
                   subtitle: Text(
-                      'Toys are essential for every dog. You don’t want your dog to bite and chew your furniture, do you? You will have to get some engaging toys and a few chew toys for your dog. This will keep him busy.'
+                      'If you are not going to breed your dog, then its better to neuter/spay it. it can help avoid some serious health complications. Neutering or spaying a dog in India can cost around ₹6,000 to ₹10,000. The cost depends on the location and the vet. Aftercare of this surgery can cost an additional ₹1,000. '
                   ),
                 ),
               ),
-          ),
-          Padding(
+            ),
+            Padding(
+                padding: EdgeInsets.all(10),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: _colors,
+                    ),
+                  ),
+                  child: ListTile(
+                    title: Text(
+                        'Cost of Toys'
+                    ),
+                    subtitle: Text(
+                        'Toys are essential for every dog. You don’t want your dog to bite and chew your furniture, do you? You will have to get some engaging toys and a few chew toys for your dog. This will keep him busy.'
+                    ),
+                  ),
+                ),
+            ),
+            Padding(
+                padding: EdgeInsets.all(10),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: _colors,
+                    ),
+                  ),
+                  child: ListTile(
+                    title: Text(
+                        'Cost of Treats'
+                    ),
+                    subtitle: Text(
+                        'To train a dog, you need to give them some motivation. Treats play an important role in training a dog. You will have to buy them monthly, which can cost around ₹500. However, you can also give your dog some healthy homemade treats occasionally.'
+                    ),
+                  ),
+                ),
+            ),
+            Padding(
+                padding: EdgeInsets.all(10),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: _colors,
+                    ),
+                  ),
+                  child: ListTile(
+                    title: Text(
+                        'Cost of Grooming a Dog in India'
+                    ),
+                    subtitle: Text(
+                        'A full grooming session of a dog, done by a professional groomer in India, will cost around ₹1,500 to ₹3,000. The cost of grooming depends on the dog’s breed and location.  A dog breed with long fur-like Golden Retriever will require more attention and maintenance every month. Whereas it can be relatively easy to groom a breed with short hair like a beagle. However, if you decide to groom your dog at home and buy all the grooming accessories, then it will cost you just around ₹500 to ₹1000 every month.'
+                    ),
+                  ),
+                ),
+            ),
+            Padding(
+                padding: EdgeInsets.all(10),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: _colors,
+                    ),
+                  ),
+                  child: ListTile(
+                    title: Text(
+                        'Cost of Vet and Vaccinations'
+                    ),
+                    subtitle: Text(
+                        'Puppies have low immunity, and so you will have to take extra care. You will have to take them to the vet every month for checkups and vaccinations. The first-year cost of all the vaccinations and vet fees will be the highest. It can be anywhere in between ₹5,000 to ₹10,000, depending on your location and vet. As the puppy matures, you won’t need to take him to the vet that often. Few regular checkups and yearly vaccinations will cost you around ₹2,000 every year.'
+                    ),
+                  ),
+                ),
+            ),
+            Padding(
               padding: EdgeInsets.all(10),
               child: Container(
                 decoration: BoxDecoration(
@@ -893,51 +968,20 @@ class Cost extends StatelessWidget {
                 ),
                 child: ListTile(
                   title: Text(
-                      'Cost of Treats'
+                      'Cost of Feeding a Dog'
                   ),
                   subtitle: Text(
-                      'To train a dog, you need to give them some motivation. Treats play an important role in training a dog. You will have to buy them monthly, which can cost around ₹500. However, you can also give your dog some healthy homemade treats occasionally.'
+                  'The cost of feeding a dog highly depends on the quality of food. Medium quality dog food will cost you between ₹2000 to ₹3000 depending on the size of the dog. Whereas high-quality dog food can cost around ₹4,000 to ₹10,000. Let’s have a look at the differences:' +
+                  '\n\nMedium quality dog foods have primary ingredients like grains and by-products. Grains are a good source of nutrients, but nothing compares to meat. Whereas, animal by-products are controversial ingredients. By-products are the remaining parts of animals that are not consumed by humans. It can include liver, kidney, intestine, and even feet and beak. They do not contain as many proteins as real meat.' +
+                      '\n\nHigh-quality dog foods have fresh meat listed as their primary ingredient, which is an excellent source of protein and other nutrients. High-quality ingredients are used for making these types of dog food. They cost around 20% to 40% more than medium quality dog food.' +
+                      '\n\nThere are low-quality and cheaper dog foods too, which we do not suggest. They contain artificial colors, artificial preservatives, and fillers, which are unhealthy for any dog.'
                   ),
                 ),
               ),
-          ),
-          Padding(
-              padding: EdgeInsets.all(10),
-              child: Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: _colors,
-                  ),
-                ),
-                child: ListTile(
-                  title: Text(
-                      'Cost of Grooming a Dog in India'
-                  ),
-                  subtitle: Text(
-                      'A full grooming session of a dog, done by a professional groomer in India, will cost around ₹1,500 to ₹3,000. The cost of grooming depends on the dog’s breed and location.  A dog breed with long fur-like Golden Retriever will require more attention and maintenance every month. Whereas it can be relatively easy to groom a breed with short hair like a beagle. However, if you decide to groom your dog at home and buy all the grooming accessories, then it will cost you just around ₹500 to ₹1000 every month.'
-                  ),
-                ),
-              ),
-          ),
-          Padding(
-              padding: EdgeInsets.all(10),
-              child: Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: _colors,
-                  ),
-                ),
-                child: ListTile(
-                  title: Text(
-                      'Cost of Vet and Vaccinations'
-                  ),
-                  subtitle: Text(
-                      'Puppies have low immunity, and so you will have to take extra care. You will have to take them to the vet every month for checkups and vaccinations. The first-year cost of all the vaccinations and vet fees will be the highest. It can be anywhere in between ₹5,000 to ₹10,000, depending on your location and vet. As the puppy matures, you won’t need to take him to the vet that often. Few regular checkups and yearly vaccinations will cost you around ₹2,000 every year.'
-                  ),
-                ),
-              ),
-          ),
-        ],
+            ),
+
+          ],
+        ),
       ),
 
     );
