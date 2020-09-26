@@ -12,7 +12,7 @@ import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:project/pdfview.dart';
+
 import 'package:project/quiz.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
@@ -21,8 +21,7 @@ import 'dart:convert';
 //
 //import 'package:pdf/pdf.dart' ;
 //import 'package:path_provider/path_provider.dart';
-import 'package:pdf/widgets.dart' as pw;
-import 'package:project/pdfscreen.dart';
+
 
 final TextEditingController etUsername = new TextEditingController();
 TextEditingController etEmailid = new TextEditingController();
@@ -207,7 +206,7 @@ class _welcomeState extends State<welcome> {
               padding: const EdgeInsets.only(top: 20),
               child: Text(
 
-                ' \"Welcome to the world of dogs, \nWhere everything is about \ndrooling and paws,\n\nAnd I lick to my heart’s content, \nA big bowl of peanut butter \nwith my vet’s consent, \n\nAnd I run quickly towards the ball,\nWhen my hooman said,\n “Fetch! Before the night falls!”. \n\n -poetry of a PawPal\n',
+                ' Welcome to the world of dogs, \nWhere everything is about \ndrooling and paws,\n\nAnd I lick to my heart’s content, \nA big bowl of peanut butter \nwith my vet’s consent, \n\nAnd I run quickly towards the ball,\nWhen my hooman said,\n “Fetch! Before the night falls!”. \n\n -poetry of a PawPal\n',
 
 
                 style: TextStyle(
